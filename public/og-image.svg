@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0A1628"/>
+  <rect x="0" y="480" width="1200" height="30" fill="#B22234"/>
+  <rect x="0" y="540" width="1200" height="30" fill="#B22234"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#C9A84C"/>
+  <text x="900" y="420" font-size="320" fill="#C9A84C" opacity="0.08" text-anchor="middle" font-family="Arial">&#x2721;</text>
+  <text x="90" y="270" font-size="180" fill="#C9A84C" font-family="Arial Black, Arial, sans-serif" font-weight="900" letter-spacing="-4">JewSA</text>
+  <text x="90" y="340" font-size="36" fill="#F5F0E8" font-family="Arial, sans-serif" font-weight="700" letter-spacing="4">WHERE PRIDE MEETS PUNCHLINES</text>
+  <text x="90" y="395" font-size="24" fill="rgba(245,240,232,0.5)" font-family="Arial, sans-serif" font-weight="700" letter-spacing="2">JEWISH-AMERICAN PRIDE MERCH</text>
+  <text x="90" y="448" font-size="28" fill="#C9A84C" font-family="Arial">&#x2721;  &#x2721;  &#x2721;</text>
+</svg>

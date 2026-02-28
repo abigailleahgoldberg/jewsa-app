@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0A1628;
+  --navy-mid: #142238;
+  --gold: #C9A84C;
+  --gold-light: #E8C76A;
+  --red: #B22234;
+  --red-bright: #D42B3E;
+  --white: #F5F0E8;
+  --cream: #FAF7F0;
+  --gray: #888888;
+  --dark: #060E1C;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--cream);
+  color: var(--navy);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Bebas Neue', 'Impact', sans-serif;
+  font-weight: 400;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.jewsa-ticker { animation: ticker-scroll 22s linear infinite; }
+
+@keyframes float-star {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.06; }
+  50%       { transform: translateY(-18px) rotate(180deg); opacity: 0.12; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(201,168,76,0.3); }
+  50%       { box-shadow: 0 0 40px rgba(201,168,76,0.6); }
+}
+
+.jewsa-glow { animation: glow-pulse 3s ease-in-out infinite; }
+
+/* Grid classes */
+.jewsa-products-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+.jewsa-proof-grid    { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.jewsa-punchlines    { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.jewsa-values-grid   { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; }
+.jewsa-hero-grid     { display: grid; grid-template-columns: 55% 45%; min-height: 680px; }
+
+@media (max-width: 900px) {
+  .jewsa-products-grid { grid-template-columns: 1fr 1fr !important; }
+  .jewsa-proof-grid    { grid-template-columns: 1fr !important; }
+  .jewsa-punchlines    { grid-template-columns: 1fr 1fr !important; }
+  .jewsa-values-grid   { grid-template-columns: 1fr 1fr !important; }
+  .jewsa-hero-grid     { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 540px) {
+  .jewsa-products-grid { grid-template-columns: 1fr !important; }
+  .jewsa-punchlines    { grid-template-columns: 1fr !important; }
+}
