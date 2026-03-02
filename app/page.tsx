@@ -1,355 +1,413 @@
 "use client";
 import Link from "next/link";
+import { useState, useEffect } from "react";
+
+const NAVY = "var(--navy)";
+const GOLD = "var(--gold)";
 
 const TICKER = "WHERE PRIDE MEETS PUNCHLINES  •  JEWISH AMERICAN SINCE FOREVER  •  MESHUGGENEH MERCH  •  MAZEL TOV, YOU FOUND US  •  BUILT IN AMERICA, BLESSED IN BROOKLYN  •  OY VEY, THESE DEALS  •  ";
 
-const PRODUCTS = [
-  {
-    id:"tee",
-    name:"JewSA Basic Tee",
-    price:25,
-    badge:"Bestseller",
-    desc:"Not your bubbe\'s basic tee. Stars, stripes, and all the chutzpah. Available S\u20134XL.",
-    img:"https://files.cdn.printful.com/files/b4e/b4ebbc30701e79902092467a74f74124_preview.png",
-  },
-  {
-    id:"hat",
-    name:"Old School Bucket Hat",
-    price:25,
-    badge:"Fan Fave",
-    desc:"Keep your keppah cool. Available in Black, Navy, and Khaki. S/M and L/XL.",
-    img:"https://files.cdn.printful.com/files/3f4/3f41dd5bee9414a4c43fcefc2a63a429_preview.png",
-  },
-];
-
 const PUNCHLINES = [
-  { line:"We put the 'merch' in 'Merchant of Venice'.", sub:"(Shakespeare would've bought a tee.)" },
-  { line:"Wear your history on your sleeve. Literally.", sub:"(The tee has sleeves. The history is real.)" },
-  { line:"Mazel tov — you're about to look amazing.", sub:"(Your bubbe will kvell. Your rabbi might not.)" },
-  { line:"We schlepped all the way here to sell you a hat.", sub:"(Worth it.)" },
-  { line:"Not all heroes wear capes. Some wear bucket hats.", sub:"(You know who you are.)" },
-  { line:"Jewish-American. Est. a very long time ago.", sub:"(The merch is new though.)" },
+  { main: "Where Pride", accent: "Meets Punchlines.", sub: "Gear for the tribe that built America — and never stopped being funny about it." },
+  { main: "We put the 'merch'", accent: "in Merchant of Venice.", sub: "Shakespeare would've bought a tee. We have proof. (We don't have proof.)" },
+  { main: "Mazel tov —", accent: "you're about to look amazing.", sub: "Your bubbe will kvell. Your rabbi's reaction may vary." },
+  { main: "Jewish-American.", accent: "Est. a very long time ago.", sub: "The merch is new though. The chutzpah is ancient." },
+  { main: "We schlepped all the way here", accent: "to sell you a hat.", sub: "Worth it. Totally worth it." },
 ];
 
-const VALUES = [
-  { stat:"100%", label:"American Made Pride", sub:"Born here, built here, worn here." },
-  { stat:"∞",    label:"Chutzpah Per Shirt",  sub:"We don't measure it. We can't. It's infinite." },
-  { stat:"0",    label:"Schmaltz",             sub:"No fluff. Just gear you'll actually wear." },
-  { stat:"1",    label:"Mission",              sub:"Jewish-American pride. Punny. Proud. Perfect." },
+const PRODUCTS = [
+  { id:"tee", name:"JewSA Basic Tee", price:25, badge:"Bestseller", desc:"Not your bubbe's basic tee. Stars, stripes, and all the chutzpah. Available S-4XL.", img:"https://files.cdn.printful.com/files/b4e/b4ebbc30701e79902092467a74f74124_preview.png", link:"/products/jewsa-basic-tee" },
+  { id:"hat", name:"Old School Bucket Hat", price:25, badge:"Fan Fave", desc:"Keep your keppah cool. Available in Black, Navy, and Khaki. S/M and L/XL.", img:"https://files.cdn.printful.com/files/3f4/3f41dd5bee9414a4c43fcefc2a63a429_preview.png", link:"/products/old-school-bucket-hat" },
 ];
 
-const REASONS = [
-  { title:"Meshuggeneh Good Quality", body:"Soft, durable, print-that-lasts. We don't cut corners. Your bubbe didn't survive all that history so you could wear garbage merch." },
-  { title:"Punny On Purpose", body:"Every piece is designed to make you smile before you even put it on. Jewish humor is a survival mechanism. We lean in." },
-  { title:"Wear Your Identity", body:"Jewish-American isn't two things. It's one thing — and it's worth celebrating loud, proud, and with a solid punchline." },
-  { title:"Gifts That Actually Land", body:"Hanukkah. Bar Mitzvahs. Birthdays. Graduations. 'I saw this and thought of you.' We've got every occasion covered." },
+const GLOSSARY = [
+  { word:"Chutzpah", pronounce:"KHOOT-spah", def:"Audacity. Nerve. The confidence to do the thing everyone else is too polite to do. Not always a compliment. Always a compliment when we say it." },
+  { word:"Kvell", pronounce:"KVELL", def:"To burst with pride over someone else's achievement. What your parents do at every graduation, recital, and dentist appointment." },
+  { word:"Schmuck", pronounce:"SHMUK", def:"A foolish or contemptible person. Usually said with warmth. Often said about yourself. Occasionally said about a driver who cut you off." },
+  { word:"Meshuggeneh", pronounce:"meh-SHUG-uh-neh", def:"Crazy. Nonsensical. The energy required to start a Jewish-American merch brand. We wear it proudly." },
+  { word:"Schmaltz", pronounce:"SHMALTZ", def:"Literally: chicken fat. Figuratively: excessive sentimentality. We have zero of either. (We have some of the second.)" },
+  { word:"Tikkun Olam", pronounce:"tee-KOON oh-LAHM", def:"Repair the world. The Jewish imperative to leave things better than you found them. It is why this brand exists. Also why the quality is good." },
+  { word:"Shpilkes", pronounce:"SHPIL-kez", def:"Anxious energy. Restlessness. The feeling of sitting through a four-hour Passover Seder when you're nine years old." },
+  { word:"Mazel Tov", pronounce:"MAH-zel tov", def:"Congratulations. Good luck. The universal Jewish exclamation of joy that works for births, weddings, bar mitzvahs, and finding a parking spot in Brooklyn." },
+  { word:"Oy Vey", pronounce:"OY VAY", def:"An expression of dismay, grief, or exasperation. The Swiss Army knife of Jewish emotional vocabulary. One phrase. Infinite applications." },
+  { word:"Bubbe", pronounce:"BUB-ee", def:"Grandmother. The woman who fed you before your parents picked you up. Still thinks you look thin. Non-negotiable about this." },
+];
+
+const OCCASIONS = [
+  { label:"Hanukkah", emoji:"🕎", note:"Eight nights. Eight chances to give something that actually lands." },
+  { label:"Bar / Bat Mitzvah", emoji:"📜", note:"They survived Torah portion prep. The least you can do is get them great merch." },
+  { label:"Birthdays", emoji:"🎂", note:"For the tribe member who has everything. They don't. Give them this." },
+  { label:"Passover", emoji:"🫓", note:"You're already bringing the kugel. Bring the conversation piece too." },
+  { label:"Graduation", emoji:"🎓", note:"They studied hard. They deserve something that says so without saying so." },
+  { label:"Just Because", emoji:"✡️", note:"No occasion needed. Being Jewish-American is reason enough." },
+];
+
+const CULTURE_STATS = [
+  { stat:"2%", context:"of the U.S. population", punchline:"Responsible for a disproportionate share of American comedy, literature, science, and deli culture. We checked." },
+  { stat:"~3,300", context:"years of recorded Jewish history", punchline:"Most groups don't make it that long. We brought snacks. That helped." },
+  { stat:"35%", context:"of U.S. Nobel Prize winners have been Jewish", punchline:"We're not saying it means anything. We're absolutely saying it means something." },
+];
+
+const CALENDAR = [
+  { date:"Jan 13, 2026", name:"Tu B'Shvat", hebrew:"ט\"ו בשבט", emoji:"🌳", type:"holiday" as const, desc:"The New Year of Trees — a celebration of nature, the land of Israel, and environmental stewardship.", observed:"Eating fruits associated with Israel (dates, figs, pomegranates), planting trees, ecological reflection." },
+  { date:"Mar 3–4, 2026", name:"Purim", hebrew:"פורים", emoji:"🎭", type:"holiday" as const, desc:"The Feast of Lots — joyful celebration of Jewish survival over Haman's plot in ancient Persia. One of the most festive days of the Jewish year.", observed:"Reading the Megillah, costumes, mishloach manot (gift baskets), feasting, charitable giving." },
+  { date:"Apr 1–9, 2026", name:"Passover (Pesach)", hebrew:"פֶּסַח", emoji:"🫓", type:"holiday" as const, desc:"The Festival of Freedom — commemorating the Exodus from Egypt and liberation from slavery. One of the most observed Jewish holidays worldwide.", observed:"Passover Seder with Haggadah, matzah for 8 days, removing all chametz from the home." },
+  { date:"Apr 13, 2026", name:"Yom HaShoah", hebrew:"יום השואה", emoji:"🕯️", type:"memorial" as const, desc:"Holocaust Remembrance Day — honoring the six million Jewish lives taken during the Nazi genocide. A solemn day of memory and the vow: Never Again.", observed:"Ceremonies, sirens in Israel, candle lighting, survivor testimonies, educational programs worldwide." },
+  { date:"Apr 21, 2026", name:"Yom HaZikaron", hebrew:"יום הזיכרון", emoji:"🪖", type:"memorial" as const, desc:"Israeli Memorial Day — honoring soldiers and terror victims who fell in defense of the State of Israel, observed the day before Yom HaAtzmaut.", observed:"Sirens, ceremonies, visits to military cemeteries, a national moment of silence." },
+  { date:"Apr 22, 2026", name:"Yom HaAtzmaut", hebrew:"יום העצמאות", emoji:"🇮🇱", type:"holiday" as const, desc:"Israeli Independence Day — celebrating the establishment of the State of Israel in 1948. A day of national joy observed by Jewish communities worldwide.", observed:"Fireworks, celebrations, Israeli music, barbecues, outdoor events in Jewish communities globally." },
+  { date:"May 5, 2026", name:"Lag B'Omer", hebrew:"ל\"ג בעומר", emoji:"🔥", type:"holiday" as const, desc:"The 33rd day of the Omer — a day of joy within the semi-mourning period between Passover and Shavuot. Associated with bonfires and celebration.", observed:"Bonfires, haircuts, weddings, archery, outdoor celebrations and gatherings." },
+  { date:"May 21–23, 2026", name:"Shavuot", hebrew:"שָׁבוּעוֹת", emoji:"📜", type:"holiday" as const, desc:"The Festival of Weeks — celebrating the giving of the Torah at Mount Sinai. Occurs 50 days after Passover and marks the spring harvest.", observed:"All-night Torah study, reading the Book of Ruth, dairy foods, synagogue decorated with flowers." },
+  { date:"Aug 3, 2026", name:"Tisha B'Av", hebrew:"תשעה באב", emoji:"💧", type:"memorial" as const, desc:"The saddest day in the Jewish calendar — commemorating the destruction of both Temples in Jerusalem and numerous other Jewish tragedies throughout history.", observed:"25-hour fast, reading Lamentations, sitting on low chairs, no music or joyful activity." },
+  { date:"Sep 11–13, 2026", name:"Rosh Hashanah", hebrew:"רֹאשׁ הַשָּׁנָה", emoji:"🍎", type:"holiday" as const, desc:"The Jewish New Year — the beginning of the High Holy Days and Days of Awe. One of the most significant and widely observed Jewish holidays.", observed:"Synagogue services, shofar blowing, apples and honey for a sweet new year, round challah, Tashlich ceremony." },
+  { date:"Sep 20–21, 2026", name:"Yom Kippur", hebrew:"יוֹם כִּיפּוּר", emoji:"🕍", type:"holiday" as const, desc:"The Day of Atonement — the holiest day in the Jewish year. A solemn day of fasting, prayer, and seeking forgiveness. God seals the Book of Life.", observed:"25-hour fast, Kol Nidre and Neilah services, white clothing, Yizkor prayer for the deceased." },
+  { date:"Sep 25–Oct 2, 2026", name:"Sukkot", hebrew:"סוּכּוֹת", emoji:"🌿", type:"holiday" as const, desc:"The Festival of Tabernacles — a joyful harvest festival commemorating the 40 years of Israelite desert wandering and divine protection.", observed:"Building and dwelling in a sukkah, waving the four species (lulav, etrog, myrtle, willow)." },
+  { date:"Oct 2–3, 2026", name:"Shemini Atzeret / Simchat Torah", hebrew:"שְׁמִינִי עֲצֶרֶת", emoji:"📖", type:"holiday" as const, desc:"The Eighth Day of Assembly and Rejoicing of the Torah — completing and restarting the annual Torah reading cycle with joyful celebration.", observed:"Dancing with Torah scrolls, completing Deuteronomy and restarting Genesis, festive synagogue services." },
+  { date:"Nov 9, 2026", name:"Kristallnacht Remembrance", hebrew:"ליל הבדולח", emoji:"🕯️", type:"memorial" as const, desc:"Night of Broken Glass — commemorating the 1938 Nazi pogrom in Germany and Austria. Synagogues burned. Jewish homes and businesses destroyed. A turning point toward the Holocaust.", observed:"Memorial ceremonies, candle lighting, educational programs, interfaith vigils worldwide." },
+  { date:"Dec 4–12, 2026", name:"Hanukkah", hebrew:"חֲנוּכָּה", emoji:"🕎", type:"holiday" as const, desc:"The Festival of Lights — eight nights celebrating the miracle of the Temple oil and the Maccabean victory. A triumph of light over darkness, observed by Jewish communities worldwide.", observed:"Lighting the Hanukkiah nightly, dreidel, latkes and sufganiyot (jelly donuts), songs, family gatherings." },
 ];
 
 export default function HomePage() {
+  const [idx, setIdx] = useState(0);
+  const [fade, setFade] = useState(true);
+  const [email, setEmail] = useState("");
+  const [emailDone, setEmailDone] = useState(false);
+
+  useEffect(() => {
+    const t = setInterval(() => {
+      setFade(false);
+      setTimeout(() => { setIdx(i => (i+1)%PUNCHLINES.length); setFade(true); }, 350);
+    }, 3600);
+    return () => clearInterval(t);
+  }, []);
+
+  const pl = PUNCHLINES[idx];
+
   return (
     <>
-      {/* ── NAV ───────────────────────────────────────── */}
-      <nav style={{ position:"sticky", top:0, zIndex:100, background:"var(--navy)", borderBottom:"2px solid var(--gold)", padding:"0 32px", display:"flex", alignItems:"center", justifyContent:"space-between", height:64 }}>
-        <Link href="/" style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:32, color:"var(--gold)", letterSpacing:"2px", textDecoration:"none" }}>JewSA</Link>
-        <div style={{ display:"flex", alignItems:"center", gap:28 }}>
-          {[["Shop","/#shop"],["Our Story","/#story"],["Blog","/blog"],["Contact","/contact"]].map(([l,h])=>(
-            <Link key={h} href={h} style={{ fontSize:13, fontWeight:900, color:"rgba(245,240,232,0.6)", textDecoration:"none", letterSpacing:"1px", textTransform:"uppercase", transition:"color 0.2s" }}
-              onMouseEnter={e=>(e.currentTarget.style.color="var(--gold)")} onMouseLeave={e=>(e.currentTarget.style.color="rgba(245,240,232,0.6)")}>{l}</Link>
+      <style>{`
+        :root { --navy:#0B1F3A; --gold:#C9A84C; --red:#B22234; --white:#F5F0E8; }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--navy);color:var(--white);font-family:'DM Sans',system-ui,sans-serif;}
+        @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+        .jewsa-ticker{animation:ticker 30s linear infinite;white-space:nowrap;display:flex;}
+        @keyframes fstar{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(8deg)}}
+        @keyframes fadin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+        .fadin{animation:fadin 0.35s ease forwards;}
+        .fhide{opacity:0;}
+        .hero-grid{display:grid;grid-template-columns:1fr 1fr;min-height:88vh;}
+        .products-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:820px;margin:0 auto;}
+        .occasions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+        .culture-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:0;}
+        .glossary-grid{display:grid;grid-template-columns:1fr 1fr;}
+        .faq-grid{display:grid;grid-template-columns:1fr 1fr;}
+        .sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--gold);padding:14px 24px;justify-content:space-between;align-items:center;border-top:3px solid var(--navy);}
+        .card-h{transition:border-color 0.2s,transform 0.2s;}
+        .card-h:hover{border-color:var(--gold)!important;transform:translateY(-2px);}
+        .occ-h:hover{background:rgba(201,168,76,0.08)!important;border-color:var(--gold)!important;}
+        .glos-h:hover{background:rgba(255,255,255,0.04)!important;}
+        @media(max-width:900px){
+          .hero-grid{grid-template-columns:1fr;min-height:auto;}
+          .hero-right{display:none!important;}
+          .occasions-grid{grid-template-columns:1fr 1fr!important;}
+          .culture-grid{grid-template-columns:1fr!important;}
+          .products-grid{grid-template-columns:1fr!important;}
+          .faq-grid{grid-template-columns:1fr!important;}
+          .glossary-grid{grid-template-columns:1fr!important;}
+          .sticky-bar{display:flex!important;}
+        }
+        @media(max-width:520px){
+          .occasions-grid{grid-template-columns:1fr!important;}
+        }
+      `}</style>
+
+      {/* NAV */}
+      <nav style={{position:"sticky",top:0,zIndex:100,background:"var(--navy)",borderBottom:"2px solid var(--gold)",padding:"0 max(24px,4vw)",display:"flex",alignItems:"center",justifyContent:"space-between",height:64}}>
+        <Link href="/" style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"var(--gold)",letterSpacing:"2px",textDecoration:"none"}}>JewSA</Link>
+        <div style={{display:"flex",alignItems:"center",gap:24,flexWrap:"wrap"}}>
+          {[["Shop","#shop"],["Culture","#culture"],["Calendar","#calendar"],["The Tribe","#story"]].map(([l,h])=>(
+            <Link key={h} href={h} style={{fontSize:13,fontWeight:700,color:"rgba(245,240,232,0.55)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase"}}>{l}</Link>
           ))}
-          <Link href="/#shop" style={{ background:"var(--gold)", color:"var(--navy)", fontWeight:900, fontSize:13, letterSpacing:"1.5px", textTransform:"uppercase", padding:"10px 20px", textDecoration:"none" }}>Shop Now</Link>
+          <Link href="#shop" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"10px 20px",textDecoration:"none"}}>Shop Now</Link>
         </div>
       </nav>
 
-      {/* ── TICKER ──────────────────────────────────────── */}
-      <div style={{ background:"var(--red)", padding:"9px 0", overflow:"hidden" }}>
-        <div className="jewsa-ticker" style={{ display:"flex", gap:0, whiteSpace:"nowrap" }}>
-          {[1,2].map(k=>(
-            <span key={k} style={{ fontSize:11, fontWeight:900, letterSpacing:"2.5px", textTransform:"uppercase", color:"rgba(245,240,232,0.9)", paddingRight:0 }}>{TICKER}{TICKER}</span>
-          ))}
+      {/* ONE-LINER STRIP */}
+      <div style={{background:"rgba(201,168,76,0.1)",borderBottom:"1px solid rgba(201,168,76,0.2)",padding:"10px max(24px,4vw)",display:"flex",alignItems:"center",gap:12,flexWrap:"wrap"}}>
+        <span style={{fontSize:11,fontWeight:900,letterSpacing:"2px",color:"var(--gold)",textTransform:"uppercase",flexShrink:0}}>What is JewSA?</span>
+        <span style={{fontSize:13,color:"rgba(245,240,232,0.6)",lineHeight:1.5}}>Jewish-American pride merch — built in America, blessed in Brooklyn, designed to make you smile before you even put it on.</span>
+        <Link href="#shop" style={{marginLeft:"auto",fontSize:12,fontWeight:900,color:"var(--gold)",textDecoration:"none",whiteSpace:"nowrap",letterSpacing:"1px",textTransform:"uppercase"}}>Shop the Collection</Link>
+      </div>
+
+      {/* TICKER */}
+      <div style={{background:"var(--red)",padding:"9px 0",overflow:"hidden"}}>
+        <div className="jewsa-ticker">
+          <span style={{fontSize:11,fontWeight:900,letterSpacing:"2.5px",textTransform:"uppercase",color:"rgba(245,240,232,0.9)"}}>{TICKER}{TICKER}{TICKER}</span>
         </div>
       </div>
 
-      {/* ── HERO ──────────────────────────────────────── */}
-      <section style={{ background:"var(--navy)", position:"relative", overflow:"hidden" }}>
-        {/* Background stars */}
-        {[
-          {top:"8%",left:"7%",size:40,dur:4.2,del:0},
-          {top:"22%",left:"15%",size:28,dur:5.1,del:1.2},
-          {top:"55%",left:"4%",size:36,dur:3.8,del:2.4},
-          {top:"70%",left:"18%",size:22,dur:6.0,del:0.8},
-          {top:"15%",left:"42%",size:32,dur:4.5,del:1.8},
-          {top:"80%",left:"38%",size:24,dur:5.5,del:3.1},
-        ].map((s,i)=>(
-          <div key={i} style={{ position:"absolute", top:s.top, left:s.left, fontSize:s.size, opacity:0.07, pointerEvents:"none", animation:`float-star ${s.dur}s ${s.del}s ease-in-out infinite` }}>✡</div>
+      {/* HERO */}
+      <section style={{background:"var(--navy)",position:"relative",overflow:"hidden"}}>
+        {[{t:"8%",l:"7%",s:40,d:4.2,dl:0},{t:"22%",l:"15%",s:28,d:5.1,dl:1.2},{t:"55%",l:"4%",s:36,d:3.8,dl:2.4},{t:"70%",l:"18%",s:22,d:6.0,dl:0.8},{t:"15%",l:"42%",s:32,d:4.5,dl:1.8}].map((s,i)=>(
+          <div key={i} style={{position:"absolute",top:s.t,left:s.l,fontSize:s.s,opacity:0.06,pointerEvents:"none",animation:`fstar ${s.d}s ${s.dl}s ease-in-out infinite`}}>✡</div>
         ))}
-
-        <div className="jewsa-hero-grid" style={{ position:"relative", zIndex:1 }}>
+        <div className="hero-grid">
           {/* LEFT */}
-          <div style={{ padding:"80px 48px 80px max(48px,6vw)", display:"flex", flexDirection:"column", justifyContent:"space-between" }}>
-            <div>
-              <div style={{ display:"inline-block", background:"rgba(201,168,76,0.15)", border:"1px solid rgba(201,168,76,0.3)", padding:"6px 16px", marginBottom:24 }}>
-                <span style={{ fontSize:11, fontWeight:900, letterSpacing:"3px", textTransform:"uppercase", color:"var(--gold)" }}>Jewish-American Pride</span>
-              </div>
-              <h1 style={{ fontSize:"clamp(48px,7vw,96px)", fontFamily:"'Bebas Neue',sans-serif", color:"var(--white)", letterSpacing:"-1px", lineHeight:0.92, marginBottom:0 }}>
-                Where<br />
-                <span style={{ color:"var(--gold)" }}>Pride</span><br />
-                Meets<br />
-                <span style={{ WebkitTextStroke:"2px var(--red-bright)", color:"transparent" }}>Punchlines.</span>
+          <div style={{padding:"80px max(48px,6vw)",display:"flex",flexDirection:"column",justifyContent:"center",gap:28}}>
+            <div style={{display:"inline-block",background:"rgba(201,168,76,0.12)",border:"1px solid rgba(201,168,76,0.28)",padding:"6px 16px",width:"fit-content"}}>
+              <span style={{fontSize:11,fontWeight:900,letterSpacing:"3px",textTransform:"uppercase",color:"var(--gold)"}}>Jewish-American Pride</span>
+            </div>
+            <div style={{minHeight:210}}>
+              <h1 className={fade?"fadin":"fhide"} style={{fontSize:"clamp(44px,6.5vw,88px)",fontFamily:"'Bebas Neue',sans-serif",color:"var(--white)",letterSpacing:"-1px",lineHeight:0.95,marginBottom:16}}>
+                {pl.main}<br/><span style={{color:"var(--gold)"}}>{pl.accent}</span>
               </h1>
+              <p className={fade?"fadin":"fhide"} style={{fontSize:"clamp(14px,1.6vw,18px)",color:"rgba(245,240,232,0.6)",lineHeight:1.7,maxWidth:440,animationDelay:"0.1s"}}>{pl.sub}</p>
             </div>
-            <div>
-              <div style={{ width:48, height:3, background:"var(--gold)", margin:"28px 0 20px" }} />
-              <p style={{ fontSize:18, color:"rgba(245,240,232,0.65)", fontWeight:700, lineHeight:1.65, maxWidth:420, marginBottom:10 }}>
-                Gear for the tribe that built America — and never stopped being funny about it.
-              </p>
-              <p style={{ fontSize:15, color:"rgba(245,240,232,0.4)", fontWeight:700, lineHeight:1.65, maxWidth:400 }}>
-                Because "Mazel tov" deserved its own merch line.
-              </p>
+            {/* Dots */}
+            <div style={{display:"flex",gap:8}}>
+              {PUNCHLINES.map((_,i)=>(
+                <button key={i} onClick={()=>{setFade(false);setTimeout(()=>{setIdx(i);setFade(true);},200);}}
+                  style={{width:i===idx?24:8,height:8,background:i===idx?"var(--gold)":"rgba(201,168,76,0.3)",border:"none",cursor:"pointer",transition:"all 0.3s"}} />
+              ))}
             </div>
-            <div>
-              <div style={{ display:"flex", gap:12, flexWrap:"wrap", marginBottom:24 }}>
-                <Link href="/#shop" style={{ background:"var(--gold)", color:"var(--navy)", fontWeight:900, fontSize:14, letterSpacing:"1.5px", textTransform:"uppercase", padding:"16px 36px", textDecoration:"none" }}>
-                  Shop The Collection
-                </Link>
-                <Link href="/#story" style={{ background:"transparent", color:"var(--white)", fontWeight:900, fontSize:14, letterSpacing:"1.5px", textTransform:"uppercase", padding:"14px 32px", border:"2px solid rgba(245,240,232,0.3)", textDecoration:"none" }}>
-                  Our Story
-                </Link>
-              </div>
-              <div style={{ display:"flex", gap:28 }}>
-                {[["100+", "Punny Products"], ["5★", "Average Rating"], ["✡", "Tribe Approved"]].map(([n,l])=>(
-                  <div key={l}>
-                    <div style={{ fontSize:16, fontWeight:900, color:"var(--gold)", letterSpacing:"-0.5px" }}>{n}</div>
-                    <div style={{ fontSize:10, fontWeight:700, color:"rgba(245,240,232,0.3)", letterSpacing:"1px", textTransform:"uppercase" }}>{l}</div>
-                  </div>
-                ))}
-              </div>
+            <div style={{display:"flex",gap:12,flexWrap:"wrap"}}>
+              <Link href="#shop" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:14,letterSpacing:"1.5px",textTransform:"uppercase",padding:"16px 36px",textDecoration:"none"}}>Shop The Collection</Link>
+              <Link href="#culture" style={{background:"transparent",color:"var(--white)",fontWeight:900,fontSize:14,letterSpacing:"1.5px",textTransform:"uppercase",padding:"14px 32px",border:"2px solid rgba(245,240,232,0.25)",textDecoration:"none"}}>The Culture</Link>
             </div>
           </div>
-
-          {/* RIGHT — flag visual */}
-          <div style={{ display:"flex", alignItems:"center", justifyContent:"center", padding:"48px 48px 48px 20px" }}>
-            <div style={{ width:"100%", aspectRatio:"3/4", position:"relative", border:"4px solid var(--gold)", boxShadow:"0 0 0 8px var(--navy), 0 0 60px rgba(201,168,76,0.2)" }} className="jewsa-glow">
-              {/* Stars & Stripes visual */}
-              <div style={{ position:"absolute", inset:0, background:"linear-gradient(180deg,#0A1628 35%,#B22234 35%,#B22234 43%,#F5F0E8 43%,#F5F0E8 51%,#B22234 51%,#B22234 59%,#F5F0E8 59%,#F5F0E8 67%,#B22234 67%,#B22234 75%,#F5F0E8 75%,#F5F0E8 83%,#B22234 83%)" }} />
-              {/* Star of David overlay */}
-              <div style={{ position:"absolute", inset:0, display:"flex", alignItems:"center", justifyContent:"center" }}>
-                <span style={{ fontSize:"clamp(80px,12vw,140px)", opacity:0.85, filter:"drop-shadow(0 4px 20px rgba(201,168,76,0.6))", color:"var(--gold)" }}>✡</span>
-              </div>
-              {/* Badge */}
-              <div style={{ position:"absolute", top:14, left:14, background:"rgba(0,0,0,0.7)", padding:"5px 12px", border:"1px solid rgba(201,168,76,0.4)" }}>
-                <span style={{ fontSize:10, fontWeight:900, letterSpacing:"2px", textTransform:"uppercase", color:"var(--gold)" }}>Est. A Very Long Time Ago</span>
-              </div>
-              <div style={{ position:"absolute", bottom:14, right:14, background:"var(--gold)", padding:"6px 14px" }}>
-                <span style={{ fontSize:10, fontWeight:900, letterSpacing:"2px", textTransform:"uppercase", color:"var(--navy)" }}>Tribe Approved ✓</span>
-              </div>
+          {/* RIGHT */}
+          <div className="hero-right" style={{background:"rgba(255,255,255,0.02)",borderLeft:"1px solid rgba(201,168,76,0.1)",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:32,padding:48}}>
+            <div style={{fontSize:120}}>🕎</div>
+            <div style={{textAlign:"center"}}>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:52,color:"var(--gold)",letterSpacing:"2px",lineHeight:1}}>JewSA</div>
+              <div style={{fontSize:12,fontWeight:700,letterSpacing:"3px",color:"rgba(245,240,232,0.4)",textTransform:"uppercase",marginTop:4}}>Punny. Proud. Perfect.</div>
+            </div>
+            <div style={{display:"flex",gap:16,flexWrap:"wrap",justifyContent:"center"}}>
+              {[["✡","Since Forever"],["🇺🇸","American Made"],["😄","Guaranteed Funny"]].map(([e,l])=>(
+                <div key={l} style={{textAlign:"center",padding:"12px 16px",border:"1px solid rgba(201,168,76,0.15)",background:"rgba(201,168,76,0.04)"}}>
+                  <div style={{fontSize:22}}>{e}</div>
+                  <div style={{fontSize:10,letterSpacing:"1.5px",color:"rgba(245,240,232,0.4)",textTransform:"uppercase",marginTop:4}}>{l}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SOCIAL PROOF STRIP ──────────────────────────── */}
-      <div style={{ background:"var(--gold)", padding:"16px 32px" }}>
-        <div style={{ maxWidth:1100, margin:"0 auto", display:"flex", alignItems:"center", gap:40, justifyContent:"center", flexWrap:"wrap" }}>
-          {["🏆 100% Chutzpah Certified", "✡ Jewish-Owned & Operated", "🇺🇸 Proud Since Day One", "😂 Bubbe-Tested, Bubbe-Approved"].map(t=>(
-            <span key={t} style={{ fontSize:13, fontWeight:900, color:"var(--navy)", letterSpacing:"0.5px" }}>{t}</span>
+      {/* SHOP */}
+      <section id="shop" style={{padding:"80px max(24px,5vw)",background:"#060F1C"}}>
+        <div style={{maxWidth:1100,margin:"0 auto"}}>
+          <div style={{textAlign:"center",marginBottom:56}}>
+            <div style={{fontSize:11,letterSpacing:"3px",color:"var(--gold)",marginBottom:12}}>THE COLLECTION</div>
+            <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(36px,5vw,64px)",letterSpacing:"-1px",marginBottom:12}}>Gear For The Tribe</h2>
+            <p style={{fontSize:16,color:"rgba(245,240,232,0.5)",maxWidth:480,margin:"0 auto"}}>Two products. Both excellent. No fluff. Your bubbe would approve.</p>
+          </div>
+          <div className="products-grid">
+            {PRODUCTS.map(p=>(
+              <div key={p.id} className="card-h" style={{background:"rgba(255,255,255,0.03)",border:"1px solid rgba(201,168,76,0.15)",overflow:"hidden"}}>
+                <div style={{position:"relative",background:"rgba(255,255,255,0.04)",padding:24,textAlign:"center"}}>
+                  <div style={{position:"absolute",top:12,left:12,background:"var(--red)",color:"rgba(245,240,232,0.95)",fontSize:10,fontWeight:900,letterSpacing:"1.5px",padding:"4px 10px",textTransform:"uppercase"}}>{p.badge}</div>
+                  <img src={p.img} alt={p.name} style={{width:"100%",maxWidth:280,height:"auto"}} loading="lazy"/>
+                </div>
+                <div style={{padding:"24px 24px 28px"}}>
+                  <div style={{fontWeight:900,fontSize:18,marginBottom:6}}>{p.name}</div>
+                  <div style={{fontSize:13,color:"rgba(245,240,232,0.5)",lineHeight:1.6,marginBottom:16}}>{p.desc}</div>
+                  <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+                    <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"var(--gold)",letterSpacing:"1px"}}>${p.price}</div>
+                    <a href={p.link} target="_blank" rel="noopener noreferrer" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1px",textTransform:"uppercase",padding:"12px 24px",textDecoration:"none"}}>Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OCCASIONS */}
+      <section style={{padding:"72px max(24px,5vw)",background:"var(--navy)"}}>
+        <div style={{maxWidth:1100,margin:"0 auto"}}>
+          <div style={{textAlign:"center",marginBottom:48}}>
+            <div style={{fontSize:11,letterSpacing:"3px",color:"var(--gold)",marginBottom:12}}>SHOP BY THE MOMENT</div>
+            <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(30px,4vw,52px)",letterSpacing:"-1px",marginBottom:12}}>There Is Always An Occasion</h2>
+            <p style={{fontSize:15,color:"rgba(245,240,232,0.45)",maxWidth:500,margin:"0 auto"}}>If you are Jewish-American, every day is technically a cultural event. We listed the official ones.</p>
+          </div>
+          <div className="occasions-grid">
+            {OCCASIONS.map(o=>(
+              <Link key={o.label} href="#shop" className="occ-h card-h" style={{background:"rgba(255,255,255,0.02)",border:"1px solid rgba(201,168,76,0.12)",padding:"24px 20px",textDecoration:"none",display:"block",transition:"all 0.2s"}}>
+                <div style={{fontSize:32,marginBottom:12}}>{o.emoji}</div>
+                <div style={{fontWeight:900,fontSize:15,color:"var(--white)",marginBottom:8}}>{o.label}</div>
+                <div style={{fontSize:12,color:"rgba(245,240,232,0.45)",lineHeight:1.6}}>{o.note}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CULTURE STATS */}
+      <section id="culture" style={{padding:"80px max(24px,5vw)",background:"#060F1C"}}>
+        <div style={{maxWidth:1100,margin:"0 auto"}}>
+          <div style={{textAlign:"center",marginBottom:56}}>
+            <div style={{fontSize:11,letterSpacing:"3px",color:"var(--gold)",marginBottom:12}}>THE CULTURE BEHIND THE MERCH</div>
+            <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(30px,4vw,52px)",letterSpacing:"-1px",marginBottom:12}}>Jewish-American. In Context.</h2>
+            <p style={{fontSize:15,color:"rgba(245,240,232,0.45)",maxWidth:520,margin:"0 auto"}}>Not a history lesson. Just a few numbers worth knowing. Then go buy a tee.</p>
+          </div>
+          <div className="culture-grid" style={{marginBottom:72}}>
+            {CULTURE_STATS.map(s=>(
+              <div key={s.stat} style={{background:"rgba(201,168,76,0.05)",border:"1px solid rgba(201,168,76,0.15)",padding:"32px 28px"}}>
+                <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:72,color:"var(--gold)",lineHeight:1,marginBottom:4}}>{s.stat}</div>
+                <div style={{fontSize:12,fontWeight:700,color:"rgba(245,240,232,0.4)",letterSpacing:"1.5px",textTransform:"uppercase",marginBottom:12}}>{s.context}</div>
+                <div style={{fontSize:14,color:"rgba(245,240,232,0.65)",lineHeight:1.7,fontStyle:"italic"}}>{s.punchline}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* GLOSSARY */}
+          <div style={{textAlign:"center",marginBottom:48}}>
+            <div style={{fontSize:11,letterSpacing:"3px",color:"var(--gold)",marginBottom:12}}>A FIELD GUIDE TO THE TRIBE</div>
+            <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,48px)",letterSpacing:"-1px",marginBottom:12}}>Words You Should Know.</h2>
+            <p style={{fontSize:15,color:"rgba(245,240,232,0.45)",maxWidth:500,margin:"0 auto"}}>Whether you are in the tribe or just tribe-adjacent, this glossary has you covered. You are welcome.</p>
+          </div>
+          <div className="glossary-grid" style={{border:"1px solid rgba(201,168,76,0.1)"}}>
+            {GLOSSARY.map((g,i)=>(
+              <div key={g.word} className="glos-h" style={{padding:"24px 28px",borderBottom:"1px solid rgba(201,168,76,0.08)",borderRight:i%2===0?"1px solid rgba(201,168,76,0.08)":"none",transition:"background 0.2s",cursor:"default"}}>
+                <div style={{display:"flex",alignItems:"baseline",gap:10,marginBottom:8,flexWrap:"wrap"}}>
+                  <span style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:22,color:"var(--gold)",letterSpacing:"1px"}}>{g.word}</span>
+                  <span style={{fontSize:11,color:"rgba(245,240,232,0.3)",fontStyle:"italic"}}>{g.pronounce}</span>
+                </div>
+                <div style={{fontSize:13,color:"rgba(245,240,232,0.6)",lineHeight:1.7}}>{g.def}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CALENDAR */}
+      <section id="calendar" style={{padding:"80px max(24px,5vw)",background:"var(--navy)"}}>
+        <div style={{maxWidth:1100,margin:"0 auto"}}>
+          <div style={{textAlign:"center",marginBottom:56}}>
+            <div style={{fontSize:11,letterSpacing:"3px",color:"var(--gold)",marginBottom:12}}>THE JEWISH CALENDAR</div>
+            <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,52px)",letterSpacing:"-1px",lineHeight:0.95,marginBottom:16}}>Holidays, Memorial Days,<br/>and Moments That Matter.</h2>
+            <p style={{fontSize:15,color:"rgba(245,240,232,0.45)",maxWidth:580,margin:"0 auto",lineHeight:1.7}}>Jewish life runs on a lunar calendar older than most nations. These are the days that anchor it — observed by Jewish communities worldwide. Dates shown are approximate for 2026; lunar holidays shift each year.</p>
+          </div>
+          {/* Legend */}
+          <div style={{display:"flex",gap:24,marginBottom:24,flexWrap:"wrap"}}>
+            {[["Holiday","var(--gold)"],["Memorial Day","rgba(180,180,200,0.7)"]].map(([l,c])=>(
+              <div key={l} style={{display:"flex",alignItems:"center",gap:8}}>
+                <div style={{width:10,height:10,background:c,flexShrink:0}}/>
+                <span style={{fontSize:12,color:"rgba(245,240,232,0.4)",letterSpacing:"1px",textTransform:"uppercase"}}>{l}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{border:"1px solid rgba(201,168,76,0.1)"}}>
+            {CALENDAR.map((h,i)=>(
+              <div key={i} style={{display:"grid",gridTemplateColumns:"130px 44px 1fr",alignItems:"stretch",borderBottom:i<CALENDAR.length-1?"1px solid rgba(201,168,76,0.07)":"none",background:h.type==="memorial"?"rgba(255,255,255,0.015)":"transparent"}}>
+                <div style={{padding:"18px 16px",borderRight:"1px solid rgba(201,168,76,0.08)",display:"flex",flexDirection:"column",justifyContent:"center"}}>
+                  <div style={{fontSize:11,color:"rgba(245,240,232,0.35)",lineHeight:1.5}}>{h.date}</div>
+                </div>
+                <div style={{padding:"18px 8px",borderRight:"1px solid rgba(201,168,76,0.05)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:20}}>{h.emoji}</div>
+                <div style={{padding:"18px 24px"}}>
+                  <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:6,flexWrap:"wrap"}}>
+                    <span style={{fontWeight:900,fontSize:14,color:h.type==="memorial"?"rgba(245,240,232,0.75)":"var(--white)"}}>{h.name}</span>
+                    <span style={{fontSize:11,color:"rgba(245,240,232,0.25)",fontStyle:"italic"}}>{h.hebrew}</span>
+                    {h.type==="memorial"&&<span style={{fontSize:9,fontWeight:900,letterSpacing:"1px",color:"rgba(180,180,200,0.6)",background:"rgba(255,255,255,0.05)",padding:"2px 7px",textTransform:"uppercase"}}>Memorial</span>}
+                  </div>
+                  <p style={{fontSize:13,color:"rgba(245,240,232,0.55)",lineHeight:1.65,marginBottom:4}}>{h.desc}</p>
+                  <p style={{fontSize:12,color:"rgba(245,240,232,0.3)",lineHeight:1.6,fontStyle:"italic"}}>{h.observed}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p style={{marginTop:20,fontSize:12,color:"rgba(245,240,232,0.25)",lineHeight:1.7,textAlign:"center"}}>Jewish holidays begin at sundown the evening before the listed date. The Jewish calendar is lunisolar — exact dates shift each secular year. Consult a Jewish calendar for the most current observance dates.</p>
+        </div>
+      </section>
+
+      {/* IS THIS DISRESPECTFUL */}
+      <section style={{padding:"80px max(24px,5vw)",background:"#060F1C"}}>
+        <div style={{maxWidth:960,margin:"0 auto"}}>
+          <div style={{textAlign:"center",marginBottom:52}}>
+            <div style={{fontSize:11,letterSpacing:"3px",color:"var(--gold)",marginBottom:12}}>WE GET ASKED THIS</div>
+            <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,48px)",letterSpacing:"-1px",marginBottom:12}}>Is This Disrespectful?</h2>
+            <p style={{fontSize:15,color:"rgba(245,240,232,0.45)",maxWidth:480,margin:"0 auto"}}>A fair question. Here is the honest answer — no spin, no deflection.</p>
+          </div>
+          <div className="faq-grid" style={{border:"1px solid rgba(201,168,76,0.1)"}}>
+            {[
+              { q:"Who made this?", a:"Jewish Americans. This brand was created by people who grew up with these holidays, these words, and these jokes. We are not laughing at the culture — we are laughing from inside it. That is the difference." },
+              { q:"Is it okay if I am not Jewish?", a:"Yes. Jewish humor and Jewish-American culture have always welcomed people in. If you find it meaningful, if you want to show appreciation for Jewish friends or family — you are welcome here. Respect the culture. Enjoy the merch." },
+              { q:"Do the jokes ever go too far?", a:"We think about this carefully. Every piece we design is one we would wear ourselves — in synagogue, at a seder, at Thanksgiving. If it does not hold up in all three settings, we do not make it." },
+              { q:"What about the memorial days on your calendar?", a:"Those are included with full respect. Yom HaShoah, Tisha B'Av, Kristallnacht — these are on the calendar because Jewish Americans carry them. Acknowledging them is part of who we are, not just the funny parts." },
+              { q:"What is the brand actually about?", a:"Jewish-American identity is one of the richest, most layered cultures in American history. We make merch that celebrates that — with humor, with pride, and with quality that takes the culture seriously even when the jokes do not." },
+              { q:"Would my bubbe approve?", a:"Depends on the bubbe. Statistically, most bubbes will kvell. The rest will kvell privately and tell you they do not like the hat while wearing it around the house. We stand by the product." },
+            ].map((faq,i)=>(
+              <div key={i} style={{padding:"28px 24px",borderBottom:"1px solid rgba(201,168,76,0.07)",borderRight:i%2===0?"1px solid rgba(201,168,76,0.07)":"none"}}>
+                <div style={{fontWeight:900,fontSize:15,color:"var(--white)",marginBottom:10}}>{faq.q}</div>
+                <div style={{fontSize:13,color:"rgba(245,240,232,0.6)",lineHeight:1.75}}>{faq.a}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STORY */}
+      <section id="story" style={{padding:"80px max(24px,5vw)",background:"var(--navy)"}}>
+        <div style={{maxWidth:780,margin:"0 auto",textAlign:"center"}}>
+          <div style={{fontSize:11,letterSpacing:"3px",color:"var(--gold)",marginBottom:16}}>THE TRIBE</div>
+          <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(32px,5vw,64px)",letterSpacing:"-1px",lineHeight:0.95,marginBottom:28}}>
+            Jewish-American.<br/><span style={{color:"var(--gold)"}}>Est. a Very Long Time Ago.</span>
+          </h2>
+          <p style={{fontSize:16,color:"rgba(245,240,232,0.6)",lineHeight:1.8,marginBottom:20}}>Jewish Americans have been part of this country since before it was a country. They built neighborhoods, wrote literature, shaped comedy, founded institutions, fought in every war, survived things that would have ended other cultures — and came out the other side with better jokes.</p>
+          <p style={{fontSize:16,color:"rgba(245,240,232,0.6)",lineHeight:1.8,marginBottom:20}}>JewSA is a celebration of that identity. Not a museum piece. Not a lecture. A tee and a bucket hat that say: we are here, we have always been here, and we find this nation genuinely funny and genuinely worth loving.</p>
+          <p style={{fontSize:15,color:"rgba(245,240,232,0.35)",lineHeight:1.8,fontStyle:"italic"}}>Wear it to the Seder. Wear it on July 4th. Wear it when someone asks where you're from and you want the answer to fit on a hat.</p>
+          <div style={{marginTop:40}}>
+            <Link href="#shop" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:14,letterSpacing:"1.5px",textTransform:"uppercase",padding:"16px 40px",textDecoration:"none"}}>Shop The Collection</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* EMAIL */}
+      <section style={{background:"var(--red)",padding:"64px max(24px,5vw)"}}>
+        <div style={{maxWidth:680,margin:"0 auto",textAlign:"center"}}>
+          {emailDone ? (
+            <div>
+              <div style={{fontSize:40,marginBottom:16}}>✡️</div>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:36,color:"rgba(245,240,232,0.95)",letterSpacing:"1px",marginBottom:8}}>You Are In The Tribe Now.</div>
+              <p style={{fontSize:15,color:"rgba(245,240,232,0.7)"}}>Mazel tov. We will be in touch. Not too often — we are not needy.</p>
+            </div>
+          ) : (
+            <>
+              <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,48px)",color:"rgba(245,240,232,0.95)",letterSpacing:"-0.5px",marginBottom:8}}>Join The Tribe.</div>
+              <p style={{fontSize:15,color:"rgba(245,240,232,0.75)",marginBottom:6,lineHeight:1.6}}>We send good stuff. New drops, culture moments, the occasional very good punchline.</p>
+              <p style={{fontSize:13,color:"rgba(245,240,232,0.5)",marginBottom:28}}>Not too often. We are not needy.</p>
+              <form onSubmit={e=>{e.preventDefault();if(email.trim())setEmailDone(true);}} style={{display:"flex",gap:0,maxWidth:460,margin:"0 auto",flexWrap:"wrap"}}>
+                <input type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="your@email.com" required
+                  style={{flex:1,minWidth:200,padding:"14px 20px",fontSize:14,background:"rgba(255,255,255,0.95)",color:"#111",border:"none",outline:"none",fontFamily:"inherit"}}/>
+                <button type="submit" style={{background:"var(--navy)",color:"var(--gold)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"14px 24px",border:"none",cursor:"pointer",whiteSpace:"nowrap"}}>Join The Tribe</button>
+              </form>
+            </>
+          )}
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer style={{background:"#04101F",borderTop:"1px solid rgba(201,168,76,0.15)",padding:"36px max(24px,5vw)",display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:16}}>
+        <div>
+          <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:28,color:"var(--gold)",letterSpacing:"2px",marginBottom:4}}>JewSA</div>
+          <div style={{fontSize:12,color:"rgba(245,240,232,0.3)"}}>Jewish-American pride merch. Punny. Proud. Perfect.</div>
+        </div>
+        <div style={{display:"flex",gap:20,flexWrap:"wrap"}}>
+          {[["Shop","#shop"],["Culture","#culture"],["Calendar","#calendar"],["The Tribe","#story"]].map(([l,h])=>(
+            <Link key={h} href={h} style={{fontSize:12,fontWeight:700,color:"rgba(245,240,232,0.4)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase"}}>{l}</Link>
           ))}
         </div>
-      </div>
-
-      {/* ── PUNCHLINES ───────────────────────────────── */}
-      <section style={{ background:"var(--cream)", padding:"72px 32px" }}>
-        <div style={{ maxWidth:1100, margin:"0 auto" }}>
-          <div style={{ textAlign:"center", marginBottom:48 }}>
-            <span style={{ fontSize:10, fontWeight:900, letterSpacing:"3px", textTransform:"uppercase", color:"var(--gray)" }}>The Bit</span>
-            <h2 style={{ fontSize:"clamp(36px,5.5vw,64px)", fontFamily:"'Bebas Neue',sans-serif", color:"var(--navy)", letterSpacing:"-1px", marginTop:8 }}>
-              We Take Our Pride<br /><span style={{ color:"var(--red)" }}>Very Unseriously.</span>
-            </h2>
-          </div>
-          <div className="jewsa-punchlines">
-            {PUNCHLINES.map(p=>(
-              <div key={p.line} style={{ background:"var(--navy)", padding:"32px 28px", borderTop:"4px solid var(--gold)" }}>
-                <p style={{ fontSize:15, fontWeight:900, color:"var(--white)", lineHeight:1.5, marginBottom:10 }}>"{p.line}"</p>
-                <p style={{ fontSize:12, fontWeight:700, color:"rgba(245,240,232,0.35)", fontStyle:"italic" }}>{p.sub}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── SHOP ────────────────────────────────────────── */}
-      <section id="shop" style={{ background:"#fff", padding:"72px 32px" }}>
-        <div style={{ maxWidth:1200, margin:"0 auto" }}>
-          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-end", marginBottom:48, flexWrap:"wrap", gap:16 }}>
-            <div>
-              <span style={{ fontSize:10, fontWeight:900, letterSpacing:"3px", textTransform:"uppercase", color:"var(--gray)" }}>The Collection</span>
-              <h2 style={{ fontSize:"clamp(36px,5.5vw,64px)", fontFamily:"'Bebas Neue',sans-serif", color:"var(--navy)", letterSpacing:"-1px", marginTop:8 }}>
-                Gear For The Tribe.
-              </h2>
-            </div>
-            <Link href="/shop" style={{ fontSize:13, fontWeight:900, color:"var(--red)", letterSpacing:"1.5px", textTransform:"uppercase", textDecoration:"none", borderBottom:"2px solid var(--red)", paddingBottom:2 }}>
-              View All Products →
-            </Link>
-          </div>
-          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:32, maxWidth:800, margin:"0 auto" }}>
-            {PRODUCTS.map(p=>(
-              <div key={p.id} style={{ position:"relative" }}>
-                {p.badge && (
-                  <div style={{ position:"absolute", top:12, left:12, zIndex:2, background:"var(--gold)", padding:"4px 10px" }}>
-                    <span style={{ fontSize:10, fontWeight:900, letterSpacing:"1.5px", textTransform:"uppercase", color:"var(--navy)" }}>{p.badge}</span>
-                  </div>
-                )}
-                <div style={{ background:"var(--cream)", aspectRatio:"1/1", display:"flex", alignItems:"center", justifyContent:"center", marginBottom:16, overflow:"hidden", border:"2px solid rgba(10,22,40,0.08)" }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.img} alt={p.name} style={{ width:"100%", height:"100%", objectFit:"cover" }} />
-                </div>
-                <h3 style={{ fontSize:18, fontWeight:900, color:"var(--navy)", marginBottom:6, letterSpacing:"-0.3px" }}>{p.name}</h3>
-                <p style={{ fontSize:13, fontWeight:700, color:"var(--gray)", lineHeight:1.6, marginBottom:16 }}>{p.desc}</p>
-                <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center" }}>
-                  <span style={{ fontSize:22, fontWeight:900, color:"var(--navy)" }}>${p.price}</span>
-                  <a href="https://aswej-merch-store-xp68.vercel.app" target="_blank" rel="noopener noreferrer" style={{ background:"var(--navy)", color:"var(--gold)", fontWeight:900, fontSize:11, letterSpacing:"1.5px", textTransform:"uppercase", padding:"12px 22px", textDecoration:"none" }}>
-                    Buy Now →
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── WHY JEWSA ──────────────────────────────────── */}
-      <section id="story" style={{ background:"var(--navy)", padding:"72px 32px" }}>
-        <div style={{ maxWidth:1100, margin:"0 auto" }}>
-          <div style={{ textAlign:"center", marginBottom:56 }}>
-            <span style={{ fontSize:10, fontWeight:900, letterSpacing:"3px", textTransform:"uppercase", color:"rgba(201,168,76,0.5)" }}>The Drash</span>
-            <h2 style={{ fontSize:"clamp(36px,5.5vw,64px)", fontFamily:"'Bebas Neue',sans-serif", color:"var(--white)", letterSpacing:"-1px", marginTop:8 }}>
-              Why Does JewSA Exist?<br /><span style={{ color:"var(--gold)" }}>Because we had to.</span>
-            </h2>
-            <div style={{ width:48, height:3, background:"var(--red)", margin:"24px auto 0" }} />
-          </div>
-          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:48, alignItems:"center", marginBottom:64 }} className="jewsa-story-grid">
-            <div>
-              <p style={{ fontSize:18, color:"rgba(245,240,232,0.75)", fontWeight:700, lineHeight:1.8, marginBottom:20 }}>
-                Jewish-American identity is one of the great untapped stories in American history. We built half this country, wrote most of the jokes, and somehow never had a proper merch line.
-              </p>
-              <p style={{ fontSize:17, color:"rgba(245,240,232,0.5)", fontWeight:700, lineHeight:1.8 }}>
-                JewSA is for the people who hold both identities at once — loud and proud about both. Who wear their history without apology and their humor without explanation. Who know that "oy vey" and "God Bless America" are not contradictions.
-              </p>
-            </div>
-            <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:16 }}>
-              {REASONS.map(r=>(
-                <div key={r.title} style={{ background:"rgba(255,255,255,0.04)", border:"1px solid rgba(201,168,76,0.15)", padding:"24px 20px" }}>
-                  <div style={{ fontSize:11, fontWeight:900, color:"var(--gold)", letterSpacing:"1.5px", textTransform:"uppercase", marginBottom:10 }}>{r.title}</div>
-                  <p style={{ fontSize:13, color:"rgba(245,240,232,0.45)", fontWeight:700, lineHeight:1.65 }}>{r.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* Stats */}
-          <div className="jewsa-values-grid" style={{ background:"rgba(255,255,255,0.03)" }}>
-            {VALUES.map((v,i)=>(
-              <div key={i} style={{ padding:"36px 28px", textAlign:"center", borderRight: i<3 ? "1px solid rgba(201,168,76,0.08)" : "none" }}>
-                <div style={{ fontSize:"clamp(32px,4vw,56px)", fontFamily:"'Bebas Neue',sans-serif", color:"var(--gold)", letterSpacing:"-1px", marginBottom:8 }}>{v.stat}</div>
-                <div style={{ fontSize:12, fontWeight:900, color:"var(--white)", marginBottom:6, letterSpacing:"0.5px" }}>{v.label}</div>
-                <div style={{ fontSize:11, fontWeight:700, color:"rgba(245,240,232,0.3)", lineHeight:1.5 }}>{v.sub}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── GIFT GUIDE ───────────────────────────────── */}
-      <section style={{ background:"var(--red)", padding:"72px 32px" }}>
-        <div style={{ maxWidth:1100, margin:"0 auto", display:"grid", gridTemplateColumns:"1fr 1fr", gap:64, alignItems:"center" }} className="jewsa-story-grid">
-          <div>
-            <span style={{ fontSize:10, fontWeight:900, letterSpacing:"3px", textTransform:"uppercase", color:"rgba(245,240,232,0.5)", display:"block", marginBottom:16 }}>For Every Occasion</span>
-            <h2 style={{ fontSize:"clamp(36px,5.5vw,64px)", fontFamily:"'Bebas Neue',sans-serif", color:"#fff", letterSpacing:"-1px", lineHeight:1.0, marginBottom:24 }}>
-              The Gift They<br />Didn't Know<br /><span style={{ color:"var(--gold)" }}>They Needed.</span>
-            </h2>
-            <div style={{ width:40, height:3, background:"rgba(245,240,232,0.4)", marginBottom:24 }} />
-            <p style={{ fontSize:17, color:"rgba(245,240,232,0.8)", fontWeight:700, lineHeight:1.75, marginBottom:32 }}>
-              Hanukkah. Bar Mitzvahs. Graduations. Shabbat dinners. "I saw this and thought of you." We've got every Jewish-American celebration covered with gear that actually lands.
-            </p>
-            <Link href="/#shop" style={{ background:"var(--gold)", color:"var(--navy)", fontWeight:900, fontSize:14, letterSpacing:"1.5px", textTransform:"uppercase", padding:"16px 36px", textDecoration:"none", display:"inline-block" }}>
-              Shop Gifts
-            </Link>
-          </div>
-          <div style={{ display:"flex", flexDirection:"column", gap:16 }}>
-            {[
-              { occasion:"Hanukkah",      icon:"🕎", note:"8 nights, 8 chances to give something actually funny." },
-              { occasion:"Bar/Bat Mitzvah",icon:"✡", note:"Today you are a JewSA customer. Mazel tov." },
-              { occasion:"Graduation",    icon:"🎓", note:"They survived. They deserve the merch." },
-              { occasion:"'Just Because'",icon:"💙", note:"No reason needed. Jewish guilt works without context." },
-            ].map(g=>(
-              <div key={g.occasion} style={{ background:"rgba(0,0,0,0.2)", padding:"18px 22px", display:"flex", alignItems:"center", gap:16 }}>
-                <span style={{ fontSize:28 }}>{g.icon}</span>
-                <div>
-                  <div style={{ fontSize:14, fontWeight:900, color:"#fff" }}>{g.occasion}</div>
-                  <div style={{ fontSize:12, fontWeight:700, color:"rgba(245,240,232,0.55)" }}>{g.note}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── EMAIL CAPTURE ────────────────────────────── */}
-      <section style={{ background:"var(--cream)", padding:"72px 32px" }}>
-        <div style={{ maxWidth:600, margin:"0 auto", textAlign:"center" }}>
-          <span style={{ fontSize:10, fontWeight:900, letterSpacing:"3px", textTransform:"uppercase", color:"var(--gray)", display:"block", marginBottom:16 }}>Join The Tribe</span>
-          <h2 style={{ fontSize:"clamp(32px,5vw,56px)", fontFamily:"'Bebas Neue',sans-serif", color:"var(--navy)", letterSpacing:"-1px", marginBottom:12 }}>
-            New drops. Big sales.<br />Better punchlines.
-          </h2>
-          <p style={{ fontSize:15, color:"var(--gray)", fontWeight:700, lineHeight:1.7, marginBottom:32 }}>
-            Sign up and get 10% off your first order. Because a good deal is basically a mitzvah.
-          </p>
-          <form onSubmit={e=>e.preventDefault()} style={{ display:"flex", gap:0, maxWidth:480, margin:"0 auto" }}>
-            <input type="email" placeholder="your@email.com" style={{ flex:1, padding:"14px 18px", border:"2px solid var(--navy)", borderRight:"none", fontFamily:"inherit", fontWeight:700, fontSize:14, outline:"none", background:"#fff" }} />
-            <button type="submit" style={{ padding:"14px 24px", background:"var(--navy)", color:"var(--gold)", fontWeight:900, fontSize:13, letterSpacing:"1.5px", textTransform:"uppercase", border:"none", cursor:"pointer", whiteSpace:"nowrap", fontFamily:"inherit" }}>
-              Join →
-            </button>
-          </form>
-          <p style={{ fontSize:11, color:"var(--gray)", fontWeight:700, marginTop:12 }}>No spam. We're Jewish, not meshugeneh.</p>
-        </div>
-      </section>
-
-      {/* ── FOOTER ────────────────────────────────────── */}
-      <footer style={{ background:"var(--dark)", padding:"48px 32px 24px", borderTop:"2px solid rgba(201,168,76,0.15)" }}>
-        <div style={{ maxWidth:1100, margin:"0 auto" }}>
-          <div style={{ display:"grid", gridTemplateColumns:"1.5fr 1fr 1fr", gap:40, marginBottom:48 }} className="jewsa-footer-grid">
-            <div>
-              <div style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:36, color:"var(--gold)", letterSpacing:"2px", marginBottom:12 }}>JewSA</div>
-              <p style={{ fontSize:14, fontWeight:700, color:"rgba(245,240,232,0.4)", lineHeight:1.75, maxWidth:240 }}>
-                Where Pride Meets Punchlines. Jewish-American merch built for the tribe.
-              </p>
-            </div>
-            <div>
-              <p style={{ fontSize:11, fontWeight:900, color:"var(--gold)", letterSpacing:"2px", textTransform:"uppercase", marginBottom:16 }}>Shop</p>
-              {[["Tees","/shop"],["Hats","/shop"],["Hoodies","/shop"],["Gifts","/shop"],["All Products","/shop"]].map(([l,h])=>(
-                <Link key={l} href={h} style={{ display:"block", color:"rgba(245,240,232,0.4)", fontWeight:700, fontSize:13, textDecoration:"none", marginBottom:8 }}>{l}</Link>
-              ))}
-            </div>
-            <div>
-              <p style={{ fontSize:11, fontWeight:900, color:"var(--gold)", letterSpacing:"2px", textTransform:"uppercase", marginBottom:16 }}>Info</p>
-              {[["Our Story","/#story"],["Blog","/blog"],["Contact","/contact"],["Terms","/terms"],["Privacy","/privacy"]].map(([l,h])=>(
-                <Link key={l} href={h} style={{ display:"block", color:"rgba(245,240,232,0.4)", fontWeight:700, fontSize:13, textDecoration:"none", marginBottom:8 }}>{l}</Link>
-              ))}
-            </div>
-          </div>
-          <div style={{ borderTop:"1px solid rgba(245,240,232,0.06)", paddingTop:20, display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:12 }}>
-            <p style={{ fontSize:12, color:"rgba(245,240,232,0.25)", fontWeight:700 }}>© 2026 JewSA. All rights reserved. Mazel tov.</p>
-            <p style={{ fontSize:12, color:"rgba(245,240,232,0.25)", fontWeight:700 }}>Made with chutzpah in the USA 🇺🇸</p>
-          </div>
-        </div>
+        <div style={{fontSize:12,color:"rgba(245,240,232,0.25)"}}>© {new Date().getFullYear()} JewSA. All rights reserved.</div>
       </footer>
 
-      <style>{`
-        @media (max-width: 860px) {
-          .jewsa-story-grid { grid-template-columns: 1fr !important; }
-          .jewsa-footer-grid { grid-template-columns: 1fr 1fr !important; }
-          .jewsa-hero-grid > div:last-child { display: none; }
-          .jewsa-hero-grid > div:first-child { padding: 48px 24px !important; }
-        }
-      `}</style>
+      {/* STICKY MOBILE CTA */}
+      <div className="sticky-bar">
+        <div>
+          <div style={{fontWeight:900,fontSize:14,color:"var(--navy)"}}>Tee + Bucket Hat</div>
+          <div style={{fontSize:12,color:"rgba(11,31,58,0.6)",fontWeight:700}}>$25 each</div>
+        </div>
+        <Link href="#shop" style={{background:"var(--navy)",color:"var(--gold)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"12px 24px",textDecoration:"none",whiteSpace:"nowrap"}}>Shop Now</Link>
+      </div>
     </>
   );
 }
