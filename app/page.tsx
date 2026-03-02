@@ -16,8 +16,8 @@ const PUNCHLINES = [
 ];
 
 const PRODUCTS = [
-  { id:"tee", name:"JewSA Basic Tee", price:25, badge:"Bestseller", desc:"Not your bubbe's basic tee. Stars, stripes, and all the chutzpah. Available S-4XL.", img:"https://files.cdn.printful.com/files/b4e/b4ebbc30701e79902092467a74f74124_preview.png", link:"/products/jewsa-basic-tee" },
-  { id:"hat", name:"Old School Bucket Hat", price:25, badge:"Fan Fave", desc:"Keep your keppah cool. Available in Black, Navy, and Khaki. S/M and L/XL.", img:"https://files.cdn.printful.com/files/3f4/3f41dd5bee9414a4c43fcefc2a63a429_preview.png", link:"/products/old-school-bucket-hat" },
+  { id:"tee", name:"JewSA Basic Tee", price:25, badge:"Bestseller", desc:"Not your bubbe's basic tee. Stars, stripes, and all the chutzpah. Available S-4XL.", img:"https://files.cdn.printful.com/files/b4e/b4ebbc30701e79902092467a74f74124_preview.png", link:"https://store.jewsa.com" },
+  { id:"hat", name:"Old School Bucket Hat", price:25, badge:"Fan Fave", desc:"Keep your keppah cool. Available in Black, Navy, and Khaki. S/M and L/XL.", img:"https://files.cdn.printful.com/files/3f4/3f41dd5bee9414a4c43fcefc2a63a429_preview.png", link:"https://store.jewsa.com" },
 ];
 
 const GLOSSARY = [
