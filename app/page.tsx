@@ -127,7 +127,7 @@ export default function HomePage() {
           {[["Shop","#shop"],["Culture","#culture"],["Calendar","#calendar"],["The Tribe","#story"]].map(([l,h])=>(
             <Link key={h} href={h} style={{fontSize:13,fontWeight:700,color:"rgba(245,240,232,0.55)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase"}}>{l}</Link>
           ))}
-          <Link href="#shop" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"10px 20px",textDecoration:"none"}}>Shop Now</Link>
+          <Link href="/cart" style={{color:"var(--gold)",fontWeight:700,fontSize:13,letterSpacing:"1px",textDecoration:"none",marginRight:8}}>Cart</Link><Link href="#shop" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"10px 20px",textDecoration:"none"}}>Shop Now</Link>
         </div>
       </nav>
 
