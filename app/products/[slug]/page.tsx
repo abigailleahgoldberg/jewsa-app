@@ -6,36 +6,27 @@ const NAVY = "#060F1C";
 const GOLD = "#C9A84C";
 
 const PRODUCTS: Record<string, {
-  name: string;
-  price: number;
-  description: string;
-  img: string;
-  variants: { label: string; id: number }[];
-  type: "size" | "color";
+  name: string; price: number; description: string; img: string;
+  variants: { label: string; id: number }[]; type: "size" | "color";
 }> = {
   "jewsa-basic-tee": {
-    name: "JewSA Basic Tee",
-    price: 25,
-    description: "Not your bubbe's basic tee. Stars, stripes, and all the chutzpah. 100% cotton, unisex fit, available S through 4XL. Printed and shipped via Printful.",
+    name: "JewSA Basic Tee", price: 25,
+    description: "Not your bubbe's basic tee. Stars, stripes, and all the chutzpah. 100% cotton, unisex fit, available S through 4XL.",
     img: "https://files.cdn.printful.com/files/b4e/b4ebbc30701e79902092467a74f74124_preview.png",
     type: "size",
     variants: [
-      { label: "S", id: 5197023020 },
-      { label: "M", id: 5197023021 },
-      { label: "L", id: 5197023022 },
-      { label: "XL", id: 5197023023 },
+      { label: "S", id: 5197023020 }, { label: "M", id: 5197023021 },
+      { label: "L", id: 5197023022 }, { label: "XL", id: 5197023023 },
       { label: "2XL", id: 5197023024 },
     ],
   },
   "old-school-bucket-hat": {
-    name: "Old School Bucket Hat",
-    price: 25,
+    name: "Old School Bucket Hat", price: 25,
     description: "Keep your keppah cool. Structured bucket hat with embroidered JewSA logo. Available in Black, Navy, and Khaki.",
     img: "https://files.cdn.printful.com/files/3f4/3f41dd5bee9414a4c43fcefc2a63a429_preview.png",
     type: "color",
     variants: [
-      { label: "Black", id: 5196674755 },
-      { label: "Navy", id: 5196674756 },
+      { label: "Black", id: 5196674755 }, { label: "Navy", id: 5196674756 },
       { label: "Khaki", id: 5196674757 },
     ],
   },
@@ -44,22 +35,35 @@ const PRODUCTS: Record<string, {
 export default function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
   const product = PRODUCTS[slug];
-  const [selected, setSelected] = useState<number | null>(null);
+  const [selected, setSelected] = useState<{ id: number; label: string } | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  if (!product) {
-    return (
-      <div style={{ background: NAVY, minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <div style={{ textAlign: "center", color: "#fff" }}>
-          <h1 style={{ color: GOLD, fontSize: 32, marginBottom: 16 }}>Product not found</h1>
-          <Link href="/#shop" style={{ color: GOLD }}>Back to shop</Link>
-        </div>
+  if (!product) return (
+    <div style={{ background: NAVY, minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ textAlign: "center", color: "#fff" }}>
+        <h1 style={{ color: GOLD, fontSize: 32, marginBottom: 16 }}>Product not found</h1>
+        <Link href="/#shop" style={{ color: GOLD }}>Back to shop</Link>
       </div>
-    );
-  }
+    </div>
+  );
 
-  const handleBuy = () => {
+  const handleBuy = async () => {
     if (!selected) return;
-    window.location.href = `https://www.printful.com/checkout/cart?add-to-cart=${selected}`;
+    setLoading(true);
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug, variantId: selected.id, variantLabel: selected.label }),
+      });
+      const data = await res.json();
+      if (data.url) window.location.href = data.url;
+      else alert("Checkout error. Please try again.");
+    } catch {
+      alert("Checkout error. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -89,11 +93,11 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
             </p>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
               {product.variants.map(v => (
-                <button key={v.id} onClick={() => setSelected(v.id)} style={{
+                <button key={v.id} onClick={() => setSelected({ id: v.id, label: v.label })} style={{
                   padding: "10px 20px",
-                  border: selected === v.id ? `2px solid ${GOLD}` : "2px solid rgba(201,168,76,0.3)",
-                  background: selected === v.id ? "rgba(201,168,76,0.15)" : "transparent",
-                  color: selected === v.id ? GOLD : "#F5F0E8",
+                  border: selected?.id === v.id ? `2px solid ${GOLD}` : "2px solid rgba(201,168,76,0.3)",
+                  background: selected?.id === v.id ? "rgba(201,168,76,0.15)" : "transparent",
+                  color: selected?.id === v.id ? GOLD : "#F5F0E8",
                   borderRadius: 6, fontSize: 14, fontWeight: 700, cursor: "pointer",
                 }}>
                   {v.label}
@@ -102,27 +106,23 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
             </div>
           </div>
 
-          <button onClick={handleBuy} disabled={!selected} style={{
-            background: selected ? GOLD : "rgba(201,168,76,0.3)",
+          <button onClick={handleBuy} disabled={!selected || loading} style={{
+            background: selected && !loading ? GOLD : "rgba(201,168,76,0.3)",
             color: NAVY, border: "none", borderRadius: 8,
             padding: "18px 36px", fontSize: 16, fontWeight: 900,
             letterSpacing: "1.5px", textTransform: "uppercase",
-            cursor: selected ? "pointer" : "not-allowed", marginTop: 8,
+            cursor: selected && !loading ? "pointer" : "not-allowed", marginTop: 8,
           }}>
-            {selected ? "Buy Now" : `Select ${product.type === "size" ? "Size" : "Color"} First`}
+            {loading ? "Loading..." : selected ? "Buy Now — $25" : `Select ${product.type === "size" ? "Size" : "Color"} First`}
           </button>
 
           <p style={{ fontSize: 12, color: "rgba(245,240,232,0.4)", margin: 0 }}>
-            Ships in 3-7 business days via Printful.
+            Secure checkout via Stripe. Ships in 3-7 business days.
           </p>
         </div>
       </div>
 
-      <style>{`
-        @media (max-width: 640px) {
-          div[style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; gap: 32px !important; }
-        }
-      `}</style>
+      <style>{`@media (max-width: 640px) { div[style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; gap: 32px !important; } }`}</style>
     </div>
   );
 }
