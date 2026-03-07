@@ -41,7 +41,21 @@ export const blogPosts: BlogPost[] = [
 <p>So the next time someone teases you about Jewish guilt, take it as a compliment. You have a conscience that runs hot. You care about the people around you enough to feel bad when you let them down. You have a built-in motivation to be better than you were yesterday.</p>
 <p>That's not a neurosis. That's a competitive advantage.</p>
 <p>Channel it. Use it. And for the love of everything, call your mother.</p>
-`
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
   {
     slug: 'best-jewish-delis-america',
@@ -77,7 +91,21 @@ export const blogPosts: BlogPost[] = [
 <p>A great Jewish deli is not just about the food, although the food must be right. It's about the atmosphere of abundance. The sense that you will be fed, and then fed some more. The presence of pickles. The sound of orders being called. The understanding that a half-pound of pastrami is a reasonable lunch.</p>
 <p>Jewish delis at their best are egalitarian spaces. Everybody eats the same food. The celebrity at the next table gets the same matzo ball soup as the kid celebrating his bar mitzvah in the back corner. That is not an accident. It is a value embedded in the culture.</p>
 <p>Go to these places. Eat too much. Bring someone to share it with. That's the whole point.</p>
-`
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
   {
     slug: 'what-non-jews-get-wrong-passover',
@@ -113,7 +141,21 @@ export const blogPosts: BlogPost[] = [
 <h2>The Short Version</h2>
 <p>Passover is a celebration of freedom. It is a reminder that liberation has a cost. It is a ritual of memory and transmission. It involves a lot of food, a lot of family, and a lot of argument about the right way to do all of the above.</p>
 <p>It is not Jewish Easter. Wish your Jewish friends a Happy Passover and ask them if you can come to a seder sometime. They will probably say yes. The food is worth it.</p>
-`
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
   {
     slug: 'jews-american-fashion-history',
@@ -149,7 +191,21 @@ export const blogPosts: BlogPost[] = [
 <p>The American fashion industry today is different from the one Jewish immigrants built. It is more global, more corporate, more complicated. But the aesthetic frameworks, the retail structures, and the cultural assumptions that define it were largely established by Jewish entrepreneurs, designers, and laborers.</p>
 <p>When you buy a pair of Calvin Klein jeans or a Ralph Lauren polo or a wrap dress, you are wearing a piece of that history. You are wearing the work of people who came to this country with very little and built something that dressed an entire nation.</p>
 <p>That's worth knowing. And honestly, it's worth wearing with pride.</p>
-`
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
   {
     slug: 'hamsa-most-underrated-jewelry-symbol',
@@ -181,7 +237,21 @@ export const blogPosts: BlogPost[] = [
 <h2>Get One</h2>
 <p>The hamsa is older than almost any symbol you currently own. It has been worn by people across cultures and centuries as a sign of protection, faith, and connection to something larger than themselves.</p>
 <p>In an era when jewelry is often purely decorative, there is something powerful about wearing a piece that means something. The hamsa means something. It has always meant something. And it will look good doing it.</p>
-`
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
   {
     slug: 'funniest-jewish-expressions-explained',
@@ -226,7 +296,21 @@ export const blogPosts: BlogPost[] = [
 <h2>The Shrug</h2>
 <p>Not a word, but an expression that belongs in this list. The Jewish shrug communicates more than most speeches. It means: "What can you do?" It means: "Life is complicated." It means: "I have accepted the situation while not fully endorsing it." It means: "Things could be worse, but I'm not counting on it."</p>
 <p>It is the gesture of a people who have learned to hold uncertainty with grace. Learn the shrug. It will serve you in every difficult situation life throws at you.</p>
-`
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
   {
     slug: 'jewish-american-comedy-shaped-culture',
@@ -261,7 +345,21 @@ export const blogPosts: BlogPost[] = [
 <p>The Jewish comedic tradition is alive and producing work right now. Sarah Silverman, Judd Apatow, Seth Rogen, Rachel Bloom, Nathan Fielder. These artists work in different modes but share the tradition's core commitments: honesty, self-examination, and the willingness to find the joke in the darkest places.</p>
 <p>American comedy would not look the way it does without Jewish comedians. The techniques, the themes, the relationship between performer and audience, the willingness to make people uncomfortable in the service of something true: all of these were substantially shaped by Jewish artists across a century of American cultural life.</p>
 <p>That's a legacy worth knowing and celebrating.</p>
-`
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
   {
     slug: 'hanukkah-vs-christmas-guide-for-gentiles',
@@ -293,7 +391,21 @@ export const blogPosts: BlogPost[] = [
 <h2>The Real Takeaway</h2>
 <p>Christmas and Hanukkah are different holidays with different meanings, different stories, and different levels of religious significance. They happen to share a month. That's it. Both deserve to be understood on their own terms rather than explained in relation to each other.</p>
 <p>Learn a little. Ask questions. Show up for the latkes. Your Jewish friends will appreciate all three things, but especially the last one.</p>
-`
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
   {
     slug: 'jewish-american-kitchen-dishes',
@@ -329,7 +441,21 @@ export const blogPosts: BlogPost[] = [
 <h2>The Point</h2>
 <p>Jewish-American food is comfort food, but comfort earned through history. It tastes like home because it was invented by people who carried home across an ocean and rebuilt it in a new country, using what they remembered and what they could find.</p>
 <p>When you eat this food, you eat that story. Know it. Appreciate it. And maybe call the person who first made it for you, if you can.</p>
-`
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
   {
     slug: 'why-every-jew-needs-a-good-tallit',
@@ -365,7 +491,21 @@ export const blogPosts: BlogPost[] = [
 <p>The tallit you wrap yourself in during prayer becomes associated with the moments of concentration, reflection, and connection that happen inside it. Many people pull their tallit up over their head during particularly significant parts of the service to create a small private space for themselves within the larger communal gathering.</p>
 <p>That space deserves a garment you chose intentionally. Not the one that was handed to you. Not the one that was cheapest. The one that, when you put it on, feels like it belongs to you and to your Jewish life.</p>
 <p>You have a whole lifetime of mornings ahead. Dress for them.</p>
-`
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
   {
     slug: 'bar-bat-mitzvah-gifts-that-make-sense',
@@ -398,7 +538,21 @@ export const blogPosts: BlogPost[] = [
 <h2>The Actual Best Gift</h2>
 <p>The actual best gift, if you want the truth, is presence. Attending a bar or bat mitzvah, particularly if you traveled to be there, is an act of love that the family will remember. The ceremony is one of the most significant events in a Jewish family's life. Showing up, dressed appropriately, staying for the service, saying something real to the kid and their parents afterward? That matters more than any object you could bring.</p>
 <p>Bring a good gift too. But know that the gift wraps around the presence. The presence is the point.</p>
-`
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
   {
     slug: 'rise-of-jewish-pride-merch',
@@ -433,7 +587,21 @@ export const blogPosts: BlogPost[] = [
 <p>What we are building at JewSA sits at the intersection of all of this. Pride that does not take itself too seriously. Humor that comes from deep familiarity with the culture rather than from outside it. Quality that respects the wearer enough to make something worth keeping.</p>
 <p>"Where Pride Meets Punchlines" is not a marketing slogan for us. It is a description of what Jewish-American culture actually is: a tradition that has survived and thrived by finding the funny in the difficult, by wearing its identity with enough confidence to joke about it.</p>
 <p>Wear it. Be proud of it. Make people ask about it. That is the whole point.</p>
-`
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   }
 ]
 
