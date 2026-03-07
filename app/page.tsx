@@ -397,6 +397,12 @@ export default function HomePage() {
             <Link key={h} href={h} style={{fontSize:12,fontWeight:700,color:"rgba(245,240,232,0.4)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase"}}>{l}</Link>
           ))}
         </div>
+        <div style={{display:"flex",gap:20,flexWrap:"wrap",alignItems:"center"}}>
+          <span style={{fontSize:11,letterSpacing:"2px",fontWeight:700,color:"rgba(234,179,8,0.5)"}}>OUR NETWORK</span>
+          {[["The Voice of Cash","https://www.thevoiceofcash.com"],["U-God Sacred Texts","https://u-god.com"],["WeBearish","https://www.webearish.com"],["AI Skills Agents","https://aiskillsagents.com"]].map(([label,href]) => (
+            <a key={href} href={href} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"rgba(245,240,232,0.3)",textDecoration:"none",fontWeight:600}}>{label}</a>
+          ))}
+        </div>
         <div style={{fontSize:12,color:"rgba(245,240,232,0.25)"}}>© {new Date().getFullYear()} JewSA. All rights reserved.</div>
       </footer>
 
