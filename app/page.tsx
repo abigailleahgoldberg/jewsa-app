@@ -369,14 +369,15 @@ export default function HomePage() {
             <div>
               <div style={{fontSize:40,marginBottom:16}}>✡️</div>
               <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:36,color:"rgba(245,240,232,0.95)",letterSpacing:"1px",marginBottom:8}}>You Are In The Tribe Now.</div>
-              <p style={{fontSize:15,color:"rgba(245,240,232,0.7)"}}>Mazel tov. We will be in touch. Not too often — we are not needy.</p>
+              <p style={{fontSize:15,color:"rgba(245,240,232,0.7)",marginBottom:16}}>Mazel tov. Check your inbox — your 10% off is waiting.</p>
+              <div style={{display:"inline-block",background:"rgba(245,240,232,0.95)",color:"#111",fontWeight:900,fontSize:24,letterSpacing:"4px",padding:"12px 28px",borderRadius:6}}>MISHPOKHE10</div>
             </div>
           ) : (
             <>
               <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,48px)",color:"rgba(245,240,232,0.95)",letterSpacing:"-0.5px",marginBottom:8}}>Join The Tribe.</div>
               <p style={{fontSize:15,color:"rgba(245,240,232,0.75)",marginBottom:6,lineHeight:1.6}}>We send good stuff. New drops, culture moments, the occasional very good punchline.</p>
               <p style={{fontSize:13,color:"rgba(245,240,232,0.5)",marginBottom:28}}>Not too often. We are not needy.</p>
-              <form onSubmit={e=>{e.preventDefault();if(email.trim())setEmailDone(true);}} style={{display:"flex",gap:0,maxWidth:460,margin:"0 auto",flexWrap:"wrap"}}>
+              <form onSubmit={async e=>{e.preventDefault();if(!email.trim())return;try{const r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});const d=await r.json();if(d.success){setEmailDone(true);}}catch(err){console.error(err);}}} style={{display:"flex",gap:0,maxWidth:460,margin:"0 auto",flexWrap:"wrap"}}>
                 <input type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="your@email.com" required
                   style={{flex:1,minWidth:200,padding:"14px 20px",fontSize:14,background:"rgba(255,255,255,0.95)",color:"#111",border:"none",outline:"none",fontFamily:"inherit"}}/>
                 <button type="submit" style={{background:"var(--navy)",color:"var(--gold)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"14px 24px",border:"none",cursor:"pointer",whiteSpace:"nowrap"}}>Join The Tribe</button>

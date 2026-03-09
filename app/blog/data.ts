@@ -49,11 +49,11 @@ export const blogPosts: BlogPost[] = [
 
 For the tribe — books, Judaica, and gifts worth having:
 
-- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
-- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
-- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
-- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
-- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
@@ -99,11 +99,11 @@ For the tribe — books, Judaica, and gifts worth having:
 
 For the tribe — books, Judaica, and gifts worth having:
 
-- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
-- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
-- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
-- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
-- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
@@ -149,11 +149,11 @@ For the tribe — books, Judaica, and gifts worth having:
 
 For the tribe — books, Judaica, and gifts worth having:
 
-- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
-- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
-- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
-- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
-- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
@@ -199,11 +199,11 @@ For the tribe — books, Judaica, and gifts worth having:
 
 For the tribe — books, Judaica, and gifts worth having:
 
-- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
-- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
-- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
-- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
-- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
@@ -245,11 +245,11 @@ For the tribe — books, Judaica, and gifts worth having:
 
 For the tribe — books, Judaica, and gifts worth having:
 
-- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
-- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
-- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
-- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
-- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
@@ -304,11 +304,11 @@ For the tribe — books, Judaica, and gifts worth having:
 
 For the tribe — books, Judaica, and gifts worth having:
 
-- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
-- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
-- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
-- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
-- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
@@ -353,11 +353,11 @@ For the tribe — books, Judaica, and gifts worth having:
 
 For the tribe — books, Judaica, and gifts worth having:
 
-- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
-- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
-- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
-- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
-- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
@@ -399,11 +399,11 @@ For the tribe — books, Judaica, and gifts worth having:
 
 For the tribe — books, Judaica, and gifts worth having:
 
-- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
-- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
-- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
-- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
-- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
@@ -449,11 +449,11 @@ For the tribe — books, Judaica, and gifts worth having:
 
 For the tribe — books, Judaica, and gifts worth having:
 
-- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
-- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
-- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
-- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
-- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
@@ -499,11 +499,11 @@ For the tribe — books, Judaica, and gifts worth having:
 
 For the tribe — books, Judaica, and gifts worth having:
 
-- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
-- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
-- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
-- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
-- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
@@ -546,11 +546,11 @@ For the tribe — books, Judaica, and gifts worth having:
 
 For the tribe — books, Judaica, and gifts worth having:
 
-- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
-- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
-- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
-- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
-- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
@@ -595,11 +595,11 @@ For the tribe — books, Judaica, and gifts worth having:
 
 For the tribe — books, Judaica, and gifts worth having:
 
-- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=jewsa-20) — Scholarly Tanakh translation used in universities worldwide
-- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=jewsa-20) — Meaningful gifts for a meaningful milestone
-- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=jewsa-20) — From classic to contemporary, find the one that fits your family
-- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=jewsa-20) — Every seder needs a good haggadah
-- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=jewsa-20) — Because we have been turning suffering into comedy for 5,000 years
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   }

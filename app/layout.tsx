@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jewsa.com"),
@@ -37,6 +38,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;0,9..40,900&display=swap" rel="stylesheet" />
       </head>
       <body>{children}</body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PQ7WTL0B3G"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PQ7WTL0B3G');
+          `}
+        </Script>
     </html>
   );
 }
