@@ -1,6 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useCart } from "../lib/cart-context";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const NAVY = "var(--navy)";
 const GOLD = "var(--gold)";
@@ -16,8 +19,8 @@ const PUNCHLINES = [
 ];
 
 const PRODUCTS = [
-  { id:"tee", name:"JewSA Basic Tee", price:25, badge:"Bestseller", desc:"Not your bubbe's basic tee. Stars, stripes, and all the chutzpah. Available S-4XL.", img:"https://files.cdn.printful.com/files/b4e/b4ebbc30701e79902092467a74f74124_preview.png", link:"/api/checkout" },
-  { id:"hat", name:"Old School Bucket Hat", price:25, badge:"Fan Fave", desc:"Keep your keppah cool. Available in Black, Navy, and Khaki. S/M and L/XL.", img:"https://files.cdn.printful.com/files/3f4/3f41dd5bee9414a4c43fcefc2a63a429_preview.png", link:"/api/checkout" },
+  { id:"tee", name:"JewSA Basic Tee", price:25, badge:"Bestseller", desc:"Not your bubbe's basic tee. Stars, stripes, and all the chutzpah. Available S-4XL.", img:"https://files.cdn.printful.com/files/b4e/b4ebbc30701e79902092467a74f74124_preview.png", variantId: "default" },
+  { id:"hat", name:"Old School Bucket Hat", price:25, badge:"Fan Fave", desc:"Keep your keppah cool. Available in Black, Navy, and Khaki. S/M and L/XL.", img:"https://files.cdn.printful.com/files/3f4/3f41dd5bee9414a4c43fcefc2a63a429_preview.png", variantId: "default" },
 ];
 
 const GLOSSARY = [
@@ -67,6 +70,7 @@ const CALENDAR = [
 ];
 
 export default function HomePage() {
+  const { addToCart, cartItemCount } = useCart();
   const [idx, setIdx] = useState(0);
   const [fade, setFade] = useState(true);
   const [email, setEmail] = useState("");
@@ -127,7 +131,7 @@ export default function HomePage() {
           {[["Shop","#shop"],["Culture","#culture"],["Calendar","#calendar"],["The Tribe","#story"]].map(([l,h])=>(
             <Link key={h} href={h} style={{fontSize:13,fontWeight:700,color:"rgba(245,240,232,0.55)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase"}}>{l}</Link>
           ))}
-          <Link href="/cart" style={{color:"var(--gold)",fontWeight:700,fontSize:13,letterSpacing:"1px",textDecoration:"none",marginRight:8}}>Cart</Link><Link href="#shop" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"10px 20px",textDecoration:"none"}}>Shop Now</Link>
+          <Link href="/cart" style={{color:"var(--gold)",fontWeight:700,fontSize:13,letterSpacing:"1px",textDecoration:"none",marginRight:8}}>Cart ({cartItemCount})</Link><Link href="#shop" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"10px 20px",textDecoration:"none"}}>Shop Now</Link>
         </div>
       </nav>
 
@@ -213,7 +217,10 @@ export default function HomePage() {
                   <div style={{fontSize:13,color:"rgba(245,240,232,0.5)",lineHeight:1.6,marginBottom:16}}>{p.desc}</div>
                   <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
                     <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"var(--gold)",letterSpacing:"1px"}}>${p.price}</div>
-                    <a href={p.link} target="_blank" rel="noopener noreferrer" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1px",textTransform:"uppercase",padding:"12px 24px",textDecoration:"none"}}>Buy Now</a>
+                    <button onClick={() => {
+                      addToCart({ productId: p.id, name: p.name, price: p.price, image: p.img, variantId: p.variantId });
+                      toast.success(`${p.name} added to cart!`);
+                    }} style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1px",textTransform:"uppercase",padding:"12px 24px",border:"none",cursor:"pointer"}}>Buy Now</button>
                   </div>
                 </div>
               </div>
@@ -415,6 +422,7 @@ export default function HomePage() {
         </div>
         <Link href="#shop" style={{background:"var(--navy)",color:"var(--gold)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"12px 24px",textDecoration:"none",whiteSpace:"nowrap"}}>Shop Now</Link>
       </div>
+      <ToastContainer position="bottom-right" autoClose={3000} hideProgressBar newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
     </>
   );
 }

@@ -1,103 +1,123 @@
 "use client";
-import { useState, useEffect } from "react";
+
+import { useCart } from "../../lib/cart-context";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
+import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const NAVY = "#060F1C";
-const GOLD = "#C9A84C";
-
-interface CartItem {
-  id: string; slug: string; name: string; variant: string;
-  variantId: number; price: number; img: string; qty: number;
-}
+const NAVY = "var(--navy)";
+const GOLD = "var(--gold)";
 
 export default function CartPage() {
-  const [cart, setCart] = useState<CartItem[]>([]);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("jewsa-cart");
-    if (saved) setCart(JSON.parse(saved));
-  }, []);
-
-  const updateCart = (newCart: CartItem[]) => {
-    setCart(newCart);
-    localStorage.setItem("jewsa-cart", JSON.stringify(newCart));
-  };
-
-  const remove = (variantId: number) => updateCart(cart.filter(i => i.variantId !== variantId));
-  const updateQty = (variantId: number, qty: number) => {
-    if (qty < 1) return remove(variantId);
-    updateCart(cart.map(i => i.variantId === variantId ? { ...i, qty } : i));
-  };
-
-  const total = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+  const { cart, removeFromCart, updateQuantity, getCartTotal, clearCart } = useCart();
+  const router = useRouter();
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleCheckout = async () => {
-    if (!cart.length) return;
-    setLoading(true);
+    setIsProcessing(true);
     try {
-      const res = await fetch("/api/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const response = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({ items: cart }),
       });
-      const data = await res.json();
-      if (data.url) window.location.href = data.url;
-      else alert("Checkout error. Please try again.");
-    } catch { alert("Checkout error. Please try again."); }
-    finally { setLoading(false); }
+
+      if (response.ok) {
+        const data = await response.json();
+        toast.success('Checkout successful!');
+        clearCart();
+        // Redirect to a success page or payment gateway if provided by API
+        if (data.redirectUrl) {
+          router.push(data.redirectUrl);
+        } else {
+          router.push('/checkout-success'); // Default success page
+        }
+      } else {
+        const errorData = await response.json();
+        toast.error(`Checkout failed: ${errorData.message || response.statusText}`);
+      }
+    } catch (error: any) {
+      toast.error(`An error occurred during checkout: ${error.message}`);
+    } finally {
+      setIsProcessing(false);
+    }
   };
 
   return (
-    <div style={{ background: NAVY, minHeight: "100vh", color: "#F5F0E8", fontFamily: "'Inter', sans-serif" }}>
-      <nav style={{ padding: "20px max(24px,5vw)", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "sticky", top: 0, background: NAVY, zIndex: 100 }}>
-        <Link href="/" style={{ color: GOLD, fontWeight: 900, fontSize: 20, textDecoration: "none", letterSpacing: "2px" }}>JEWSA</Link>
-        <Link href="/#shop" style={{ color: GOLD, fontSize: 13, fontWeight: 700, letterSpacing: "1px", textDecoration: "none" }}>CONTINUE SHOPPING</Link>
+    <>
+      <style>{`
+        :root { --navy:#0B1F3A; --gold:#C9A84C; --red:#B22234; --white:#F5F0E8; }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--navy);color:var(--white);font-family:'DM Sans',system-ui,sans-serif;}
+      `}</style>
+      <nav style={{position:"sticky",top:0,zIndex:100,background:"var(--navy)",borderBottom:"2px solid var(--gold)",padding:"0 max(24px,4vw)",display:"flex",alignItems:"center",justifyContent:"space-between",height:64}}>
+        <Link href="/" style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"var(--gold)",letterSpacing:"2px",textDecoration:"none"}}>JewSA</Link>
+        <div style={{display:"flex",alignItems:"center",gap:24,flexWrap:"wrap"}}>
+            <Link href="/" style={{color:"rgba(245,240,232,0.55)",fontWeight:700,fontSize:13,letterSpacing:"1px",textDecoration:"none"}}>Continue Shopping</Link>
+        </div>
       </nav>
-
-      <div style={{ maxWidth: 800, margin: "0 auto", padding: "48px max(24px,5vw)" }}>
-        <h1 style={{ fontSize: 36, fontWeight: 900, letterSpacing: "2px", marginBottom: 32, color: GOLD }}>YOUR CART</h1>
+      <div style={{padding:"40px max(24px,5vw)",maxWidth:900,margin:"0 auto"}}>
+        <h1 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(36px,5vw,64px)",letterSpacing:"-1px",marginBottom:30,textAlign:"center"}}>Your Cart</h1>
 
         {cart.length === 0 ? (
-          <div style={{ textAlign: "center", padding: "80px 0" }}>
-            <p style={{ fontSize: 20, color: "rgba(245,240,232,0.5)", marginBottom: 24 }}>Your cart is empty.</p>
-            <Link href="/#shop" style={{ background: GOLD, color: NAVY, padding: "14px 32px", borderRadius: 8, fontWeight: 900, textDecoration: "none", fontSize: 14, letterSpacing: "1.5px", textTransform: "uppercase" }}>SHOP NOW</Link>
+          <div style={{textAlign:"center",padding:"50px 0"}}>
+            <p style={{fontSize:18,color:"rgba(245,240,232,0.7)",marginBottom:20}}>Your cart is empty. Time to get some swag!</p>
+            <Link href="/" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:14,letterSpacing:"1.5px",textTransform:"uppercase",padding:"14px 28px",textDecoration:"none"}}>Shop Now</Link>
           </div>
         ) : (
-          <>
-            <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 32 }}>
-              {cart.map(item => (
-                <div key={item.variantId} style={{ display: "grid", gridTemplateColumns: "80px 1fr auto", gap: 20, background: "rgba(255,255,255,0.03)", border: "1px solid rgba(201,168,76,0.15)", borderRadius: 10, padding: 20, alignItems: "center" }}>
-                  <img src={item.img} alt={item.name} style={{ width: 80, height: 80, objectFit: "contain", borderRadius: 6 }} />
-                  <div>
-                    <p style={{ fontWeight: 900, fontSize: 16, margin: "0 0 4px" }}>{item.name}</p>
-                    <p style={{ color: GOLD, fontSize: 13, margin: "0 0 12px", fontWeight: 700 }}>{item.variant}</p>
-                    <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                      <button onClick={() => updateQty(item.variantId, item.qty - 1)} style={{ width: 28, height: 28, border: `1px solid ${GOLD}`, background: "transparent", color: GOLD, fontWeight: 900, cursor: "pointer", borderRadius: 4, fontSize: 16 }}>-</button>
-                      <span style={{ fontWeight: 900, minWidth: 20, textAlign: "center" }}>{item.qty}</span>
-                      <button onClick={() => updateQty(item.variantId, item.qty + 1)} style={{ width: 28, height: 28, border: `1px solid ${GOLD}`, background: "transparent", color: GOLD, fontWeight: 900, cursor: "pointer", borderRadius: 4, fontSize: 16 }}>+</button>
-                      <button onClick={() => remove(item.variantId)} style={{ marginLeft: 8, background: "transparent", border: "none", color: "rgba(245,240,232,0.3)", cursor: "pointer", fontSize: 12, fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}>Remove</button>
-                    </div>
+          <div>
+            <div style={{border:"1px solid rgba(201,168,76,0.15)",marginBottom:20}}>
+              {cart.map((item) => (
+                <div key={`${item.productId}-${item.variantId}`} style={{display:"flex",alignItems:"center",padding:"15px 20px",borderBottom:"1px solid rgba(201,168,76,0.08)",backgroundColor:"rgba(255,255,255,0.03)"}}>
+                  <img src={item.image} alt={item.name} style={{width:80,height:80,objectFit:"contain",marginRight:20,borderRadius:4}} />
+                  <div style={{flexGrow:1}}>
+                    <h2 style={{fontSize:18,fontWeight:900,marginBottom:5}}>{item.name}</h2>
+                    <p style={{fontSize:14,color:"rgba(245,240,232,0.6)"}}>Price: ${item.price.toFixed(2)}</p>
                   </div>
-                  <p style={{ fontWeight: 900, fontSize: 20, color: GOLD, margin: 0 }}>${(item.price * item.qty).toFixed(2)}</p>
+                  <input
+                    type="number"
+                    min="1"
+                    value={item.quantity}
+                    onChange={(e) => updateQuantity(item.productId, parseInt(e.target.value), item.variantId)}
+                    style={{width:60,padding:"8px",fontSize:14,marginRight:15,backgroundColor:"rgba(255,255,255,0.1)",border:"1px solid var(--gold)",color:"var(--white)",borderRadius:4}}
+                  />
+                  <button onClick={() => removeFromCart(item.productId, item.variantId)} style={{background:"var(--red)",color:"var(--white)",border:"none",padding:"8px 12px",cursor:"pointer",borderRadius:4}}>Remove</button>
                 </div>
               ))}
             </div>
-
-            <div style={{ borderTop: "1px solid rgba(201,168,76,0.2)", paddingTop: 24, display: "flex", flexDirection: "column", gap: 16 }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <span style={{ fontSize: 16, color: "rgba(245,240,232,0.6)" }}>Subtotal</span>
-                <span style={{ fontSize: 24, fontWeight: 900, color: GOLD }}>${total.toFixed(2)}</span>
-              </div>
-              <p style={{ fontSize: 12, color: "rgba(245,240,232,0.4)", margin: 0 }}>Free shipping on orders over $50. Ships 3-7 business days.</p>
-              <button onClick={handleCheckout} disabled={loading} style={{ background: GOLD, color: NAVY, border: "none", borderRadius: 8, padding: "18px 36px", fontSize: 16, fontWeight: 900, letterSpacing: "1.5px", textTransform: "uppercase", cursor: loading ? "not-allowed" : "pointer" }}>
-                {loading ? "Loading..." : `Checkout — $${total.toFixed(2)}`}
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"15px 0",borderTop:"2px solid var(--gold)",marginTop:20}}>
+              <h2 style={{fontSize:22,fontWeight:900}}>Total: ${getCartTotal().toFixed(2)}</h2>
+              <button
+                onClick={handleCheckout}
+                disabled={isProcessing}
+                style={{
+                  background:"var(--gold)",
+                  color:"var(--navy)",
+                  fontWeight:900,
+                  fontSize:16,
+                  letterSpacing:"1.5px",
+                  textTransform:"uppercase",
+                  padding:"16px 32px",
+                  border:"none",
+                  cursor:isProcessing?"not-allowed":"pointer",
+                  opacity:isProcessing?0.7:1,
+                  transition:"opacity 0.2s"
+                }}
+              >
+                {isProcessing ? 'Processing...' : 'Proceed to Checkout'}
               </button>
-              <p style={{ fontSize: 12, color: "rgba(245,240,232,0.4)", margin: 0, textAlign: "center" }}>Secure checkout via Stripe.</p>
             </div>
-          </>
+            <div style={{textAlign:"center",marginTop:20}}>
+              <button onClick={clearCart} style={{background:"transparent",color:"rgba(245,240,232,0.6)",border:"none",textDecoration:"underline",cursor:"pointer",fontSize:14}}>Clear Cart</button>
+            </div>
+          </div>
         )}
       </div>
-    </div>
+      <ToastContainer position="bottom-right" autoClose={3000} hideProgressBar newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+    </>
   );
 }
