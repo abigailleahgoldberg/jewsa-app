@@ -2,8 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useCart } from "../lib/cart-context";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const NAVY = "var(--navy)";
 const GOLD = "var(--gold)";
@@ -75,26 +74,12 @@ export default function HomePage() {
   const [fade, setFade] = useState(true);
   const [email, setEmail] = useState("");
   const [emailDone, setEmailDone] = useState(false);
-  const [checkingOut, setCheckingOut] = useState<string | null>(null);
+  const [addedToCart, setAddedToCart] = useState<string | null>(null);
 
-  const buyNowDirect = async (p: { id: string; name: string; price: number; img: string; variantId: number }) => {
-    setCheckingOut(p.id);
-    try {
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ items: [{ productId: p.id, name: p.name, price: p.price, img: p.img, qty: 1, variantId: p.variantId }] }),
-      });
-      const data = await res.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        alert('Checkout error — please try again.');
-      }
-    } catch {
-      alert('Checkout error — please try again.');
-    }
-    setCheckingOut(null);
+  const handleAddToCart = (p: { id: string; name: string; price: number; img: string; variantId: string }) => {
+    addToCart({ productId: p.id, name: p.name, price: p.price, image: p.img, variantId: p.variantId });
+    setAddedToCart(p.id);
+    setTimeout(() => setAddedToCart(null), 2000);
   };
 
   useEffect(() => {
@@ -239,10 +224,9 @@ export default function HomePage() {
                   <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
                     <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"var(--gold)",letterSpacing:"1px"}}>${p.price}</div>
                     <button
-                      onClick={() => buyNowDirect(p)}
-                      disabled={checkingOut === p.id}
-                      style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1px",textTransform:"uppercase",padding:"12px 24px",border:"none",cursor:checkingOut===p.id?"wait":"pointer",opacity:checkingOut===p.id?0.7:1}}
-                    >{checkingOut === p.id ? 'Loading...' : 'Buy Now'}</button>
+                      onClick={() => handleAddToCart(p)}
+                      style={{background: addedToCart === p.id ? "var(--navy)" : "var(--gold)", color: addedToCart === p.id ? "var(--gold)" : "var(--navy)", fontWeight:900, fontSize:13, letterSpacing:"1px", textTransform:"uppercase", padding:"12px 24px", border: addedToCart === p.id ? "2px solid var(--gold)" : "none", cursor:"pointer", transition:"all 0.2s"}}
+                    >{addedToCart === p.id ? '✓ Added!' : 'Add to Cart'}</button>
                   </div>
                 </div>
               </div>
@@ -444,7 +428,7 @@ export default function HomePage() {
         </div>
         <Link href="#shop" style={{background:"var(--navy)",color:"var(--gold)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"12px 24px",textDecoration:"none",whiteSpace:"nowrap"}}>Shop Now</Link>
       </div>
-      <ToastContainer position="bottom-right" autoClose={3000} hideProgressBar newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+
     </>
   );
 }
