@@ -28,17 +28,15 @@ export default function CartPage() {
 
       if (response.ok) {
         const data = await response.json();
-        toast.success('Checkout successful!');
-        clearCart();
-        // Redirect to a success page or payment gateway if provided by API
-        if (data.redirectUrl) {
-          router.push(data.redirectUrl);
+        // API returns { url: "https://checkout.stripe.com/..." }
+        if (data.url) {
+          window.location.href = data.url; // Hard navigate to Stripe hosted checkout
         } else {
-          router.push('/checkout-success'); // Default success page
+          toast.error('Checkout error: no redirect URL returned.');
         }
       } else {
-        const errorData = await response.json();
-        toast.error(`Checkout failed: ${errorData.message || response.statusText}`);
+        const errorData = await response.json().catch(() => ({}));
+        toast.error(`Checkout failed: ${errorData.error || errorData.message || response.statusText}`);
       }
     } catch (error: any) {
       toast.error(`An error occurred during checkout: ${error.message}`);

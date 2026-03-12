@@ -75,6 +75,27 @@ export default function HomePage() {
   const [fade, setFade] = useState(true);
   const [email, setEmail] = useState("");
   const [emailDone, setEmailDone] = useState(false);
+  const [checkingOut, setCheckingOut] = useState<string | null>(null);
+
+  const buyNowDirect = async (p: { id: string; name: string; price: number; img: string; variantId: number }) => {
+    setCheckingOut(p.id);
+    try {
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items: [{ productId: p.id, name: p.name, price: p.price, img: p.img, qty: 1, variantId: p.variantId }] }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert('Checkout error — please try again.');
+      }
+    } catch {
+      alert('Checkout error — please try again.');
+    }
+    setCheckingOut(null);
+  };
 
   useEffect(() => {
     const t = setInterval(() => {
@@ -217,10 +238,11 @@ export default function HomePage() {
                   <div style={{fontSize:13,color:"rgba(245,240,232,0.5)",lineHeight:1.6,marginBottom:16}}>{p.desc}</div>
                   <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
                     <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"var(--gold)",letterSpacing:"1px"}}>${p.price}</div>
-                    <button onClick={() => {
-                      addToCart({ productId: p.id, name: p.name, price: p.price, image: p.img, variantId: p.variantId });
-                      toast.success(`${p.name} added to cart!`);
-                    }} style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1px",textTransform:"uppercase",padding:"12px 24px",border:"none",cursor:"pointer"}}>Buy Now</button>
+                    <button
+                      onClick={() => buyNowDirect(p)}
+                      disabled={checkingOut === p.id}
+                      style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1px",textTransform:"uppercase",padding:"12px 24px",border:"none",cursor:checkingOut===p.id?"wait":"pointer",opacity:checkingOut===p.id?0.7:1}}
+                    >{checkingOut === p.id ? 'Loading...' : 'Buy Now'}</button>
                   </div>
                 </div>
               </div>
