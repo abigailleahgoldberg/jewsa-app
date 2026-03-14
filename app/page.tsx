@@ -75,6 +75,7 @@ export default function HomePage() {
   const [email, setEmail] = useState("");
   const [emailDone, setEmailDone] = useState(false);
   const [addedToCart, setAddedToCart] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleAddToCart = (p: { id: string; name: string; price: number; img: string; variantId: string }) => {
     addToCart({ productId: p.id, name: p.name, price: p.price, image: p.img, variantId: p.variantId });
@@ -124,6 +125,25 @@ export default function HomePage() {
           .faq-grid{grid-template-columns:1fr!important;}
           .glossary-grid{grid-template-columns:1fr!important;}
           .sticky-bar{display:flex!important;}
+          .jewsa-nav-links{display:none!important;}
+          .jewsa-hamburger{display:flex!important;}
+          .jewsa-oneliner{flex-direction:column!important;gap:8px!important;align-items:flex-start!important;}
+          .jewsa-oneliner-cta{margin-left:0!important;}
+          .jewsa-hero-left{padding:48px 24px!important;}
+          .jewsa-hero-h1{font-size:clamp(36px,10vw,48px)!important;}
+          .jewsa-hero-min{min-height:160px!important;}
+          .jewsa-hero-btns{flex-direction:column!important;}
+          .jewsa-hero-btns a{text-align:center!important;width:100%!important;}
+          .jewsa-calendar-row{grid-template-columns:1fr!important;gap:0!important;}
+          .jewsa-calendar-date{border-right:none!important;border-bottom:1px solid rgba(201,168,76,0.06)!important;padding:12px 16px 4px!important;}
+          .jewsa-calendar-emoji{display:none!important;}
+          .jewsa-calendar-content{padding:4px 16px 16px!important;}
+          .jewsa-email-form{flex-direction:column!important;}
+          .jewsa-email-form input{min-width:0!important;width:100%!important;}
+          .jewsa-email-form button{width:100%!important;}
+          .jewsa-footer{flex-direction:column!important;text-align:center!important;gap:24px!important;}
+          .jewsa-footer-links{justify-content:center!important;}
+          .jewsa-footer-network{justify-content:center!important;}
         }
         @media(max-width:520px){
           .occasions-grid{grid-template-columns:1fr!important;}
@@ -132,20 +152,43 @@ export default function HomePage() {
 
       {/* NAV */}
       <nav style={{position:"sticky",top:0,zIndex:100,background:"var(--navy)",borderBottom:"2px solid var(--gold)",padding:"0 max(24px,4vw)",display:"flex",alignItems:"center",justifyContent:"space-between",height:64}}>
-        <Link href="/" style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"var(--gold)",letterSpacing:"2px",textDecoration:"none"}}>JewSA</Link>
-        <div style={{display:"flex",alignItems:"center",gap:24,flexWrap:"wrap"}}>
+        <Link href="/" style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"var(--gold)",letterSpacing:"2px",textDecoration:"none",zIndex:10}}>JewSA</Link>
+        <div className="jewsa-nav-links" style={{display:"flex",alignItems:"center",gap:24}}>
           {[["Shop","#shop"],["Culture","#culture"],["Calendar","#calendar"],["The Tribe","#story"]].map(([l,h])=>(
             <Link key={h} href={h} style={{fontSize:13,fontWeight:700,color:"rgba(245,240,232,0.55)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase"}}>{l}</Link>
           ))}
-          <Link href="/cart" style={{color:"var(--gold)",fontWeight:700,fontSize:13,letterSpacing:"1px",textDecoration:"none",marginRight:8}}>Cart ({cartItemCount})</Link><Link href="#shop" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"10px 20px",textDecoration:"none"}}>Shop Now</Link>
+          <Link href="/cart" style={{color:"var(--gold)",fontWeight:700,fontSize:13,letterSpacing:"1px",textDecoration:"none"}}>Cart ({cartItemCount})</Link>
+          <Link href="#shop" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"10px 20px",textDecoration:"none"}}>Shop Now</Link>
+        </div>
+        {/* Mobile: cart + hamburger */}
+        <div className="jewsa-hamburger" style={{display:"none",alignItems:"center",gap:16}}>
+          <Link href="/cart" style={{color:"var(--gold)",fontWeight:700,fontSize:13,letterSpacing:"1px",textDecoration:"none"}}>Cart ({cartItemCount})</Link>
+          <button onClick={()=>setMobileMenuOpen(!mobileMenuOpen)} aria-label="Menu" style={{background:"none",border:"none",color:"var(--gold)",cursor:"pointer",padding:4}}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              {mobileMenuOpen
+                ? <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                : <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              }
+            </svg>
+          </button>
         </div>
       </nav>
 
+      {/* Mobile menu overlay */}
+      {mobileMenuOpen && (
+        <div style={{position:"fixed",top:64,left:0,right:0,bottom:0,background:"var(--navy)",zIndex:99,padding:"32px 24px",overflowY:"auto"}}>
+          {[["Shop","#shop"],["Culture","#culture"],["Calendar","#calendar"],["The Tribe","#story"]].map(([l,h])=>(
+            <Link key={h} href={h} onClick={()=>setMobileMenuOpen(false)} style={{display:"block",fontSize:18,fontWeight:700,color:"rgba(245,240,232,0.7)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase",padding:"16px 0",borderBottom:"1px solid rgba(201,168,76,0.1)"}}>{l}</Link>
+          ))}
+          <Link href="#shop" onClick={()=>setMobileMenuOpen(false)} style={{display:"block",background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:14,letterSpacing:"1.5px",textTransform:"uppercase",padding:"16px 24px",textDecoration:"none",textAlign:"center",marginTop:24}}>Shop Now</Link>
+        </div>
+      )}
+
       {/* ONE-LINER STRIP */}
-      <div style={{background:"rgba(201,168,76,0.1)",borderBottom:"1px solid rgba(201,168,76,0.2)",padding:"10px max(24px,4vw)",display:"flex",alignItems:"center",gap:12,flexWrap:"wrap"}}>
+      <div className="jewsa-oneliner" style={{background:"rgba(201,168,76,0.1)",borderBottom:"1px solid rgba(201,168,76,0.2)",padding:"10px max(24px,4vw)",display:"flex",alignItems:"center",gap:12,flexWrap:"wrap"}}>
         <span style={{fontSize:11,fontWeight:900,letterSpacing:"2px",color:"var(--gold)",textTransform:"uppercase",flexShrink:0}}>What is JewSA?</span>
         <span style={{fontSize:13,color:"rgba(245,240,232,0.6)",lineHeight:1.5}}>Jewish-American pride merch — built in America, blessed in Brooklyn, designed to make you smile before you even put it on.</span>
-        <Link href="#shop" style={{marginLeft:"auto",fontSize:12,fontWeight:900,color:"var(--gold)",textDecoration:"none",whiteSpace:"nowrap",letterSpacing:"1px",textTransform:"uppercase"}}>Shop the Collection</Link>
+        <Link className="jewsa-oneliner-cta" href="#shop" style={{marginLeft:"auto",fontSize:12,fontWeight:900,color:"var(--gold)",textDecoration:"none",whiteSpace:"nowrap",letterSpacing:"1px",textTransform:"uppercase"}}>Shop the Collection</Link>
       </div>
 
       {/* TICKER */}
@@ -162,12 +205,12 @@ export default function HomePage() {
         ))}
         <div className="hero-grid">
           {/* LEFT */}
-          <div style={{padding:"80px max(48px,6vw)",display:"flex",flexDirection:"column",justifyContent:"center",gap:28}}>
+          <div className="jewsa-hero-left" style={{padding:"80px max(48px,6vw)",display:"flex",flexDirection:"column",justifyContent:"center",gap:28}}>
             <div style={{display:"inline-block",background:"rgba(201,168,76,0.12)",border:"1px solid rgba(201,168,76,0.28)",padding:"6px 16px",width:"fit-content"}}>
               <span style={{fontSize:11,fontWeight:900,letterSpacing:"3px",textTransform:"uppercase",color:"var(--gold)"}}>Jewish-American Pride</span>
             </div>
-            <div style={{minHeight:210}}>
-              <h1 className={fade?"fadin":"fhide"} style={{fontSize:"clamp(44px,6.5vw,88px)",fontFamily:"'Bebas Neue',sans-serif",color:"var(--white)",letterSpacing:"-1px",lineHeight:0.95,marginBottom:16}}>
+            <div className="jewsa-hero-min" style={{minHeight:210}}>
+              <h1 className={`jewsa-hero-h1 ${fade?"fadin":"fhide"}`} style={{fontSize:"clamp(44px,6.5vw,88px)",fontFamily:"'Bebas Neue',sans-serif",color:"var(--white)",letterSpacing:"-1px",lineHeight:0.95,marginBottom:16}}>
                 {pl.main}<br/><span style={{color:"var(--gold)"}}>{pl.accent}</span>
               </h1>
               <p className={fade?"fadin":"fhide"} style={{fontSize:"clamp(14px,1.6vw,18px)",color:"rgba(245,240,232,0.6)",lineHeight:1.7,maxWidth:440,animationDelay:"0.1s"}}>{pl.sub}</p>
@@ -179,7 +222,7 @@ export default function HomePage() {
                   style={{width:i===idx?24:8,height:8,background:i===idx?"var(--gold)":"rgba(201,168,76,0.3)",border:"none",cursor:"pointer",transition:"all 0.3s"}} />
               ))}
             </div>
-            <div style={{display:"flex",gap:12,flexWrap:"wrap"}}>
+            <div className="jewsa-hero-btns" style={{display:"flex",gap:12,flexWrap:"wrap"}}>
               <Link href="#shop" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:14,letterSpacing:"1.5px",textTransform:"uppercase",padding:"16px 36px",textDecoration:"none"}}>Shop The Collection</Link>
               <Link href="#culture" style={{background:"transparent",color:"var(--white)",fontWeight:900,fontSize:14,letterSpacing:"1.5px",textTransform:"uppercase",padding:"14px 32px",border:"2px solid rgba(245,240,232,0.25)",textDecoration:"none"}}>The Culture</Link>
             </div>
@@ -312,12 +355,12 @@ export default function HomePage() {
           </div>
           <div style={{border:"1px solid rgba(201,168,76,0.1)"}}>
             {CALENDAR.map((h,i)=>(
-              <div key={i} style={{display:"grid",gridTemplateColumns:"130px 44px 1fr",alignItems:"stretch",borderBottom:i<CALENDAR.length-1?"1px solid rgba(201,168,76,0.07)":"none",background:h.type==="memorial"?"rgba(255,255,255,0.015)":"transparent"}}>
-                <div style={{padding:"18px 16px",borderRight:"1px solid rgba(201,168,76,0.08)",display:"flex",flexDirection:"column",justifyContent:"center"}}>
-                  <div style={{fontSize:11,color:"rgba(245,240,232,0.35)",lineHeight:1.5}}>{h.date}</div>
+              <div key={i} className="jewsa-calendar-row" style={{display:"grid",gridTemplateColumns:"130px 44px 1fr",alignItems:"stretch",borderBottom:i<CALENDAR.length-1?"1px solid rgba(201,168,76,0.07)":"none",background:h.type==="memorial"?"rgba(255,255,255,0.015)":"transparent"}}>
+                <div className="jewsa-calendar-date" style={{padding:"18px 16px",borderRight:"1px solid rgba(201,168,76,0.08)",display:"flex",flexDirection:"column",justifyContent:"center"}}>
+                  <div style={{fontSize:11,color:"rgba(245,240,232,0.35)",lineHeight:1.5}}>{h.emoji} {h.date}</div>
                 </div>
-                <div style={{padding:"18px 8px",borderRight:"1px solid rgba(201,168,76,0.05)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:20}}>{h.emoji}</div>
-                <div style={{padding:"18px 24px"}}>
+                <div className="jewsa-calendar-emoji" style={{padding:"18px 8px",borderRight:"1px solid rgba(201,168,76,0.05)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:20}}>{h.emoji}</div>
+                <div className="jewsa-calendar-content" style={{padding:"18px 24px"}}>
                   <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:6,flexWrap:"wrap"}}>
                     <span style={{fontWeight:900,fontSize:14,color:h.type==="memorial"?"rgba(245,240,232,0.75)":"var(--white)"}}>{h.name}</span>
                     <span style={{fontSize:11,color:"rgba(245,240,232,0.25)",fontStyle:"italic"}}>{h.hebrew}</span>
@@ -390,7 +433,7 @@ export default function HomePage() {
               <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(28px,4vw,48px)",color:"rgba(245,240,232,0.95)",letterSpacing:"-0.5px",marginBottom:8}}>Join The Tribe.</div>
               <p style={{fontSize:15,color:"rgba(245,240,232,0.75)",marginBottom:6,lineHeight:1.6}}>We send good stuff. New drops, culture moments, the occasional very good punchline.</p>
               <p style={{fontSize:13,color:"rgba(245,240,232,0.5)",marginBottom:28}}>Not too often. We are not needy.</p>
-              <form onSubmit={async e=>{e.preventDefault();if(!email.trim())return;try{const r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});const d=await r.json();if(d.success){setEmailDone(true);}}catch(err){console.error(err);}}} style={{display:"flex",gap:0,maxWidth:460,margin:"0 auto",flexWrap:"wrap"}}>
+              <form onSubmit={async e=>{e.preventDefault();if(!email.trim())return;try{const r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});const d=await r.json();if(d.success){setEmailDone(true);}}catch(err){console.error(err);}}} className="jewsa-email-form" style={{display:"flex",gap:0,maxWidth:460,margin:"0 auto",flexWrap:"wrap"}}>
                 <input type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="your@email.com" required
                   style={{flex:1,minWidth:200,padding:"14px 20px",fontSize:14,background:"rgba(255,255,255,0.95)",color:"#111",border:"none",outline:"none",fontFamily:"inherit"}}/>
                 <button type="submit" style={{background:"var(--navy)",color:"var(--gold)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"14px 24px",border:"none",cursor:"pointer",whiteSpace:"nowrap"}}>Join The Tribe</button>
@@ -401,17 +444,17 @@ export default function HomePage() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{background:"#04101F",borderTop:"1px solid rgba(201,168,76,0.15)",padding:"36px max(24px,5vw)",display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:16}}>
+      <footer className="jewsa-footer" style={{background:"#04101F",borderTop:"1px solid rgba(201,168,76,0.15)",padding:"36px max(24px,5vw)",display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:16}}>
         <div>
           <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:28,color:"var(--gold)",letterSpacing:"2px",marginBottom:4}}>JewSA</div>
           <div style={{fontSize:12,color:"rgba(245,240,232,0.3)"}}>Jewish-American pride merch. Punny. Proud. Perfect.</div>
         </div>
-        <div style={{display:"flex",gap:20,flexWrap:"wrap"}}>
+        <div className="jewsa-footer-links" style={{display:"flex",gap:20,flexWrap:"wrap"}}>
           {[["Shop","#shop"],["Culture","#culture"],["Calendar","#calendar"],["The Tribe","#story"]].map(([l,h])=>(
             <Link key={h} href={h} style={{fontSize:12,fontWeight:700,color:"rgba(245,240,232,0.4)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase"}}>{l}</Link>
           ))}
         </div>
-        <div style={{display:"flex",gap:20,flexWrap:"wrap",alignItems:"center"}}>
+        <div className="jewsa-footer-network" style={{display:"flex",gap:20,flexWrap:"wrap",alignItems:"center"}}>
           <span style={{fontSize:11,letterSpacing:"2px",fontWeight:700,color:"rgba(234,179,8,0.5)"}}>OUR NETWORK</span>
           {[["The Voice of Cash","https://www.thevoiceofcash.com"],["U-God Sacred Texts","https://u-god.com"],["WeBearish","https://www.webearish.com"],["AI Skills Agents","https://aiskillsagents.com"]].map(([label,href]) => (
             <a key={href} href={href} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"rgba(245,240,232,0.3)",textDecoration:"none",fontWeight:600}}>{label}</a>
