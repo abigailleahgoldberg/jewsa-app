@@ -229,7 +229,26 @@ export default function HomePage() {
           </div>
           {/* RIGHT */}
           <div className="hero-right" style={{background:"rgba(255,255,255,0.02)",borderLeft:"1px solid rgba(201,168,76,0.1)",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:32,padding:48}}>
-            <div style={{fontSize:120}}>🕎</div>
+            <svg width="120" height="140" viewBox="0 0 120 140" fill="none" aria-label="Menorah">
+              <rect x="52" y="20" width="16" height="100" rx="3" fill="var(--gold)" opacity="0.9"/>
+              <rect x="8" y="18" width="6" height="40" rx="3" fill="var(--gold)" opacity="0.8"/>
+              <rect x="25" y="10" width="6" height="48" rx="3" fill="var(--gold)" opacity="0.8"/>
+              <rect x="42" y="6" width="6" height="52" rx="3" fill="var(--gold)" opacity="0.8"/>
+              <rect x="72" y="6" width="6" height="52" rx="3" fill="var(--gold)" opacity="0.8"/>
+              <rect x="89" y="10" width="6" height="48" rx="3" fill="var(--gold)" opacity="0.8"/>
+              <rect x="106" y="18" width="6" height="40" rx="3" fill="var(--gold)" opacity="0.8"/>
+              <path d="M11 58 Q11 72 60 72 Q109 72 109 58" stroke="var(--gold)" strokeWidth="5" fill="none" opacity="0.7"/>
+              <path d="M28 58 Q28 68 60 68 Q92 68 92 58" stroke="var(--gold)" strokeWidth="5" fill="none" opacity="0.7"/>
+              <path d="M45 58 Q45 64 60 64 Q75 64 75 58" stroke="var(--gold)" strokeWidth="5" fill="none" opacity="0.7"/>
+              {[11,28,45,60,75,92,109].map((x,i)=>(
+                <ellipse key={i} cx={x} cy={i===3?4:i<3?[16,8,4][i]:[4,8,16][i-4]} rx="5" ry="6" fill="#FFD700" opacity="0.6"/>
+              ))}
+              {[11,28,45,60,75,92,109].map((x,i)=>(
+                <ellipse key={`g${i}`} cx={x} cy={i===3?0:i<3?[12,4,0][i]:[0,4,12][i-4]} rx="3" ry="4" fill="#FFF4CC" opacity="0.4"/>
+              ))}
+              <rect x="35" y="120" width="50" height="8" rx="4" fill="var(--gold)" opacity="0.6"/>
+              <rect x="42" y="114" width="36" height="8" rx="2" fill="var(--gold)" opacity="0.7"/>
+            </svg>
             <div style={{textAlign:"center"}}>
               <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:52,color:"var(--gold)",letterSpacing:"2px",lineHeight:1}}>JewSA</div>
               <div style={{fontSize:12,fontWeight:700,letterSpacing:"3px",color:"rgba(245,240,232,0.4)",textTransform:"uppercase",marginTop:4}}>Punny. Proud. Perfect.</div>
