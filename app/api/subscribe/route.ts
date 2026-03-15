@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const BREVO_API_KEY = process.env.BREVO_API_KEY!;
 const JEWSA_LIST_ID = 3;
 
 export async function POST(req: NextRequest) {
@@ -10,11 +9,17 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Valid email required' }, { status: 400 });
     }
 
+    const brevoKey = process.env.BREVO_API_KEY;
+    if (!brevoKey) {
+      console.warn('BREVO_API_KEY not set, skipping subscription');
+      return NextResponse.json({ success: true, code: 'MISHPOKHE10' });
+    }
+
     // Add contact to Brevo
     const res = await fetch('https://api.brevo.com/v3/contacts', {
       method: 'POST',
       headers: {
-        'api-key': BREVO_API_KEY,
+        'api-key': brevoKey,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -29,43 +34,40 @@ export async function POST(req: NextRequest) {
     });
 
     if (res.status === 201 || res.status === 204) {
-      // Send welcome email with 10% off code
+      // Send welcome email with coupon to subscriber
+      const htmlContent =
+        '<div style="max-width:600px;margin:0 auto;font-family:Arial,sans-serif;">' +
+        '<div style="background:#0B1F3A;padding:32px;text-align:center;">' +
+        '<h1 style="color:#C9A84C;font-size:28px;margin:0;letter-spacing:2px;">JewSA</h1>' +
+        '</div>' +
+        '<div style="padding:40px 32px;background:#ffffff;text-align:center;">' +
+        '<h2 style="color:#0B1F3A;font-size:22px;margin-bottom:16px;">Mazel tov! You\'re officially part of the tribe.</h2>' +
+        '<p style="color:#333333;font-size:16px;line-height:1.6;margin-bottom:24px;">As a thank you for joining, here\'s 10% off your first order:</p>' +
+        '<div style="background:#f9f7f0;border:2px dashed #C9A84C;padding:24px;margin:24px 0;display:inline-block;">' +
+        '<p style="color:#333333;font-size:14px;margin:0 0 8px;">Your discount code:</p>' +
+        '<p style="color:#C9A84C;font-size:32px;font-weight:900;letter-spacing:4px;margin:0;">MISHPOKHE10</p>' +
+        '</div>' +
+        '<p style="color:#333333;font-size:14px;margin:24px 0;">Use this code at checkout for 10% off your entire order.</p>' +
+        '<a href="https://jewsa.com/#shop" style="display:inline-block;background:#C9A84C;color:#0B1F3A;font-weight:900;font-size:16px;padding:16px 40px;text-decoration:none;letter-spacing:1px;">SHOP NOW</a>' +
+        '</div>' +
+        '<div style="padding:24px 32px;background:#0B1F3A;text-align:center;">' +
+        '<p style="color:#C9A84C;font-size:12px;margin:0;">Jewish-American pride merch. Punny. Proud. Perfect.</p>' +
+        '<p style="color:#C9A84C;font-size:11px;margin:8px 0 0;opacity:0.6;">You received this because you subscribed at jewsa.com</p>' +
+        '</div>' +
+        '</div>';
+
       await fetch('https://api.brevo.com/v3/smtp/email', {
         method: 'POST',
         headers: {
-          'api-key': BREVO_API_KEY,
-          'Content-Type': 'application/json',
+          'accept': 'application/json',
+          'content-type': 'application/json',
+          'api-key': brevoKey,
         },
         body: JSON.stringify({
           sender: { name: 'JewSA', email: 'abigailleahgoldberg@gmail.com' },
           to: [{ email }],
-          subject: 'Welcome to JewSA — here\'s your 10% off 🎉',
-          htmlContent: `
-<!DOCTYPE html>
-<html>
-<body style="font-family: -apple-system, sans-serif; max-width: 560px; margin: 0 auto; padding: 32px 24px; background: #fff; color: #111;">
-  <div style="font-size: 32px; margin-bottom: 8px;">✡️</div>
-  <h1 style="font-size: 24px; font-weight: 800; margin: 0 0 8px;">Welcome to JewSA.</h1>
-  <p style="color: #555; font-size: 16px; line-height: 1.6; margin: 0 0 24px;">
-    You're in. You're mishpokhe now.
-  </p>
-  <div style="background: #111; color: #fff; border-radius: 8px; padding: 24px; margin-bottom: 24px; text-align: center;">
-    <div style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.6; margin-bottom: 8px;">Your welcome discount</div>
-    <div style="font-size: 36px; font-weight: 900; letter-spacing: 4px;">MISHPOKHE10</div>
-    <div style="font-size: 13px; opacity: 0.6; margin-top: 8px;">10% off your first order</div>
-  </div>
-  <a href="https://jewsa.com/products" style="display: block; background: #fff; color: #111; border: 2px solid #111; border-radius: 6px; padding: 14px 24px; text-align: center; font-weight: 700; text-decoration: none; margin-bottom: 24px;">Shop JewSA →</a>
-  <p style="color: #888; font-size: 14px; line-height: 1.6;">
-    We'll send you the good stuff — new drops, stories, and the occasional message from our Jewish mother. Nothing you'll want to unsubscribe from. Probably.
-  </p>
-  <hr style="border: none; border-top: 1px solid #eee; margin: 24px 0;"/>
-  <p style="color: #bbb; font-size: 12px;">
-    JewSA · Made in America, for the hyphenated. ·
-    <a href="https://jewsa.com" style="color: #bbb;">jewsa.com</a>
-  </p>
-</body>
-</html>
-          `,
+          subject: 'Welcome to the Tribe! Here\'s 10% Off',
+          htmlContent: htmlContent,
         }),
       });
 
