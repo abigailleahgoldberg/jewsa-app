@@ -35,6 +35,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'why-every-jew-needs-a-good-tallit',
     'bar-bat-mitzvah-gifts-that-make-sense',
     'rise-of-jewish-pride-merch',
+    'passover-survival-guide-whole-family',
+    'jewish-delis-changed-america-state-by-state',
+    'jewish-kids-summer-camp-stories',
   ]
 
   return [

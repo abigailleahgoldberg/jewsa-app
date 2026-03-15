@@ -602,6 +602,147 @@ For the tribe — books, Judaica, and gifts worth having:
 - [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
+  },
+  {
+    slug: 'passover-survival-guide-whole-family',
+    title: 'The Ultimate Passover Survival Guide for the Whole Family',
+    excerpt: 'Passover is the most logistically intense holiday in the Jewish calendar. Here is everything you need to know to survive the seder, feed your family, and still be speaking to your relatives by Yom Tov.',
+    date: '2026-03-15',
+    category: 'humor',
+    readTime: 7,
+    content: `
+<h2>Passover Is Coming. Are You Ready?</h2>
+<p>Let's be clear about something: Passover is not a casual holiday. It is an eight-day commitment that begins with a full kitchen audit, proceeds through a ritual dinner that can last until midnight, and ends with every person in the household deeply tired of matzo. It is also one of the most beautiful and meaningful experiences in the Jewish calendar, which is why families keep doing it year after year despite the chaos.</p>
+<p>If you are hosting a seder for the first time, or if you have been doing this for decades and still feel like you are improvising under pressure, this guide is for you.</p>
+<h2>The Kitchen: Where Passover Begins</h2>
+<p>The preparation for Passover starts with the chametz situation. Chametz refers to any grain product that has leavened, and the Torah requires that it be removed from your home entirely before the holiday begins. This is not a metaphor. People clean behind their ovens. They tape off cabinets. They sell their chametz to a non-Jewish neighbor through a rabbi and buy it back after the holiday.</p>
+<p>The practical reality for most families involves a thorough cleaning of the kitchen, a dedicated set of Passover dishes and cookware that come out once a year, and a grocery run that costs significantly more than you budgeted. Passover food is expensive. This is not something that improves with acceptance, but it is something you need to plan for.</p>
+<p>The chametz burning, which happens the morning before the seder, is one of the underrated pleasures of Passover. You gather whatever chametz survived the search the night before, take it outside, and burn it. There is something deeply satisfying about burning bread in your backyard. Your neighbors will have questions.</p>
+<h2>The Seder Plate: What Goes On It</h2>
+<p>The seder plate is the centerpiece of the table and contains six symbolic foods. Know what they are before your guests ask, because they will ask.</p>
+<p>Maror is the bitter herb, traditionally horseradish, representing the bitterness of slavery. Charoset is the sweet paste of apples, nuts, and wine, representing the mortar the Israelites used. Karpas is a vegetable, usually parsley, dipped in salt water to represent tears. Zeroa is the shank bone, representing the Passover sacrifice. Beitzah is the hard-boiled egg, representing the Temple offering. And in many families, a sixth item represents something relevant to your own tradition or community.</p>
+<p>Keep the horseradish strong. This is not a moment for restraint. Weak horseradish at a seder is a character flaw.</p>
+<h2>The Haggadah: Choosing Your Version</h2>
+<p>The Haggadah is the book everyone follows at the seder, and it comes in more versions than you can count. The Maxwell House Haggadah, which has been printed since 1932, has graced more American seder tables than any other. It is serviceable and familiar. It is also not anyone's idea of an inspiring text.</p>
+<p>More recent haggadahs from publishers like Artscroll, the Jewish Publication Society, and independent creators offer everything from deeply traditional to politically engaged to family-friendly versions with illustrations for children. If you are hosting a diverse crowd, consider a haggadah with clear translations and explanations. If you are hosting mostly Hebrew readers, you have more options.</p>
+<p>Whatever you choose, mark the pages you plan to skip. Every family has a slightly different version of how long the seder runs. Acknowledge this up front and spare everyone the argument.</p>
+<h2>The Food: A Short Practical Guide</h2>
+<p>The seder meal comes after a substantial portion of the service, which means your guests arrive hungry and wait through discussion, songs, and symbolic foods before anything substantive appears. Plan accordingly.</p>
+<p>Matzo ball soup is non-negotiable if you are serving a traditional meal. The matzo ball debate is endless, but do not serve them from a mix for a holiday seder. Make them from scratch. People will notice, and they will remember.</p>
+<p>Brisket or roast chicken are the standard mains. Both work well for large crowds and both improve when made the day before and reheated. Potato kugel is an excellent side dish and travels well if you are bringing food to someone else's seder. Macaroons are the traditional Passover dessert and have a loyal following. Flourless chocolate cake has joined the rotation and deserves its place.</p>
+<h2>The Kids: Keeping Them Engaged</h2>
+<p>The seder is specifically designed to engage children through questions, songs, and the hiding of the afikomen, which is the piece of matzo concealed early in the service and ransomed back from the children at the end. The afikomen is a serious negotiation. Do not agree to anything you cannot actually deliver.</p>
+<p>The Four Questions, traditionally asked by the youngest child, are sung in Hebrew and represent the first act of participation. Prepare your young children in advance. Watching a five-year-old recite the Four Questions in Hebrew is one of the more reliable tearjerker moments in the Jewish year.</p>
+<h2>Managing the Table</h2>
+<p>Every family has its seder dynamics. The uncle who wants to read every word. The cousin who announces she is vegan at the dinner table. The debate about whether the seder can start before sunset. The question of whether a second cup of wine is still technically before the meal or after it.</p>
+<p>You cannot control all of it. You can set the agenda, pour the wine early, and remind everyone that the goal is to tell the story of the Exodus with enough enthusiasm that people want to come back next year. The food is good, the wine is flowing, and the story being told is one of the most powerful in human history.</p>
+<p>Chag Sameach. You've got this.</p>
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
+  },
+  {
+    slug: 'jewish-delis-changed-america-state-by-state',
+    title: 'Jewish Delis That Changed America: A State-by-State Tour',
+    excerpt: "From Katz's on the Lower East Side to Langer's in Los Angeles, Jewish delis built the blueprint for American comfort food. Here is the definitive tour.",
+    date: '2026-02-20',
+    category: 'history',
+    readTime: 8,
+    content: `
+<h2>The Institution That Built American Food Culture</h2>
+<p>The Jewish delicatessen is one of the most distinctly American institutions in the country. It was born in the tenements of the Lower East Side, spread across every city where Jewish immigrants settled, and shaped the way Americans eat in ways that outlasted the delis themselves. Pastrami, corned beef, the Reuben sandwich, the concept of a truly enormous lunch — all of it traces back to the Jewish deli tradition.</p>
+<p>What follows is a tour of the delis that mattered most and the cities where Jewish deli culture took root. Some of these places are still open. Some are legends that live on in memory and influence. All of them changed how America feeds itself.</p>
+<h2>New York: The Originals</h2>
+<p>You cannot tell the story of the Jewish deli without starting in New York, because that is where the story begins. The Lower East Side in the early twentieth century was the most densely populated neighborhood in the world, and its streets were lined with appetizing shops, kosher butchers, and delicatessens that served the Ashkenazi immigrant community.</p>
+<p>Katz's Delicatessen, founded in 1888 on Houston Street, is the most famous survivor of that era. The hand-carved pastrami is made to a formula that has not changed substantially in a century. The line moves slowly. The prices reflect the Manhattan of today rather than the Manhattan of 1888. None of this has changed the calculus: Katz's remains the reference point against which every other American deli is measured.</p>
+<p>The Second Avenue Deli, founded in 1954 and relocated after the death of its founder, represents a different chapter in New York deli history. It survived the decline of the East Village's Jewish population and became an institution in its own right, known for matzo ball soup that many consider the standard against which all others are judged.</p>
+<h2>California: The West Coast Tradition</h2>
+<p>Los Angeles has been arguing for decades about whether Langer's Delicatessen makes the best pastrami sandwich in America. The argument is not resolved, but the participants are serious. Langer's opened in 1947 on Alvarado Street, near MacArthur Park, and built its reputation on double-baked rye bread and pastrami cured and steamed to a standard that New Yorkers reluctantly acknowledge is exceptional.</p>
+<p>The number 19 at Langer's — pastrami, Swiss cheese, coleslaw, and Russian dressing on rye — became a reference dish for an entire generation of food writers. The late food critic Jonathan Gold, who defined Los Angeles food culture, was a vocal partisan for Langer's in the ongoing national pastrami debate.</p>
+<p>In the Bay Area, Wise Sons Delicatessen brought the deli tradition to a new generation when it opened in 2012. Their approach to deli food takes the tradition seriously without being precious about it, and their presence helped establish that the Jewish deli could thrive outside the neighborhoods where it originated.</p>
+<h2>Illinois: Chicago's Deli Legacy</h2>
+<p>Chicago had a substantial Jewish deli culture centered in the neighborhoods of Rogers Park, Albany Park, and the North Shore suburbs. The tradition produced Manny's Cafeteria and Delicatessen, which opened in 1942 and has been serving politicians, union workers, and everyone else from a steam table ever since. Manny's is not precious about its food. It is abundant, unpretentious, and has survived everything Chicago has thrown at it.</p>
+<p>The Chicago deli tradition also produced a distinct style: larger portions, lower prices, and an egalitarian atmosphere that reflected the city's working-class Jewish community. The corned beef here is cut thicker than it is in New York. This is not an accident.</p>
+<h2>Michigan: The Dearborn Connection</h2>
+<p>The large Arab-American community in Dearborn means that halal food dominates the culinary landscape, but the surrounding Detroit metro area built a substantial Jewish deli culture that influenced the region. Zingerman's Delicatessen in Ann Arbor, opened in 1982, became one of the most celebrated delis in the country. Their mail-order business brought Jewish deli food to every corner of the United States, introducing the corned beef sandwich and the proper Reuben to people who had never encountered them.</p>
+<h2>Texas: The Houston Story</h2>
+<p>Houston's Jewish community, concentrated in the Meyerland neighborhood, built a local deli culture that reflected the particular character of Texas Jewish life. Kenny and Ziggy's, opened in 1999 by Kenny Friedman, became the spiritual home of Houston's Jewish food scene. The menu includes over two hundred items and reads like a comprehensive survey of Jewish-American deli cooking.</p>
+<h2>Why the Deli Mattered</h2>
+<p>The Jewish delicatessen was never just a restaurant. It was a cultural institution where immigrant communities maintained continuity with the food traditions they had carried from Europe, adapted them to American ingredients and American scale, and eventually shared them with the entire country.</p>
+<p>The deli also served as a democratic space. The prices were never high. The booths accommodated everyone. The menu rewarded appetite over sophistication. In a society where other institutions were stratified by race, religion, and class, the Jewish deli fed everyone who showed up.</p>
+<p>The delis that remain are worth visiting, worth supporting, and worth understanding as repositories of a tradition that shaped American food culture in ways that extend far beyond the pastrami sandwich. The ones that have closed deserve to be remembered. They were part of the story of how immigrants built something new in a new country, and the evidence of that building is still visible in every city where they stood.</p>
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
+  },
+  {
+    slug: 'jewish-kids-summer-camp-stories',
+    title: 'Why Every Jewish Kid Has the Same Summer Camp Stories',
+    excerpt: 'The color war, the Friday night services on the hill, the counselor who became a legend — Jewish summer camp is one of the most powerful community institutions in American Jewish life, and every generation comes back with the same stories.',
+    date: '2026-01-10',
+    category: 'culture',
+    readTime: 6,
+    content: `
+<h2>The Shared Archive</h2>
+<p>Something unusual happens when two Jewish adults who grew up in different cities, at different camps, in different decades compare notes. The details differ. The punchlines are identical. The color war story. The all-camp talent show. The counselor who was so beloved that his name became a verb. The final Shabbat service on the last night that made everyone cry even though everyone was fifteen and theoretically too old to cry.</p>
+<p>Jewish summer camp is one of the most powerful community institutions in American Jewish life, and it has been producing the same essential stories for generations. Understanding why requires understanding what Jewish summer camp actually is and what it was designed to accomplish.</p>
+<h2>What Jewish Summer Camp Is</h2>
+<p>Jewish summer camps in America range from Orthodox religious programs to Zionist youth camps to nondenominational cultural programs, but they share certain features that define the experience. They are residential. They run for four to eight weeks. They are almost entirely populated by Jewish children and Jewish staff. And they operate on the explicit understanding that the point is not just swimming and archery — it is Jewish continuity.</p>
+<p>The founders of the Jewish camp movement in the early twentieth century were worried about assimilation. They understood that Jewish children who spent their formative summers in a fully Jewish environment, making Jewish friends, observing Jewish rituals, singing Hebrew songs, and experiencing Jewish community as the norm rather than the exception, would grow up with a relationship to their Jewish identity that classroom education alone could not produce.</p>
+<p>They were right. Study after study has confirmed that Jewish camping correlates with stronger Jewish identity, higher rates of Jewish communal involvement, and greater likelihood of raising Jewish children. The institution works because it creates an experience of Jewish belonging that is joyful rather than obligatory.</p>
+<h2>Color War: The Central Myth</h2>
+<p>Color war is the capstone event of Jewish summer camp, and the details vary across institutions but the structure is universal. The camp is divided into two teams, typically named for values like Courage and Wisdom or Hebrew words for strength and kindness. Over several days, the teams compete in every activity the camp offers — swimming, sports, singing, debate, relay races, cleanliness inspections.</p>
+<p>The breakout, the moment when color war is announced, is the subject of years of planning and theatrical misdirection. Returning campers arrive with theories about when it will happen and how it will be staged. The breakout is designed to shock even the most prepared veterans. This has been true at every camp, in every decade, since the tradition began.</p>
+<p>The color war sing is the event that produces the most lasting memories. Each team writes and rehearses original songs to be performed before the entire camp. The songs are funny and heartfelt and terrible and moving in roughly equal measure. The team that performs best in the sing receives significant points. Former campers who cannot remember their college roommate's last name can still perform their color war sing from 1994 without missing a word.</p>
+<h2>Friday Night Shabbat: Why It Hits Different at Camp</h2>
+<p>Shabbat at summer camp is a different experience from Shabbat at home or at synagogue. The preparation is communal. The whole camp changes clothes at the same time, which has the effect of visually marking the transition from the weekday world. The dining hall is set with nicer linens. Someone has put flowers on the tables.</p>
+<p>The service happens outside, usually in a clearing or on a hill, in the kind of setting that makes religious experience feel more accessible. The songs are the same songs that have been sung at Jewish summer camps for generations — Lecha Dodi, Shalom Aleichem, Oseh Shalom — and they are sung by everyone together, loudly and badly, in a way that somehow works.</p>
+<p>The final Friday night service, on the last Shabbat before camp ends, is the one that ruins everyone. It is partly the accumulated emotional weight of the summer and partly the knowledge that this specific version of this community is ending. It is partly that the songs have been sung enough times to have accrued meaning. Every Jewish adult who went to camp can tell you exactly where they were standing during that last service and roughly how long it took to stop crying afterward.</p>
+<h2>The Counselors</h2>
+<p>Jewish summer camp produces counselors who become legends, and every camp has at least one per generation. The legend is usually a staff member in their early twenties who is genuinely funny, genuinely kind, and genuinely present with their campers in a way that leaves a lasting impression.</p>
+<p>Former campers name their children after these people. They look them up on social media twenty years later to tell them what the summer meant. The counselors often don't fully understand the impact they had until they receive those messages, because from their perspective they were just working a summer job.</p>
+<h2>What Gets Carried Forward</h2>
+<p>The summer camp experience is not just a set of memories. It is a template for Jewish community. Former campers who become parents bring their children to the same camps, or camps like them, because they want their children to have the same experience. Former staff members become educators, rabbis, and community organizers who carry the camp model into other contexts.</p>
+<p>The shared stories are shared because they are evidence of a shared experience, and the shared experience is evidence that Jewish community is possible and joyful and worth creating. That is what the founders of the Jewish camping movement were trying to build a century ago, and it is still being built, summer after summer, one color war and one Friday night service at a time.</p>
+
+
+---
+
+**Jewish Books, Gifts & Essentials**
+
+For the tribe — books, Judaica, and gifts worth having:
+
+- [The Jewish Study Bible](https://www.amazon.com/s?k=jewish+study+bible&tag=theclantv20-20) — Scholarly Tanakh translation used in universities worldwide
+- [Bar & Bat Mitzvah Gifts](https://www.amazon.com/s?k=bar+mitzvah+gifts+jewish&tag=theclantv20-20) — Meaningful gifts for a meaningful milestone
+- [Hanukkah Menorah](https://www.amazon.com/s?k=hanukkah+menorah+jewish&tag=theclantv20-20) — From classic to contemporary, find the one that fits your family
+- [The Complete Passover Haggadah](https://www.amazon.com/s?k=passover+haggadah+modern&tag=theclantv20-20) — Every seder needs a good haggadah
+- [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   }
 ]
 
