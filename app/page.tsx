@@ -201,7 +201,9 @@ export default function HomePage() {
       {/* HERO */}
       <section style={{background:"var(--navy)",position:"relative",overflow:"hidden"}}>
         {[{t:"8%",l:"7%",s:40,d:4.2,dl:0},{t:"22%",l:"15%",s:28,d:5.1,dl:1.2},{t:"55%",l:"4%",s:36,d:3.8,dl:2.4},{t:"70%",l:"18%",s:22,d:6.0,dl:0.8},{t:"15%",l:"42%",s:32,d:4.5,dl:1.8}].map((s,i)=>(
-          <div key={i} style={{position:"absolute",top:s.t,left:s.l,fontSize:s.s,opacity:0.06,pointerEvents:"none",animation:`fstar ${s.d}s ${s.dl}s ease-in-out infinite`}}>✡</div>
+          <div key={i} style={{position:"absolute",top:s.t,left:s.l,fontSize:s.s,opacity:0.06,pointerEvents:"none",animation:`fstar ${s.d}s ${s.dl}s ease-in-out infinite`}}>
+            <svg viewBox="0 0 24 24" width={s.s} height={s.s} fill="var(--gold)"><polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/></svg>
+          </div>
         ))}
         <div className="hero-grid">
           {/* LEFT */}
@@ -254,9 +256,8 @@ export default function HomePage() {
               <div style={{fontSize:12,fontWeight:700,letterSpacing:"3px",color:"rgba(245,240,232,0.4)",textTransform:"uppercase",marginTop:4}}>Punny. Proud. Perfect.</div>
             </div>
             <div style={{display:"flex",gap:16,flexWrap:"wrap",justifyContent:"center"}}>
-              {[["✡","Since Forever"],["🇺🇸","American Made"],["😄","Guaranteed Funny"]].map(([e,l])=>(
+              {[["Since Forever"],["American Made"],["Guaranteed Funny"]].map(([l])=>(
                 <div key={l} style={{textAlign:"center",padding:"12px 16px",border:"1px solid rgba(201,168,76,0.15)",background:"rgba(201,168,76,0.04)"}}>
-                  <div style={{fontSize:22}}>{e}</div>
                   <div style={{fontSize:10,letterSpacing:"1.5px",color:"rgba(245,240,232,0.4)",textTransform:"uppercase",marginTop:4}}>{l}</div>
                 </div>
               ))}
@@ -308,7 +309,7 @@ export default function HomePage() {
           <div className="occasions-grid">
             {OCCASIONS.map(o=>(
               <Link key={o.label} href="#shop" className="occ-h card-h" style={{background:"rgba(255,255,255,0.02)",border:"1px solid rgba(201,168,76,0.12)",padding:"24px 20px",textDecoration:"none",display:"block",transition:"all 0.2s"}}>
-                <div style={{fontSize:32,marginBottom:12}}>{o.emoji}</div>
+                <div style={{width:10,height:10,borderRadius:"50%",background:"var(--gold)",marginBottom:12}}/>
                 <div style={{fontWeight:900,fontSize:15,color:"var(--white)",marginBottom:8}}>{o.label}</div>
                 <div style={{fontSize:12,color:"rgba(245,240,232,0.45)",lineHeight:1.6}}>{o.note}</div>
               </Link>
@@ -376,9 +377,9 @@ export default function HomePage() {
             {CALENDAR.map((h,i)=>(
               <div key={i} className="jewsa-calendar-row" style={{display:"grid",gridTemplateColumns:"130px 44px 1fr",alignItems:"stretch",borderBottom:i<CALENDAR.length-1?"1px solid rgba(201,168,76,0.07)":"none",background:h.type==="memorial"?"rgba(255,255,255,0.015)":"transparent"}}>
                 <div className="jewsa-calendar-date" style={{padding:"18px 16px",borderRight:"1px solid rgba(201,168,76,0.08)",display:"flex",flexDirection:"column",justifyContent:"center"}}>
-                  <div style={{fontSize:11,color:"rgba(245,240,232,0.35)",lineHeight:1.5}}>{h.emoji} {h.season}</div>
+                  <div style={{display:"flex",alignItems:"center",gap:6,fontSize:11,color:"rgba(245,240,232,0.35)",lineHeight:1.5}}><div style={{width:8,height:8,borderRadius:"50%",background:h.type==="memorial"?"rgba(180,180,200,0.7)":"var(--gold)",flexShrink:0}}/>{h.season}</div>
                 </div>
-                <div className="jewsa-calendar-emoji" style={{padding:"18px 8px",borderRight:"1px solid rgba(201,168,76,0.05)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:20}}>{h.emoji}</div>
+                <div className="jewsa-calendar-emoji" style={{padding:"18px 8px",borderRight:"1px solid rgba(201,168,76,0.05)",display:"flex",alignItems:"center",justifyContent:"center"}}><div style={{width:12,height:12,borderRadius:"50%",background:h.type==="memorial"?"rgba(180,180,200,0.7)":"var(--gold)"}}/></div>
                 <div className="jewsa-calendar-content" style={{padding:"18px 24px"}}>
                   <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:6,flexWrap:"wrap"}}>
                     {h.slug ? <Link href={`/holidays/${h.slug}`} style={{fontWeight:900,fontSize:14,color:"var(--gold)",textDecoration:"none"}}>{h.name} →</Link> : <span style={{fontWeight:900,fontSize:14,color:h.type==="memorial"?"rgba(245,240,232,0.75)":"var(--white)"}}>{h.name}</span>}
@@ -447,7 +448,7 @@ export default function HomePage() {
         <div style={{maxWidth:680,margin:"0 auto",textAlign:"center"}}>
           {emailDone ? (
             <div>
-              <div style={{fontSize:40,marginBottom:16}}>✡️</div>
+              <div style={{width:40,height:40,borderRadius:"50%",background:"var(--gold)",margin:"0 auto 16px"}}></div>
               <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:36,color:"rgba(245,240,232,0.95)",letterSpacing:"1px",marginBottom:8}}>You Are In The Tribe Now.</div>
               <p style={{fontSize:15,color:"rgba(245,240,232,0.7)",marginBottom:16}}>Mazel tov. Check your inbox — your 10% off is waiting.</p>
               <div style={{display:"inline-block",background:"rgba(245,240,232,0.95)",color:"#111",fontWeight:900,fontSize:24,letterSpacing:"4px",padding:"12px 28px",borderRadius:6}}>MISHPOKHE10</div>

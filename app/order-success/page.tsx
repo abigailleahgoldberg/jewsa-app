@@ -8,7 +8,7 @@ export default function OrderSuccess() {
   return (
     <div style={{ background: NAVY, minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", color: "#F5F0E8", fontFamily: "'Inter', sans-serif" }}>
       <div style={{ textAlign: "center", maxWidth: 500, padding: "40px 24px" }}>
-        <div style={{ fontSize: 64, marginBottom: 24 }}>✡️</div>
+        <div style={{ width: 64, height: 64, borderRadius: "50%", background: GOLD, margin: "0 auto 24px" }}></div>
         <h1 style={{ fontSize: 36, fontWeight: 900, color: GOLD, marginBottom: 16 }}>Order Confirmed!</h1>
         <p style={{ fontSize: 18, lineHeight: 1.7, color: "rgba(245,240,232,0.8)", marginBottom: 8 }}>
           Mazel tov. Your JewSA order is in.

@@ -55,8 +55,7 @@ export default function GiftGuidePage() {
         {sections.map(section => (
           <div key={section.title} style={{ marginBottom: 56 }}>
             <div style={{ marginBottom: 24 }}>
-              <span style={{ fontSize: 28, marginRight: 12 }}>{section.emoji}</span>
-              <h2 style={{ fontSize: 26, fontWeight: 900, color: '#eab308', display: 'inline', letterSpacing: '-0.5px' }}>{section.title}</h2>
+              <h2 style={{ fontSize: 26, fontWeight: 900, color: '#eab308', letterSpacing: '-0.5px' }}>{section.title}</h2>
               <p style={{ color: 'rgba(245,240,232,0.35)', fontSize: 14, marginTop: 6 }}>{section.subtitle}</p>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(280px,1fr))', gap: 16 }}>
