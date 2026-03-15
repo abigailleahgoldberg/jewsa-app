@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { CartProvider } from "../lib/cart-context";
 import Script from 'next/script';
+import NetworkBar from "../components/NetworkBar";
+import ExitIntent from "../components/ExitIntent";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jewsa.com"),
@@ -39,7 +41,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;0,9..40,900&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <NetworkBar />
         <CartProvider>{children}</CartProvider>
+        <ExitIntent />
       </body>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-PQ7WTL0B3G"

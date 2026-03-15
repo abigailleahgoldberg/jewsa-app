@@ -33,10 +33,17 @@ function formatDate(dateStr: string): string {
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
+function getRelatedPosts(slug: string, category: string) {
+  const same = blogPosts.filter(p => p.slug !== slug && p.category === category);
+  const others = blogPosts.filter(p => p.slug !== slug && p.category !== category);
+  return [...same, ...others].slice(0, 3);
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
   const post = blogPosts.find((p) => p.slug === slug)
   if (!post) notFound()
+  const related = getRelatedPosts(slug, post.category)
 
   return (
     <main className="min-h-screen bg-[#1A1A2E] text-white">
@@ -79,6 +86,30 @@ export default async function BlogPostPage({ params }: Props) {
             &larr; Back to all posts
           </Link>
         </div>
+
+        {related.length > 0 && (
+          <div className="mt-16">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-yellow-400 mb-6">
+              You Might Also Like
+            </h2>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+              {related.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/blog/${r.slug}`}
+                  className="block border border-yellow-400/10 hover:border-yellow-400/30 transition-colors p-5 rounded"
+                >
+                  <span className={`text-xs font-semibold px-2 py-1 rounded uppercase tracking-wide inline-block mb-3 ${categoryColors[r.category]}`}>
+                    {r.category}
+                  </span>
+                  <h3 className="text-white font-bold text-sm leading-snug">
+                    {r.title}
+                  </h3>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       <style>{`
