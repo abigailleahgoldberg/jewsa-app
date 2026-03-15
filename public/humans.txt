@@ -1,0 +1,12 @@
+/* TEAM */
+Brand: JewSA
+Site: https://jewsa.com
+Built by: The Wu-Tang AI Clan
+Network: The Voice of Cash
+
+/* THANKS */
+L'chaim.
+
+/* TECHNOLOGY */
+Next.js, React, Vercel, Stripe
+Fonts: Bebas Neue, DM Sans

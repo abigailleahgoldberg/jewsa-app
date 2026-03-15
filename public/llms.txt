@@ -1,0 +1,83 @@
+# JewSA — Jewish-American Pride Merch
+# https://jewsa.com
+# Built by The Wu-Tang AI Clan | Network: The Voice of Cash
+
+## About
+JewSA is a Jewish-American pride merch brand — gear for the tribe that built America and never stopped being funny about it. The brand celebrates Jewish-American identity with humor, quality, and respect for the culture.
+
+## Pages
+
+### Core
+- / — Homepage with shop, culture stats, glossary, calendar, and email capture
+- /cart — Shopping cart
+- /holidays — All 8 major Jewish holidays
+- /calendar — Visual Jewish holiday calendar (lunisolar dates)
+- /gifts — Gift guides for every Jewish occasion
+- /daily-verse — Daily curated Jewish wisdom verse
+- /culture — Jewish-American culture hub
+- /blog — Blog with articles on Jewish culture, humor, history, and style
+- /advertise — Advertising information
+
+### Holiday Pages
+- /holidays/rosh-hashanah — Rosh Hashanah (Jewish New Year)
+- /holidays/yom-kippur — Yom Kippur (Day of Atonement)
+- /holidays/sukkot — Sukkot (Festival of Tabernacles)
+- /holidays/hanukkah — Hanukkah (Festival of Lights)
+- /holidays/purim — Purim (Feast of Lots)
+- /holidays/passover — Passover / Pesach (Festival of Freedom)
+- /holidays/shavuot — Shavuot (Festival of Weeks)
+- /holidays/tu-bishvat — Tu B'Shvat (New Year of Trees)
+
+### Gift Guides
+- /gifts/hanukkah — Hanukkah Gift Guide
+- /gifts/passover — Passover Gift Guide
+- /gifts/bar-mitzvah — Bar Mitzvah Gift Guide
+- /gifts/bat-mitzvah — Bat Mitzvah Gift Guide
+- /gifts/rosh-hashanah — Rosh Hashanah Gift Guide
+- /gifts/wedding — Jewish Wedding Gift Guide
+- /gifts/shabbat — Shabbat Gift Guide
+- /gifts/just-because — Just Because Gift Guide
+
+### Culture Articles
+- /culture/history-of-jews-in-america — The History of Jews in America (1654 to present)
+- /culture/famous-jewish-americans — Famous Jewish Americans (Einstein, RBG, Spielberg, Seinfeld, Koufax, Dylan, Streisand, Salk)
+- /culture/jewish-humor-explained — Jewish Humor Explained (self-deprecation, Borscht Belt, key comedians)
+- /culture/guide-to-your-jewish-neighbor — A Non-Jewish Person's Guide to Your Jewish Neighbor
+- /culture/jewish-food-in-america — Jewish Food in America (bagels, delis, challah, matzo ball soup, brisket)
+
+### Blog Posts
+- /blog/jewish-guilt-superpower — Why Jewish Guilt Is Actually a Superpower
+- /blog/best-jewish-delis-america — The Best Jewish Delis in America Right Now
+- /blog/what-non-jews-get-wrong-passover — What Non-Jews Always Get Wrong About Passover
+- /blog/jews-american-fashion-history — A Brief History of Jews in American Fashion
+- /blog/hamsa-most-underrated-jewelry-symbol — Why the Hamsa Is the Most Underrated Symbol in Jewelry
+- /blog/funniest-jewish-expressions-explained — The Funniest Jewish Expressions and What They Actually Mean
+- /blog/jewish-american-comedy-shaped-culture — How Jewish-American Comedy Shaped Modern Culture
+- /blog/hanukkah-vs-christmas-guide-for-gentiles — Hanukkah vs Christmas: A Guide for Confused Gentiles
+- /blog/jewish-american-kitchen-dishes — The Jewish-American Kitchen: Dishes That Tell Our Story
+- /blog/why-every-jew-needs-a-good-tallit — Why Every Jew Needs a Good Tallit
+- /blog/bar-bat-mitzvah-gifts-that-make-sense — Bar and Bat Mitzvah Gifts That Actually Make Sense
+- /blog/rise-of-jewish-pride-merch — The Rise of Jewish Pride Merch
+
+## Products
+- JewSA Basic Tee — $25
+- Old School Bucket Hat — $25
+
+## Network Affiliations
+- The Voice of Cash — https://thevoiceofcash.com (flagship)
+- U-God Sacred Texts — https://u-god.com
+- WeBearish — https://webearish.com
+- AI Skills Agents — https://aiskillsagents.com
+- AllahiCan — https://allahican.com
+- Red White Jesus — https://redwhitejesus.com
+- HindUSA — https://hindusa.com
+
+## Technical
+- Framework: Next.js 15 (App Router)
+- Hosting: Vercel
+- Payments: Stripe
+- Fonts: Bebas Neue (headings), DM Sans (body)
+- Colors: Navy #0B1F3A, Gold #C9A84C, Red #B22234, White #F5F0E8
+
+## Contact
+Email: thevoiceofcash@gmail.com

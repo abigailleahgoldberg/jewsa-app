@@ -154,7 +154,7 @@ export default function HomePage() {
       <nav style={{position:"sticky",top:0,zIndex:100,background:"var(--navy)",borderBottom:"2px solid var(--gold)",padding:"0 max(24px,4vw)",display:"flex",alignItems:"center",justifyContent:"space-between",height:64}}>
         <Link href="/" style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"var(--gold)",letterSpacing:"2px",textDecoration:"none",zIndex:10}}>JewSA</Link>
         <div className="jewsa-nav-links" style={{display:"flex",alignItems:"center",gap:24}}>
-          {[["Shop","#shop"],["Culture","#culture"],["Calendar","#calendar"],["The Tribe","#story"]].map(([l,h])=>(
+          {[["Shop","#shop"],["Holidays","/holidays"],["Gifts","/gifts"],["Culture","/culture"],["Daily Verse","/daily-verse"],["The Tribe","#story"]].map(([l,h])=>(
             <Link key={h} href={h} style={{fontSize:13,fontWeight:700,color:"rgba(245,240,232,0.55)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase"}}>{l}</Link>
           ))}
           <Link href="/cart" style={{color:"var(--gold)",fontWeight:700,fontSize:13,letterSpacing:"1px",textDecoration:"none"}}>Cart ({cartItemCount})</Link>
@@ -177,7 +177,7 @@ export default function HomePage() {
       {/* Mobile menu overlay */}
       {mobileMenuOpen && (
         <div style={{position:"fixed",top:64,left:0,right:0,bottom:0,background:"var(--navy)",zIndex:99,padding:"32px 24px",overflowY:"auto"}}>
-          {[["Shop","#shop"],["Culture","#culture"],["Calendar","#calendar"],["The Tribe","#story"]].map(([l,h])=>(
+          {[["Shop","#shop"],["Holidays","/holidays"],["Gifts","/gifts"],["Culture","/culture"],["Daily Verse","/daily-verse"],["Calendar","/calendar"],["The Tribe","#story"]].map(([l,h])=>(
             <Link key={h} href={h} onClick={()=>setMobileMenuOpen(false)} style={{display:"block",fontSize:18,fontWeight:700,color:"rgba(245,240,232,0.7)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase",padding:"16px 0",borderBottom:"1px solid rgba(201,168,76,0.1)"}}>{l}</Link>
           ))}
           <Link href="#shop" onClick={()=>setMobileMenuOpen(false)} style={{display:"block",background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:14,letterSpacing:"1.5px",textTransform:"uppercase",padding:"16px 24px",textDecoration:"none",textAlign:"center",marginTop:24}}>Shop Now</Link>
