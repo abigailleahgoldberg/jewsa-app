@@ -120,7 +120,10 @@ export default function CartPage() {
               >
                 {isProcessing ? 'Redirecting to Checkout...' : 'Checkout →'}
               </button>
-              <p style={{fontSize:11,color:"rgba(245,240,232,0.3)",marginTop:12,textAlign:"center",lineHeight:1.6}}>
+              <p style={{fontSize:12,color:"rgba(201,168,76,0.6)",marginTop:12,textAlign:"center",lineHeight:1.6}}>
+                Have a coupon code? You can enter it on the checkout page.
+              </p>
+              <p style={{fontSize:11,color:"rgba(245,240,232,0.3)",marginTop:6,textAlign:"center",lineHeight:1.6}}>
                 Secure checkout via Stripe. Ships 3–7 business days.
               </p>
               <div style={{textAlign:"center",marginTop:16}}>

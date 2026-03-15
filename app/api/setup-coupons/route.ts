@@ -1,0 +1,38 @@
+import { NextResponse } from 'next/server';
+
+export async function GET() {
+  try {
+    const stripeKey = process.env.STRIPE_SECRET_KEY;
+    if (!stripeKey) return NextResponse.json({ error: 'No Stripe key' }, { status: 500 });
+
+    const Stripe = (await import('stripe')).default;
+    const stripe = new Stripe(stripeKey, { apiVersion: '2026-02-25.clover' });
+
+    // Check if coupon already exists
+    try {
+      await stripe.coupons.retrieve('jewsa-10-off');
+    } catch {
+      await stripe.coupons.create({
+        id: 'jewsa-10-off',
+        percent_off: 10,
+        duration: 'forever',
+        name: 'JewSA 10% Off',
+      });
+    }
+
+    // Create promotion code if it doesn't exist
+    const existingPromos = await stripe.promotionCodes.list({ code: 'MISHPOKHE10', limit: 1 });
+    if (existingPromos.data.length === 0) {
+      await stripe.promotionCodes.create({
+        coupon: 'jewsa-10-off',
+        code: 'MISHPOKHE10',
+        active: true,
+      });
+    }
+
+    return NextResponse.json({ success: true, message: 'Coupon and promo code created' });
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json({ error: String(err) }, { status: 500 });
+  }
+}
