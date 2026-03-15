@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 
 const LINKS = [
   { label: "RedWhiteJesus", href: "https://redwhitejesus.com" },
-  { label: "AllahiCan", href: "https://allahican.com" },
+  { label: "AllahICan", href: "https://allahican.com" },
+  { label: "HindUSA", href: "https://hindusa.com" },
   { label: "U-God Sacred Texts", href: "https://u-god.com" },
 ];
 

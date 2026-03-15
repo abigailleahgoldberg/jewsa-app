@@ -112,6 +112,20 @@ export default async function BlogPostPage({ params }: Props) {
         )}
       </div>
 
+      {/* Faith Network Section */}
+      <div className="max-w-3xl mx-auto px-6 pb-12 mt-8">
+        <div style={{ background: 'rgba(250,204,21,0.05)', border: '1px solid rgba(250,204,21,0.15)', borderRadius: 10, padding: '24px' }}>
+          <div style={{ fontSize: '0.62rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: '#facc15', marginBottom: 14, fontWeight: 700 }}>Faith Network</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <a href="https://u-god.com" style={{ color: '#facc15', textDecoration: 'none', fontSize: '0.9rem' }}><strong>U-God.com</strong> — Explore all traditions and sacred texts across 25+ world religions</a>
+            <a href="https://redwhitejesus.com" style={{ color: 'rgba(250,204,21,0.7)', textDecoration: 'none', fontSize: '0.9rem' }}><strong>RedWhiteJesus.com</strong> — See what Christianity teaches about faith, culture, and American life</a>
+            <a href="https://allahican.com" style={{ color: 'rgba(250,204,21,0.7)', textDecoration: 'none', fontSize: '0.9rem' }}><strong>AllahICan.com</strong> — Islamic perspectives and guidance for modern American Muslims</a>
+            <a href="https://hindusa.com" style={{ color: 'rgba(250,204,21,0.7)', textDecoration: 'none', fontSize: '0.9rem' }}><strong>HindUSA.com</strong> — Hindu American culture, traditions, and community</a>
+            <a href="https://thevoiceofcash.com" style={{ color: 'rgba(250,204,21,0.4)', textDecoration: 'none', fontSize: '0.85rem' }}>TheVoiceOfCash.com — Our Network</a>
+          </div>
+        </div>
+      </div>
+
       <style>{`
         .blog-content h2 {
           color: #facc15;
