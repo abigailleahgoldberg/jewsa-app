@@ -24,7 +24,7 @@ export async function GET() {
     const existingPromos = await stripe.promotionCodes.list({ code: 'MISHPOKHE10', limit: 1 });
     if (existingPromos.data.length === 0) {
       await stripe.promotionCodes.create({
-        coupon: 'jewsa-10-off',
+        promotion: { type: 'coupon', coupon: 'jewsa-10-off' },
         code: 'MISHPOKHE10',
         active: true,
       });
