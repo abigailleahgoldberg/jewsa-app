@@ -492,6 +492,12 @@ export default function HomePage() {
           <a href="https://www.biblegateway.com" target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"rgba(245,240,232,0.35)",textDecoration:"none",fontWeight:600}}>BibleGateway →</a>
           <a href="https://www.jewishvirtuallibrary.org" target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"rgba(245,240,232,0.35)",textDecoration:"none",fontWeight:600}}>Jewish Virtual Library →</a>
         </div>
+        <div style={{width:"100%",paddingTop:12,borderTop:"1px solid rgba(201,168,76,0.06)",display:"flex",gap:16,flexWrap:"wrap",alignItems:"center"}}>
+          <span style={{fontSize:11,letterSpacing:"2px",fontWeight:700,color:"rgba(234,179,8,0.4)"}}>LEGAL</span>
+          {[["/privacy","Privacy"],["/terms","Terms"],["/disclaimer","Disclaimer"],["/returns","Returns"],["/affiliate-disclosure","Affiliate Disclosure"],["/dmca","DMCA"],["/contact","Contact"]].map(([h,l])=>(
+            <Link key={h} href={h} style={{fontSize:11,color:"rgba(245,240,232,0.25)",textDecoration:"none",fontWeight:600}}>{l}</Link>
+          ))}
+        </div>
       </footer>
 
       {/* STICKY MOBILE CTA */}
