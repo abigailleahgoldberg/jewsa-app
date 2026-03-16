@@ -486,6 +486,12 @@ export default function HomePage() {
           ))}
         </div>
         <div style={{fontSize:12,color:"rgba(245,240,232,0.25)"}}>© {new Date().getFullYear()} JewSA. All rights reserved.</div>
+        <div style={{width:"100%",paddingTop:16,borderTop:"1px solid rgba(201,168,76,0.08)",display:"flex",gap:20,flexWrap:"wrap",alignItems:"center"}}>
+          <span style={{fontSize:11,letterSpacing:"2px",fontWeight:700,color:"rgba(234,179,8,0.5)"}}>RESOURCES</span>
+          <a href="https://www.sefaria.org" target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"rgba(245,240,232,0.35)",textDecoration:"none",fontWeight:600}}>Sefaria — Jewish Texts Online →</a>
+          <a href="https://www.biblegateway.com" target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"rgba(245,240,232,0.35)",textDecoration:"none",fontWeight:600}}>BibleGateway →</a>
+          <a href="https://www.jewishvirtuallibrary.org" target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:"rgba(245,240,232,0.35)",textDecoration:"none",fontWeight:600}}>Jewish Virtual Library →</a>
+        </div>
       </footer>
 
       {/* STICKY MOBILE CTA */}
