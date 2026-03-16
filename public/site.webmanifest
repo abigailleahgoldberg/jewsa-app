@@ -1,0 +1,12 @@
+{
+  "name": "JewSA",
+  "short_name": "JewSA",
+  "description": "Jewish American Culture, Community & Commerce — where pride meets punchlines.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1F3A",
+  "theme_color": "#1E3A5F",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" }
+  ]
+}
