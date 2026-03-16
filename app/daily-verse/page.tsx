@@ -2,6 +2,105 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
+async function shareVerseAsImage(verse: string, reference: string, theme: string) {
+  const canvas = document.createElement("canvas");
+  canvas.width = 1080;
+  canvas.height = 1080;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  const accentColor = "#C9A84C";
+  const siteUrl = "jewsa.com";
+  const bgColor = "#0B1F3A";
+
+  // Background
+  ctx.fillStyle = bgColor;
+  ctx.fillRect(0, 0, 1080, 1080);
+
+  // Top accent bar
+  ctx.fillStyle = accentColor;
+  ctx.fillRect(0, 0, 1080, 8);
+
+  // Theme badge
+  ctx.fillStyle = accentColor;
+  ctx.font = "700 22px sans-serif";
+  ctx.textAlign = "center";
+  ctx.fillText(theme.toUpperCase(), 540, 78);
+
+  // Verse text — pre-calculate lines for vertical centering
+  const maxWidth = 880;
+  const lineHeight = 62;
+  ctx.font = "italic 42px Georgia, serif";
+  const fullText = "\u201C" + verse + "\u201D";
+  const allWords = fullText.split(" ");
+  const lines: string[] = [];
+  let line = "";
+  for (const word of allWords) {
+    const testLine = line + word + " ";
+    if (ctx.measureText(testLine).width > maxWidth && line !== "") {
+      lines.push(line.trim());
+      line = word + " ";
+    } else {
+      line = testLine;
+    }
+  }
+  if (line.trim()) lines.push(line.trim());
+
+  const totalTextHeight = lines.length * lineHeight;
+  const zoneTop = 120;
+  const zoneBottom = 890;
+  const startY = Math.round((zoneTop + zoneBottom) / 2 - totalTextHeight / 2 + lineHeight * 0.75);
+
+  ctx.fillStyle = "#F5F0E8";
+  ctx.textAlign = "center";
+  let y = startY;
+  for (const l of lines) {
+    ctx.fillText(l, 540, y);
+    y += lineHeight;
+  }
+
+  // Reference
+  ctx.fillStyle = accentColor;
+  ctx.font = "700 28px sans-serif";
+  ctx.fillText(reference, 540, y + 64);
+
+  // Bottom divider
+  ctx.fillStyle = "rgba(201,168,76,0.3)";
+  ctx.fillRect(390, 960, 300, 1);
+
+  // Site branding
+  ctx.fillStyle = "rgba(245,240,232,0.45)";
+  ctx.font = "400 20px sans-serif";
+  ctx.fillText(siteUrl, 540, 1000);
+
+  // Bottom accent bar
+  ctx.fillStyle = accentColor;
+  ctx.fillRect(0, 1072, 1080, 8);
+
+  canvas.toBlob(async (blob) => {
+    if (!blob) return;
+    const file = new File([blob], "daily-verse.png", { type: "image/png" });
+    if (navigator.share && navigator.canShare({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file], title: reference, text: verse });
+      } catch {
+        downloadBlob(blob);
+      }
+    } else {
+      downloadBlob(blob);
+    }
+  }, "image/png");
+}
+
+function downloadBlob(blob: Blob) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "daily-verse.png";
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 interface Verse {
   text: string;
   reference: string;
@@ -24,6 +123,7 @@ export default function DailyVersePage() {
   const [verse, setVerse] = useState<Verse | null>(null);
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [sharing, setSharing] = useState(false);
 
   useEffect(() => {
     fetch("/api/daily")
@@ -42,6 +142,13 @@ export default function DailyVersePage() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
+  };
+
+  const handleShareImage = async () => {
+    if (!verse || sharing) return;
+    setSharing(true);
+    await shareVerseAsImage(verse.text, verse.reference, verse.theme);
+    setSharing(false);
   };
 
   const themeColor = verse ? (THEME_COLORS[verse.theme] || "#C9A84C") : "#C9A84C";
@@ -119,37 +226,64 @@ export default function DailyVersePage() {
                 — {verse.reference}
               </cite>
 
-              {/* Copy button */}
-              <button
-                onClick={handleCopy}
-                style={{
-                  background: copied ? "rgba(45,125,58,0.2)" : "transparent",
-                  border: `1px solid ${copied ? "#2D7D3A" : "rgba(201,168,76,0.3)"}`,
-                  color: copied ? "#2D7D3A" : "rgba(245,240,232,0.5)",
-                  padding:"10px 20px",
-                  fontSize:13,
-                  fontWeight:700,
-                  letterSpacing:"1px",
-                  textTransform:"uppercase",
-                  cursor:"pointer",
-                  display:"flex",
-                  alignItems:"center",
-                  gap:8,
-                  transition:"all 0.2s",
-                }}
-              >
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  {copied ? (
-                    <path d="M3 8l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  ) : (
-                    <>
-                      <rect x="5" y="1" width="9" height="11" rx="1" stroke="currentColor" strokeWidth="1.5"/>
-                      <rect x="1" y="4" width="9" height="11" rx="1" stroke="currentColor" strokeWidth="1.5" fill="var(--navy)"/>
-                    </>
-                  )}
-                </svg>
-                {copied ? "Copied!" : "Copy Verse"}
-              </button>
+              {/* Action buttons */}
+              <div style={{display:"flex",gap:12,flexWrap:"wrap"}}>
+                <button
+                  onClick={handleCopy}
+                  style={{
+                    background: copied ? "rgba(45,125,58,0.2)" : "transparent",
+                    border: `1px solid ${copied ? "#2D7D3A" : "rgba(201,168,76,0.3)"}`,
+                    color: copied ? "#2D7D3A" : "rgba(245,240,232,0.5)",
+                    padding:"10px 20px",
+                    fontSize:13,
+                    fontWeight:700,
+                    letterSpacing:"1px",
+                    textTransform:"uppercase",
+                    cursor:"pointer",
+                    display:"flex",
+                    alignItems:"center",
+                    gap:8,
+                    transition:"all 0.2s",
+                  }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    {copied ? (
+                      <path d="M3 8l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    ) : (
+                      <>
+                        <rect x="5" y="1" width="9" height="11" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+                        <rect x="1" y="4" width="9" height="11" rx="1" stroke="currentColor" strokeWidth="1.5" fill="var(--navy)"/>
+                      </>
+                    )}
+                  </svg>
+                  {copied ? "Copied!" : "Copy Verse"}
+                </button>
+                <button
+                  onClick={handleShareImage}
+                  disabled={sharing}
+                  style={{
+                    background: "transparent",
+                    border: "1px solid rgba(201,168,76,0.3)",
+                    color: "rgba(245,240,232,0.5)",
+                    padding:"10px 20px",
+                    fontSize:13,
+                    fontWeight:700,
+                    letterSpacing:"1px",
+                    textTransform:"uppercase",
+                    cursor: sharing ? "wait" : "pointer",
+                    display:"flex",
+                    alignItems:"center",
+                    gap:8,
+                    transition:"all 0.2s",
+                    opacity: sharing ? 0.6 : 1,
+                  }}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                  </svg>
+                  {sharing ? "Generating..." : "Share as Image"}
+                </button>
+              </div>
             </div>
           ) : (
             <div style={{background:"rgba(255,255,255,0.03)",border:"1px solid rgba(201,168,76,0.15)",padding:48,textAlign:"center"}}>
