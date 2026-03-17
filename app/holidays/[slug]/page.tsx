@@ -34,6 +34,23 @@ export default async function HolidayPage({ params }: Props) {
   const allHolidays = getAllHolidays();
   const related = allHolidays.filter((h) => h.slug !== slug).slice(0, 3);
 
+  const holidayDates: Record<string, {startDate: string; endDate: string}> = {
+    "rosh-hashanah": {startDate:"2026-09-20",endDate:"2026-09-22"},
+    "yom-kippur": {startDate:"2026-09-29",endDate:"2026-09-30"},
+    "sukkot": {startDate:"2026-10-04",endDate:"2026-10-11"},
+    "shemini-atzeret": {startDate:"2026-10-11",endDate:"2026-10-12"},
+    "simchat-torah": {startDate:"2026-10-12",endDate:"2026-10-13"},
+    "hanukkah": {startDate:"2026-12-05",endDate:"2026-12-13"},
+    "tu-bishvat": {startDate:"2027-02-01",endDate:"2027-02-02"},
+    "purim": {startDate:"2027-03-03",endDate:"2027-03-04"},
+    "passover": {startDate:"2027-04-02",endDate:"2027-04-09"},
+    "yom-hashoah": {startDate:"2027-04-20",endDate:"2027-04-21"},
+    "yom-haatzmaut": {startDate:"2027-05-01",endDate:"2027-05-02"},
+    "shavuot": {startDate:"2027-05-22",endDate:"2027-05-24"},
+    "tisha-bav": {startDate:"2027-08-01",endDate:"2027-08-02"},
+  };
+  const dates = holidayDates[holiday.slug] || {startDate:"2026-09-01",endDate:"2026-09-02"};
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -46,7 +63,10 @@ export default async function HolidayPage({ params }: Props) {
       url: "https://jewsa.com",
     },
     eventStatus: "https://schema.org/EventScheduled",
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    startDate: dates.startDate,
+    endDate: dates.endDate,
+    location: {"@type":"VirtualLocation","url":`https://jewsa.com/holidays/${holiday.slug}`},
+    eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
   };
 
   return (
@@ -72,6 +92,7 @@ export default async function HolidayPage({ params }: Props) {
           <Link href="/gifts" style={{fontSize:13,fontWeight:700,color:"rgba(245,240,232,0.55)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase"}}>Gifts</Link>
           <Link href="/culture" style={{fontSize:13,fontWeight:700,color:"rgba(245,240,232,0.55)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase"}}>Culture</Link>
           <Link href="/daily-verse" style={{fontSize:13,fontWeight:700,color:"rgba(245,240,232,0.55)",textDecoration:"none",letterSpacing:"1px",textTransform:"uppercase"}}>Daily Verse</Link>
+          <Link href="/blog" style={{color:"var(--white)",textDecoration:"none",fontWeight:500}}>Blog</Link>
           <Link href="/#shop" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1.5px",textTransform:"uppercase",padding:"10px 20px",textDecoration:"none"}}>Shop</Link>
         </div>
       </nav>
