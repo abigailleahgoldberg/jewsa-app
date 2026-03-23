@@ -8,7 +8,197 @@ export interface BlogPost {
   readTime: number
 }
 
-export const blogPosts: BlogPost[
+export const blogPosts: BlogPost[] = [
+  {
+    slug: 'seder-plate-every-item-explained',
+    title: 'The Seder Plate: What Every Item Means and Why It Matters',
+    excerpt: 'Six items, thousands of years of meaning. Here is what each thing on the Passover seder plate represents and why it still resonates.',
+    content: `The seder plate is the visual center of the Passover table. Six items, each pointing to a different piece of the Exodus story.
+
+The shank bone represents the Paschal offering made at the Temple. The blood of that lamb was placed on Israelite doorposts so the angel of death would pass over. Many vegetarian households substitute a roasted beet.
+
+The roasted egg represents the festival sacrifice brought to the Temple and mourning for its destruction. Some traditions also see it as a symbol of spring and renewal.
+
+Maror, the bitter herbs, represents the bitterness of slavery. The sharp burn of horseradish is a bodily reminder of what suffering felt like. Some Sephardic traditions use romaine lettuce, which starts sweet and turns bitter.
+
+Charoset is a sweet paste representing the mortar the enslaved Israelites used to build for Pharaoh. Ashkenazi charoset uses apples, walnuts, wine, and cinnamon. Sephardic charosets vary enormously — Moroccan uses dates and walnuts, Iraqi uses dates and pomegranate.
+
+Chazeret is a second bitter herb used in the Hillel sandwich — matzah, maror, and charoset eaten together in memory of how the sage Hillel combined them.
+
+Karpas, the green vegetable, is dipped in salt water early in the seder. Green represents spring and new growth. Salt water represents tears. Dipping spring in tears is the seder's first taste of the central tension: freedom comes through suffering, and joy cannot be separated from memory.`,
+    date: '2026-03-23',
+    category: 'culture',
+    readTime: 6
+  },
+  {
+    slug: 'passover-foods-complete-guide',
+    title: 'Passover Foods: The Complete Guide to What You Eat, What You Avoid, and Why',
+    excerpt: 'Matzah, brisket, macaroons, and the great chametz purge. Here is everything you need to know about what goes on the Passover table.',
+    content: `Passover is one of the most food-centered holidays in the Jewish calendar, and the rules about what you can and cannot eat are among the most specific in Jewish law.
+
+Chametz refers to leavened grain products — wheat, barley, oats, spelt, or rye that has been allowed to ferment or rise. Bread, pasta, beer, cake, crackers. All of it is forbidden during Passover. The prohibition comes from the Exodus story: the Israelites left Egypt so quickly their bread had no time to rise.
+
+Matzah is the unleavened flatbread that replaces all grain products. There is a specific mitzvah to eat matzah at the seder. Beyond the religious obligation, matzah shows up everywhere: matzah brei, matzah ball soup, matzah pizza, matzah toffee.
+
+The seder meal varies by family but certain dishes are standard. Matzah ball soup is the most universal — the debate over floaters versus sinkers is ongoing. Brisket slow-braised with onions is the other signature dish. Gefilte fish, tzimmes, and roasted vegetables round out most tables.
+
+The kitniyot divide is significant: Ashkenazi tradition prohibits rice, corn, and beans during Passover in addition to chametz. Sephardic tradition never adopted this restriction. A Sephardic Passover table might have rice pilaf while an Ashkenazi table has potato kugel.
+
+For dessert: flourless chocolate cake is the prestige option. Coconut macaroons are the other classic. The constraints produce creativity.`,
+    date: '2026-03-23',
+    category: 'culture',
+    readTime: 7
+  },
+  {
+    slug: 'ashkenazi-vs-sephardic-passover-traditions',
+    title: 'Ashkenazi vs. Sephardic Passover: How Two Worlds Do the Same Holiday',
+    excerpt: 'Same Exodus, different tables. The differences between Ashkenazi and Sephardic Passover traditions go deep.',
+    content: `Passover commemorates the same event for every Jewish community in the world: the Exodus from Egypt. But how that story is told, what is eaten, and which customs surround the seder vary significantly between Ashkenazi and Sephardic Jews.
+
+Both communities use a Haggadah but the versions differ. Ashkenazi seders follow standard printed formats. Sephardic communities have their own liturgical poetry and songs. The fifteen steps of the seder are universal. The flavor differs.
+
+The most immediately practical difference is kitniyot. Ashkenazi tradition prohibits rice, corn, beans, and lentils during Passover. Sephardic tradition never adopted this restriction. A Sephardic Passover meal might include rice pilaf while a traditional Ashkenazi Passover table avoids all legumes.
+
+Ashkenazi charoset is almost always apples, walnuts, red wine, and cinnamon. Sephardic charosets vary by country: Moroccan uses dates and walnuts, Iraqi uses dates and pomegranate, Turkish often includes chestnuts.
+
+One of the most vivid Sephardic customs is the reenactment of leaving Egypt. Family members physically mime leaving — walking through the room with bundles over their shoulders. The embodied drama of the story is made literal.
+
+The songs at a Sephardic seder draw on Ladino, the Judeo-Spanish language, and the melodies are distinct from the Ashkenazi tunes most American Jews know. As more families have mixed backgrounds, American seders increasingly draw on both traditions.`,
+    date: '2026-03-23',
+    category: 'culture',
+    readTime: 6
+  },
+  {
+    slug: 'passover-hosting-guide-first-time',
+    title: 'Hosting Your First Passover Seder: A Practical Guide',
+    excerpt: 'Never hosted a seder before? Here is what you actually need to pull it off.',
+    content: `Hosting a Passover seder for the first time can feel overwhelming. The holiday has its own language, ritual objects, a specific guiding text, and food requirements that eliminate most of what you normally cook.
+
+The Haggadah is the text that guides the seder. You need one copy per person. There are hundreds of versions. The Maxwell House Haggadah is still available and entirely functional. The New American Haggadah is a popular modern option. For families who want to get to the meal faster, short-form editions exist.
+
+You need one seder plate with six items: shank bone or roasted beet, roasted egg, bitter herbs, charoset, green vegetable, and a second bitter herb. Also on the table: three matzot covered under a cloth, and a cup designated for Elijah the Prophet.
+
+The seder requires four cups of wine or grape juice per person. For food: matzah ball soup as opener, brisket or roasted chicken as the main. Everything should be kosher for Passover — no chametz.
+
+The most common mistake of first-time hosts: letting the pre-meal portion run so long that children have melted down and adults are too hungry to focus. The seder has fifteen steps. The first six happen before the meal. Keep them moving. The afikomen — the hidden matzah piece that must be found before the seder can conclude — is the built-in negotiation. Have a small gift ready to trade for its return.
+
+The Haggadah instructs that each person should see themselves as if they personally came out of Egypt. First-time hosting feels logistically heavy. It is worth the effort.`,
+    date: '2026-03-23',
+    category: 'culture',
+    readTime: 7
+  },
+  {
+    slug: 'jewish-spring-holidays-omer-shavuot',
+    title: 'From Passover to Shavuot: The Jewish Spring Holiday Season Explained',
+    excerpt: 'Passover is just the beginning. Here is the full arc of the Jewish spring calendar.',
+    content: `Most people know about Passover. Fewer know that Passover is the opening movement of a seven-week season that culminates in Shavuot.
+
+Passover commemorates the liberation of the Israelites from slavery in Egypt. It begins on the 15th of Nisan and lasts seven days in Israel, eight in the diaspora. The seder is the central ritual. The holiday ends and the counting begins.
+
+On the second night of Passover, Jews begin counting the Omer — a 49-day count to the eve of Shavuot. Each evening there is a blessing and a count. The counting connects the liberation of Passover to the revelation of Shavuot. Passover is the physical liberation; Shavuot is the spiritual one.
+
+The Omer period is a semi-mourning period. Weddings, parties, and haircuts are restricted during most of the count. The reason given is that a plague killed thousands of Rabbi Akiva's students during this period.
+
+Lag B'Omer falls on the 33rd day of the Omer. The mourning restrictions lift for this day. It is celebrated with bonfires and outdoor activities. In Israel, enormous celebrations gather at the tomb of Rabbi Shimon bar Yochai.
+
+Shavuot falls 50 days after Passover and commemorates the giving of the Torah at Mount Sinai. The most distinctive custom is the all-night Torah study session called Tikkun Leil Shavuot. Jews stay awake all night learning and pray the morning service at sunrise. The other universal custom is eating dairy — cheesecake and blintzes on Shavuot are as traditional as matzah on Passover.`,
+    date: '2026-03-23',
+    category: 'culture',
+    readTime: 6
+  },
+  {
+    slug: 'modern-jewish-american-weddings',
+    title: 'Modern Jewish American Weddings: The Traditions and What They Mean',
+    excerpt: 'The chuppah, the ketubah, the glass, the hora — here is what each Jewish wedding tradition means.',
+    content: `Jewish weddings are among the most ritual-dense ceremonies in American life. Even highly secular Jewish couples often include the chuppah, the ketubah, and the breaking of the glass.
+
+The chuppah is the wedding canopy — four poles supporting a cloth roof under which the couple stands. It represents the new home the couple is building together. The open sides symbolize that the home will be open to guests and community.
+
+The ketubah is the Jewish marriage contract. Historically it outlined the husband's obligations to his wife — a protective document at a time when women had few legal protections. In modern practice, egalitarian couples use updated texts describing mutual obligations. The ketubah is typically a work of art, signed by two witnesses before the ceremony and displayed in the couple's home.
+
+Under the chuppah, one or both partners circle the other seven times — corresponding to the seven wedding blessings and the seven days of creation. The Sheva Brachot are chanted during the ceremony and repeated at festive meals in the seven days after the wedding.
+
+The ceremony ends with stomping on a glass wrapped in cloth. Even in the greatest joy, Jews remember the destruction of the Temple. The breaking of the glass anchors even a wedding in Jewish history and collective memory.
+
+The hora is the circle dance that erupts at Jewish receptions. The whole room joins hands and dances in circles. The couple is lifted in chairs and carried through the crowd. It is chaotic, joyful, and one of the most genuinely communal moments in American Jewish life.`,
+    date: '2026-03-23',
+    category: 'culture',
+    readTime: 7
+  },
+  {
+    slug: 'jewish-naming-traditions',
+    title: 'Jewish Naming Traditions: Why Names Matter So Much and How the Rules Differ',
+    excerpt: 'Why Ashkenazi Jews name after the dead and Sephardic Jews name after the living.',
+    content: `Names in Jewish culture carry specific weight. They connect the living to the dead, the present to the past, and the individual to the family line. The customs vary significantly by community.
+
+In Ashkenazi tradition, children are named after deceased relatives. The soul of the person who has died is honored by giving their name to a new child. Naming after a living relative is considered bad luck. The result: every Ashkenazi family tree carries the names of ancestors forward through generations.
+
+Sephardic tradition does the opposite. Children are named after living relatives, typically starting with grandparents. This is considered an honor to the living grandparent. In a Sephardic family, a grandfather and his new grandchild commonly share the same name.
+
+Most Jewish Americans have both a Hebrew name and a secular English name. The Hebrew name is used in religious contexts — for aliyot, for the ketubah, for prayers for healing, and for burial. Many secular names are anglicizations of Yiddish names that were themselves translations of Hebrew names. Sadie may come from Sarah. Harry may come from Hershel, which comes from Tzvi. Irving may come from Israel.
+
+Boys receive their Hebrew name at the brit milah on the eighth day after birth. Girls are typically named at a synagogue Torah service. Many liberal communities hold a simchat bat ceremony that mirrors the brit milah in formality.
+
+Even families who observe little else often name children after grandparents. The name is the thread.`,
+    date: '2026-03-23',
+    category: 'culture',
+    readTime: 5
+  },
+  {
+    slug: 'jewish-cultural-vocabulary-guide',
+    title: 'Jewish Cultural Vocabulary: Chutzpah, Mensch, Tikkun Olam, and More',
+    excerpt: 'These words entered American English from Yiddish and Hebrew — but their full meaning is richer than most people realize.',
+    content: `A significant portion of American slang arrived via Yiddish — the language of Ashkenazi Jews in Eastern Europe, brought to America by millions of immigrants between 1880 and 1924. These words entered the mainstream and lost some of their context in the translation.
+
+Chutzpah is usually translated as audacity or nerve, but it carries a specific moral edge. The classic definition: chutzpah is killing your parents and then asking the court for mercy because you are an orphan. It describes shameless boldness that ignores consequences. In American usage it is often admiring. In traditional usage it still carries the original warning.
+
+Mensch literally means person in Yiddish. In cultural usage it means a person of integrity, honor, and genuine kindness. Being called a mensch is one of the highest compliments. It combines moral uprightness with warmth and reliability. There is no exact English equivalent.
+
+Tikkun olam means repair of the world. Originally a kabbalistic concept, it has become the central framework for Jewish social justice work. The core obligation: the world is broken and we have a responsibility to fix what we can.
+
+Mitzvah literally means commandment. In common usage, doing a mitzvah means doing a good deed. But the original meaning is stronger: it is an obligation, not a voluntary kindness.
+
+Beshert means destined or fated, usually applied to a romantic partner. Naches is the specific pleasure that comes from the success of someone you love, usually a child. There is no English word for it. These words stuck because they describe things English had no words for.`,
+    date: '2026-03-23',
+    category: 'culture',
+    readTime: 6
+  },
+  {
+    slug: 'israeli-food-vs-jewish-american-food',
+    title: 'Israeli Food vs. Jewish American Food: They Are Not the Same Thing',
+    excerpt: 'Hummus, falafel, shakshuka vs. matzah ball soup, brisket, babka. Here is what separates them.',
+    content: `When non-Jewish Americans think of Jewish food, they often think of hummus, falafel, and shakshuka. When American Jews think of Jewish food, they often think of matzah ball soup, brisket, and babka. Both groups are right, and both are describing something different.
+
+The cuisine most American Jews call Jewish food is largely Ashkenazi — the food of Jews from Central and Eastern Europe who came to the United States between 1880 and 1924. Brisket slow-braised with onions. Matzah ball soup. Gefilte fish. Kugel. Latkes. Challah. These foods were shaped by what was available in the shtetl: chickens, potatoes, carp, root vegetables that kept through winter. The fat of choice was schmaltz — rendered chicken fat — because pork was forbidden and butter could not be used with meat.
+
+Israeli cuisine is a synthesis that emerged from many Jewish communities who came to Israel from across the world — Ashkenazi Jews from Europe, Mizrahi Jews from the Middle East, Sephardic Jews from the Mediterranean, and the Arab Palestinian population whose food traditions were already there. Hummus, falafel, shakshuka, sabich — Israeli food is fundamentally Mediterranean: olive oil, eggplant, chickpeas, fresh herbs, tahini, pomegranate, lamb.
+
+The Jewish American deli has no Israeli equivalent. It serves cured meats — pastrami, corned beef, tongue — on rye bread. The pastrami sandwich is an American creation. So is the bagel with lox and cream cheese, which combined the Eastern European bagel with the Scandinavian tradition of smoked salmon in the context of American abundance.
+
+Both traditions are worth knowing. Both are worth eating.`,
+    date: '2026-03-23',
+    category: 'culture',
+    readTime: 6
+  },
+  {
+    slug: 'purim-explained-for-everyone',
+    title: 'Purim Explained: The Holiday of Costumes, Noise, and One Very Brave Woman',
+    excerpt: 'Purim is one of the most festive days in the Jewish calendar and also one of the least understood outside it.',
+    content: `Purim is one of the most joyful holidays in the Jewish calendar. It involves costumes, noise, drinking, and a specific command to give food to neighbors. It also tells the story of one of the most consequential acts of courage in the Hebrew Bible.
+
+Purim comes from the Book of Esther, one of only two books in the Hebrew Bible where God is not explicitly mentioned. The story is set in the Persian court of King Ahasuerus. The chief minister Haman despises the Jews and plots to kill all of them on a day chosen by lot — the word purim means lots.
+
+Mordecai's niece Esther has become the queen without revealing her Jewish identity. When Mordecai tells her about the plot, she must decide whether to approach the king uninvited — a potentially capital offense. She says: if I perish, I perish. She approaches the king, reveals the plot, and Haman is executed. The Jews are allowed to defend themselves and survive.
+
+The Book of Esther is read aloud from a handwritten scroll called the Megillah. Every time Haman's name is mentioned, the congregation makes noise — spinning groggers, stomping, booing — to drown it out.
+
+The four mitzvot of Purim: hearing the Megillah read twice, sending food gifts to at least two people, giving money to at least two poor people, and eating a festive meal. Hamantaschen are the signature food — triangular pastries named for Haman's three-cornered hat.
+
+Purim tells a story about an identifiable threat to Jewish existence and the courage of a woman who risked everything to prevent it. The noise at Haman's name is a statement: we are still here.`,
+    date: '2026-03-23',
+    category: 'culture',
+    readTime: 5
+  },
   {
     slug: 'passover-april-fools-day-2026-god-has-jokes',
     title: 'Passover Starts on April Fool\'s Day This Year and God Has Jokes',
@@ -63,7 +253,6 @@ The most important thing: showing up is the gift. Being willing to sit through a
     category: 'culture',
     readTime: 5
   },
-] = [
   {
     slug: 'jewish-guilt-superpower',
     title: 'Why Jewish Guilt Is Actually a Superpower',
@@ -1022,5 +1211,4 @@ For the tribe — books, Judaica, and gifts worth having:
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   }
-]
-
+];
