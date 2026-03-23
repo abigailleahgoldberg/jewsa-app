@@ -8,7 +8,62 @@ export interface BlogPost {
   readTime: number
 }
 
-export const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPost[
+  {
+    slug: 'passover-april-fools-day-2026-god-has-jokes',
+    title: 'Passover Starts on April Fool\'s Day This Year and God Has Jokes',
+    excerpt: 'Passover begins April 1, 2026. April Fool\'s Day. The holiday commemorating the most dramatic escape in history lands on the day dedicated to convincing people that fake things are real. Make it make sense.',
+    content: `Passover begins April 1, 2026. April Fool\'s Day. The holiday that commemorates the Jewish people\'s escape from slavery in ancient Egypt lands this year on the calendar day dedicated to convincing people that fake things are real.
+
+You cannot make this up. Or maybe only God can, which at this point feels on brand.
+
+Let us think about what Passover actually is for a moment. It is a holiday where families gather to retell a story of liberation from bondage through a series of plagues that included frogs raining from the sky and the firstborn sons of an entire civilization dying in one night. It is a holiday where you are required to eat symbolic bitter herbs to remember suffering. Where you pour drops of wine from your cup for each plague. Where you tell your children about darkness and death and the cost of freedom.
+
+And this year it opens on April 1st.
+
+The Passover seder has been running on roughly the same script for thousands of years. The four questions, the four children, the ten plagues, the four cups of wine, the hiding of the afikomen. It is the most codified dinner in the history of dinners. You can say it quickly or slowly but the sequence does not change. You cannot skip the plagues. You cannot skip the bitter herbs. You cannot skip the part where Pharaoh\'s heart is hardened again and again because the story requires him to be the villain long enough to make the deliverance meaningful.
+
+Now imagine explaining this to someone who had never heard of Passover. On April Fool\'s Day.
+
+There is a version of this where you could sell it as a prank. Tonight we are going to read about plagues and eat horseradish and sing songs in a language most of us do not speak and stay at the table for four hours. April Fool\'s. Except it is not a prank. This is actually what is happening. The Haggadah is real. The bitter herbs are real. The symbolic lamb shankbone on the seder plate is real.
+
+Jewish humor has always understood something that other cultures sometimes miss: you can hold the weight of a story and laugh at the same time. You can commemorate something serious and also notice that it is occurring on April Fool\'s Day and find that funny. These are not in conflict. If anything, Passover landing on April 1st is the most Jewish thing that could happen. Of course it did. Of course it did.
+
+Chag Pesach Sameach. Bring the horseradish. This year more than ever we deserve the wine.`,
+    date: '2026-03-23',
+    category: 'humor',
+    readTime: 4
+  },
+  {
+    slug: 'what-to-buy-a-jewish-friend-for-passover',
+    title: 'What to Actually Buy Your Jewish Friend for Passover (A Non-Jewish Person\'s Guide)',
+    excerpt: 'Passover is coming and you want to bring something. You do not know what to bring. This is the guide. You are welcome.',
+    content: `Passover is coming and you have been invited to a seder. Or your Jewish friend mentioned Passover is coming and you want to acknowledge it. Or you want to send something to someone whose whole family observes and you have no idea where to start.
+
+This guide is for you.
+
+First: the context. Passover is eight days long for most observant Jews outside of Israel, and the two seder nights are the main event. The seder is a ritual meal with a specific order of service, symbolic foods, and a lot of wine. During Passover, observant Jews do not eat chametz, which means leavened bread. No regular bread, no pasta, no cereal, no beer. This is not a dietary preference. It is a commandment.
+
+What this means for you: do not bring bread. Do not bring beer. Do not bring a pasta salad. These are thoughtful gifts in other contexts and confusing gifts in this one.
+
+What you can bring:
+
+Wine is always appropriate. Passover requires four cups of wine at the seder, and observant households often use kosher wine. Look for a bottle labeled kosher for Passover. Manischewitz is the famous one and it is sweet and somewhat divisive. A nicer bottle of kosher red from Israel like Yarden or Recanati will be genuinely appreciated.
+
+Chocolate that is kosher for Passover. This is more available than you think. Most grocery stores with any Jewish customer base stock Passover chocolate in the weeks before the holiday. Dark chocolate with no chametz ingredients. It is a reliable gift.
+
+A beautiful Haggadah. The Haggadah is the book that guides the seder. Every family has their own and many have accumulated multiples over the years. A thoughtful modern Haggadah, and there are many beautiful ones, is a gift that will sit on the seder table and be used for years. The Maxwell House one is functional. The illustrated ones from Artscroll or the Maxwell Haggadah are genuinely lovely.
+
+Flowers. Always appropriate. No symbolic baggage. Brightens the table.
+
+What not to bring beyond the obvious: matzo, unless you are bringing a very good brand or a novelty kind. Most households have more matzo than they want by the end of day two. Anything requiring cooking if they are running a fully kosher kitchen and you are not. Good intentions are appreciated but complexity is not.
+
+The most important thing: showing up is the gift. Being willing to sit through a long ritual meal in which you will not understand everything and will eat symbolic bitter herbs and sing songs you do not know is the real gift. Bring something, but bring yourself most of all.`,
+    date: '2026-03-23',
+    category: 'culture',
+    readTime: 5
+  },
+] = [
   {
     slug: 'jewish-guilt-superpower',
     title: 'Why Jewish Guilt Is Actually a Superpower',
