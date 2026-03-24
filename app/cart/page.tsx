@@ -54,7 +54,7 @@ export default function CartPage() {
 
         {cart.length === 0 ? (
           <div style={{textAlign:"center",padding:"64px 0"}}>
-            <div style={{fontSize:48,marginBottom:16}}>🛒</div>
+            <div style={{fontSize:48,marginBottom:16}}></div>
             <p style={{fontSize:18,color:"rgba(245,240,232,0.6)",marginBottom:28}}>Your cart is empty.</p>
             <Link href="/#shop" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:14,letterSpacing:"1.5px",textTransform:"uppercase",padding:"14px 32px",textDecoration:"none"}}>Shop Now</Link>
           </div>
@@ -82,7 +82,7 @@ export default function CartPage() {
                       onClick={() => removeFromCart(item.productId, item.variantId)}
                       style={{background:"none",border:"none",color:"rgba(245,240,232,0.4)",cursor:"pointer",fontSize:18,padding:"4px 8px",lineHeight:1}}
                       title="Remove"
-                    >✕</button>
+                    ></button>
                   </div>
                   <div style={{fontWeight:900,fontSize:16,minWidth:64,textAlign:"right",flexShrink:0}}>
                     ${(item.price * item.quantity).toFixed(2)}
