@@ -8,11 +8,11 @@ export interface BlogPost {
   readTime: number
 }
 
-export const blogPosts: BlogPost[
+export const blogPosts: BlogPost[] = [
   {
     slug: 'they-tried-we-ate-passover',
     title: 'They Tried. We Ate.',
-    description: 'Every Jewish holiday tells the same story: someone tried to destroy us, we survived, and then we ate. A celebration of survival, food, and Jewish pride for Passover 2026.',
+    excerpt: 'Every Jewish holiday tells the same story: someone tried to destroy us, we survived, and then we ate. A celebration of survival, food, and Jewish pride for Passover 2026.',
     content: `Every Jewish holiday can be summarized in exactly one sentence.
 
 They tried to kill us. We survived. Now we eat.
@@ -69,7 +69,7 @@ Passover 2026 starts the evening of April 12. The matzah is ready. The story is 
   {
     slug: 'in-chutzpah-we-trust',
     title: 'In Chutzpah We Trust',
-    description: 'Chutzpah is the most Jewish American value there is. Here is where it comes from, what it actually means, and why it belongs on the national motto.',
+    excerpt: 'Chutzpah is the most Jewish American value there is. Here is where it comes from, what it actually means, and why it belongs on the national motto.',
     content: `"In God We Trust" is on every dollar bill.
 
 But if you want to understand how Jewish Americans actually operate, the motto is different.
@@ -118,7 +118,7 @@ Wear it to Shabbat. Wear it to brunch. Wear it when someone asks you where you g
   {
     slug: 'chosen-people-american-made',
     title: 'Chosen People. American Made.',
-    description: 'What does it mean to be chosen people and American made at the same time? A look at Jewish American dual identity, ancient covenant, and modern pride.',
+    excerpt: 'What does it mean to be chosen people and American made at the same time? A look at Jewish American dual identity, ancient covenant, and modern pride.',
     content: `Two identities. No conflict.
 
 Jewish Americans carry something most people do not have to think about: being fully, completely one thing and fully, completely another thing at the same time.
