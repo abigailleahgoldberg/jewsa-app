@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+// Passover 2026 Gift Guide Landing Page
 export const metadata: Metadata = {
   title: 'Passover Gift Guide 2026 | Best Passover Gifts | JewSA',
   description: 'The best Passover gifts for 2026. Seder essentials, haggadahs, Passover plates, and gifts for the Jewish family hosting the seder. Curated by JewSA.',
