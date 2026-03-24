@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.jewsa.com/gift-guide' },
 }
 const sections = [
-  { title: 'Bar & Bat Mitzvah Gifts', emoji: '✡️', subtitle: 'Gifts worthy of the moment',
+  { title: 'Bar & Bat Mitzvah Gifts', emoji: '️', subtitle: 'Gifts worthy of the moment',
     items: [
       { name: 'Jewish Study Bible', desc: 'The gold standard. Every Jewish home should have one. Gift it when they become adults in the faith.', link: 'https://www.amazon.com/s?k=jewish+study+bible+oxford&tag=jewsa-20', price: '$45' },
       { name: 'Personalized Kiddush Cup', desc: 'Engraved with their name and date. Lasts forever. Used every Shabbat.', link: 'https://www.amazon.com/s?k=personalized+kiddush+cup+engraved&tag=jewsa-20', price: '$40-$120' },
@@ -13,7 +13,7 @@ const sections = [
       { name: 'Hebrew Name Art Print', desc: 'Their Hebrew name in beautiful calligraphy. Frame it. Done.', link: 'https://www.amazon.com/s?k=hebrew+name+art+personalized+jewish&tag=jewsa-20', price: '$25-$60' },
     ]
   },
-  { title: 'Hanukkah Essentials', emoji: '🕎', subtitle: 'Eight nights of the good stuff',
+  { title: 'Hanukkah Essentials', emoji: '', subtitle: 'Eight nights of the good stuff',
     items: [
       { name: 'Hanukkah Menorah (Hanukkiah)', desc: 'From classic silver to modern design. Every family has a style. Find theirs.', link: 'https://www.amazon.com/s?k=hanukkah+menorah+hanukkiah&tag=jewsa-20', price: '$20-$150' },
       { name: 'Dreidel Set', desc: 'Wood, metal, or novelty. The game exists. Play it.', link: 'https://www.amazon.com/s?k=dreidel+set+hanukkah&tag=jewsa-20', price: '$10-$25' },
@@ -21,7 +21,7 @@ const sections = [
       { name: 'Hanukkah Socks (8 nights, 8 pairs)', desc: 'Someone will love this. Someone in your family wants Hanukkah socks.', link: 'https://www.amazon.com/s?k=hanukkah+socks+jewish+funny&tag=jewsa-20', price: '$15-$35' },
     ]
   },
-  { title: 'Passover Seder Essentials', emoji: '🍷', subtitle: 'For a seder worth attending',
+  { title: 'Passover Seder Essentials', emoji: '', subtitle: 'For a seder worth attending',
     items: [
       { name: 'The Maxwell House Haggadah', desc: 'The classic. Your bubbe used it. Four million copies in print. Get it.', link: 'https://www.amazon.com/s?k=maxwell+house+haggadah+passover&tag=jewsa-20', price: '$8' },
       { name: 'Modern Illustrated Haggadah', desc: 'For the family that wants something beautiful and contemporary at the table.', link: 'https://www.amazon.com/s?k=illustrated+haggadah+modern+passover&tag=jewsa-20', price: '$20-$40' },
@@ -29,7 +29,7 @@ const sections = [
       { name: 'Elijah\'s Cup (Silver)', desc: 'Leave the door open. Pour the cup. Keep the tradition.', link: 'https://www.amazon.com/s?k=elijahs+cup+silver+passover&tag=jewsa-20', price: '$20-$60' },
     ]
   },
-  { title: 'Books Worth Reading', emoji: '📚', subtitle: 'Jewish culture, humor, and history',
+  { title: 'Books Worth Reading', emoji: '', subtitle: 'Jewish culture, humor, and history',
     items: [
       { name: 'Chutzpah — Alan Dershowitz', desc: 'Jewish identity, American life, and the art of arguing your position confidently.', link: 'https://www.amazon.com/s?k=chutzpah+dershowitz&tag=jewsa-20', price: '$15' },
       { name: 'The Chosen — Chaim Potok', desc: 'The definitive American Jewish novel. If they have not read it, gift it.', link: 'https://www.amazon.com/s?k=the+chosen+chaim+potok&tag=jewsa-20', price: '$13' },
