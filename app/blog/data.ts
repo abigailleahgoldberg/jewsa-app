@@ -49,7 +49,6 @@ Your name carries your family's history, your community's choices, and sometimes
     category: 'Culture',
     readTime: 6
   },
-] = [
   {
     slug: 'seder-plate-every-item-explained',
     title: 'The Seder Plate: What Every Item Means and Why It Matters',
