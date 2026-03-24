@@ -8,7 +8,7 @@ export interface BlogPost {
   readTime: number
 }
 
-export const blogPosts: BlogPost[
+export const blogPosts: BlogPost[] = [
   {
     slug: 'jewish-american-identity-2026',
     title: 'Jewish American Identity in 2026: What It Means to Be Jewish in America Today',
