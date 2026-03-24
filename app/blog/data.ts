@@ -164,7 +164,6 @@ Wear it when you want someone to ask what it means. Because the answer is worth 
     category: 'culture',
     readTime: 6
   },
-] = [
   {
     slug: 'jewish-american-identity-2026',
     title: 'Jewish American Identity in 2026: What It Means to Be Jewish in America Today',
