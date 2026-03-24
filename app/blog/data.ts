@@ -25,7 +25,7 @@ What binds American Jewish identity is usually some combination of: family histo
 
 There is no requirement. There is no litmus test. You belong if you say you do.`,
     date: '2026-03-24',
-    category: 'Culture',
+    category: 'culture',
     readTime: 6
   },
   {
@@ -46,7 +46,7 @@ Immigration and diaspora added layers — children got Hebrew names for religiou
 
 Your name carries your family's history, your community's choices, and sometimes your parents' hopes for who you would become. That weight is part of being Jewish.`,
     date: '2026-03-24',
-    category: 'Culture',
+    category: 'culture',
     readTime: 6
   },
   {
