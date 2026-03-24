@@ -8,7 +8,48 @@ export interface BlogPost {
   readTime: number
 }
 
-export const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPost[
+  {
+    slug: 'jewish-american-identity-2026',
+    title: 'Jewish American Identity in 2026: What It Means to Be Jewish in America Today',
+    excerpt: 'An honest conversation about identity, belonging, and community in a changing landscape.',
+    content: `Jewish identity in America in 2026 is layered in ways it was not even five years ago. The conversation about what it means to be Jewish — whether religion is required, whether ethnicity or culture is enough, how to balance religious tradition with secular modern life — is more visible and more contested than ever.
+
+There is no single answer. A Jewish identity for some people is entirely religious — observance of halacha, participation in synagogue and ritual, engagement with Torah and talmudic tradition. For others, it is cultural and ethnic without religious practice — family, humor, food, values, history, but not necessarily belief or observance. For many, it is some combination that shifts depending on context.
+
+The second and third generation American Jewish experience is different from the immigrant experience and different from the Israeli experience. Most American Jews have the luxury of choosing their level of engagement with Jewish institutions and practice in a way that Jews in other eras did not. That freedom is also the challenge — it requires active choice and commitment rather than inheritance.
+
+The antisemitism conversation has become more prominent and more urgent. A lot of that is real and concerning. Some of the anxiety is proportional to actual threat and some of it is performative. Parsing the difference and deciding what level of vigilance is reasonable — without paranoia and without complacency — is something every Jewish family is figuring out right now.
+
+What binds American Jewish identity is usually some combination of: family history, cultural reference points (food, humor, holidays), values (justice-seeking, intellectual curiosity, arguing about ideas), and often some relationship with Israel whether positive, complicated, or contentious.
+
+There is no requirement. There is no litmus test. You belong if you say you do.`,
+    date: '2026-03-24',
+    category: 'Culture',
+    readTime: 6
+  },
+  {
+    slug: 'jewish-names-explained-origins-and-meanings',
+    title: 'Jewish Names Explained: Origins, Meanings, and Why They Matter',
+    excerpt: 'From Ashkenazi to Sephardic to Israeli naming traditions — a guide to the names that carry history.',
+    content: `Jewish names are often unique, sometimes hard to pronounce for non-Jewish people, and usually carry meaning that goes beyond the practical. Understanding where names come from and what they signify adds another layer to Jewish identity.
+
+Ashkenazi Jewish names (the tradition from Central and Eastern Europe) follow different patterns than Sephardic names (from Spain, North Africa, and the Middle East) or Israeli names chosen in modern Hebrew.
+
+Ashkenazi tradition often involves naming after deceased relatives — you would name a child after a grandparent who had passed away. The initial letter might match or the full name might match. This created a kind of genealogical record through names. The practice varies by family custom but the principle is consistent: names carry lineage.
+
+Sephardic tradition more commonly names children after living relatives, particularly parents and grandparents. This is a different philosophy — the person named after you is a blessing while you are still here.
+
+Israeli naming traditions are often entirely different — names chosen for meaning in modern Hebrew that do not necessarily reference family history. Environmental names (Tamar for palm tree), virtue names (Gal for wave), abstract concepts turned into names. The Israeli project of creating a new society also meant creating a new naming culture.
+
+Immigration and diaspora added layers — children got Hebrew names for religious or cultural identity and anglicized names for practical use in their societies. Many Jews have a traditional Hebrew name used in religious contexts and a secular name used in daily life.
+
+Your name carries your family's history, your community's choices, and sometimes your parents' hopes for who you would become. That weight is part of being Jewish.`,
+    date: '2026-03-24',
+    category: 'Culture',
+    readTime: 6
+  },
+] = [
   {
     slug: 'seder-plate-every-item-explained',
     title: 'The Seder Plate: What Every Item Means and Why It Matters',
