@@ -839,6 +839,201 @@ For the tribe — books, Judaica, and gifts worth having:
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
   },
   {
+    slug: 'jewish-passover-guide',
+    title: 'Jewish Passover Guide: Everything You Need to Know',
+    excerpt: 'Passover is one of the most observed Jewish holidays in the world. Here is what it means, how it is celebrated, and why the seder table is the most important meal of the Jewish year.',
+    date: '2026-03-24',
+    category: 'culture',
+    readTime: 9,
+    content: `
+<h2>What Is Passover?</h2>
+<p>Passover, known in Hebrew as Pesach, is the Jewish holiday that commemorates the liberation of the Israelites from slavery in Egypt. The story comes from the Book of Exodus: the Israelites were enslaved for generations, Moses delivered God's demand to Pharaoh to let his people go, Pharaoh refused, ten plagues followed, and eventually the Israelites walked out of Egypt and into the desert toward a new life.</p>
+<p>The name Passover refers to one of those plagues. The tenth and final plague was the death of the firstborn in every Egyptian household. God instructed the Israelites to mark their doorposts with lamb's blood so the plague would pass over their homes. That act of marking, and the protection that followed, is at the center of the holiday's name and meaning.</p>
+<p>Passover is not just a historical commemoration. It is an active re-living. The Haggadah, the text read at the seder, says explicitly: in every generation, each person is obligated to see themselves as if they personally left Egypt. Passover is the holiday of liberation that does not let you observe from a distance. You are supposed to feel it.</p>
+
+<h2>When Is Passover?</h2>
+<p>Passover begins on the 15th of Nisan in the Hebrew calendar, which typically falls in March or April on the Gregorian calendar. The holiday lasts eight days in the Diaspora and seven days in Israel. In 2026, Passover begins on the evening of April 2 and ends on April 10.</p>
+<p>The holiday begins at sundown on the first night, which is when the first seder is held. Many families hold a second seder on the second night. The first two days and last two days are full holidays. The middle four days are chol hamoed, a semi-festive period when many people work but special observances continue.</p>
+
+<h2>The Seder: The Heart of Passover</h2>
+<p>The seder is the ritual meal held on the first one or two nights of Passover. The word seder means order in Hebrew, and that order is everything. The seder follows a specific sequence of fifteen steps outlined in the Haggadah. Every step has a purpose. Nothing is arbitrary.</p>
+<p>The Haggadah tells the story of the Exodus through a combination of readings, songs, rituals, symbolic foods, and questions. The most famous moment is the Four Questions, traditionally sung by the youngest child at the table: why is this night different from all other nights? The rest of the seder is, essentially, the answer.</p>
+<p>The seder plate sits at the center of the table and holds six symbolic foods. Maror is bitter herbs, typically horseradish, representing the bitterness of slavery. Charoset is a sweet paste of apples, nuts, and wine representing the mortar the slaves used to build Egyptian structures. Karpas is a green vegetable, usually parsley, dipped in saltwater representing tears and the hope of spring. Zeroa is a roasted shank bone representing the lamb sacrifice. Beitzah is a roasted egg representing the cycle of life and the festival offering. Chazeret is a second bitter herb, typically romaine lettuce, used in the Hillel sandwich.</p>
+<p>Three pieces of matzah sit separately, covered. Matzah is unleavened bread, made without yeast, representing the bread the Israelites baked in haste as they fled Egypt. They did not have time to let the dough rise. Matzah is the edible reminder that freedom came fast and required sacrifice.</p>
+
+<h2>The Ten Plagues</h2>
+<p>The ten plagues God brought upon Egypt are recited at the seder table. As each plague is named, participants dip a finger into their wine cup and place a drop on their plate. The symbolic act reduces the fullness of joy. Even in liberation, the Haggadah teaches, we do not celebrate the suffering of others without pause.</p>
+<p>The ten plagues: blood, frogs, lice, wild beasts, pestilence, boils, hail, locusts, darkness, and the death of the firstborn. Ten acts of divine pressure before Pharaoh let the people go. Every child at the seder learns them. Many adults still recite them by memory decades later.</p>
+
+<h2>The Four Cups of Wine</h2>
+<p>Four cups of wine are drunk at specific points during the seder, corresponding to the four expressions of redemption God uses in Exodus: I will bring you out, I will deliver you, I will redeem you, I will take you. Each cup marks a stage of liberation. The wine is supposed to be drunk while reclining, a symbol of freedom. Slaves did not recline. Free people do.</p>
+<p>A fifth cup is poured but not drunk. This is Elijah's cup, set out for the prophet Elijah who tradition holds will herald the coming of the Messianic age. The front door is opened during the seder to welcome Elijah in. Children watch the cup carefully to see if the level drops.</p>
+
+<h2>What You Cannot Eat on Passover</h2>
+<p>Passover dietary restrictions are among the most extensive in Jewish practice. Chametz, which means leavened products, is completely forbidden during Passover. This includes bread, pasta, most cereals, cookies, cakes, beer, and whiskey. Any grain that has been allowed to ferment or rise is chametz.</p>
+<p>Before Passover begins, observant Jews conduct a search of their homes called bedikat chametz, removing every trace of leavened products. Some sell their chametz to a non-Jew for the duration of the holiday, a legal workaround that allows them to own chametz after Passover ends. Anything that cannot be sold or removed is burned the morning before Passover begins in a ritual called biur chametz.</p>
+<p>Matzah replaces bread during the holiday. Observant households often have separate dishes, pots, and utensils designated specifically for Passover use, ensuring no cross-contamination with chametz from the rest of the year.</p>
+
+<h2>Passover Traditions That Vary by Community</h2>
+<p>Ashkenazi Jews, whose ancestry traces to Eastern Europe, traditionally also avoid kitniyot during Passover. Kitniyot includes legumes, rice, corn, and beans. The restriction developed because these foods were stored alongside grains and could potentially become mixed with chametz. Sephardic Jews, whose ancestry traces to Spain and the Mediterranean, do not follow this restriction and eat rice and legumes freely during Passover.</p>
+<p>This difference matters at the seder table. An Ashkenazi family and a Sephardic family observing the same holiday follow different rules about what appears in the kitchen. In recent years, some Ashkenazi authorities have moved toward permitting kitniyot, and the practice is evolving across denominations.</p>
+<p>The haggadah used varies by family and community. The Maxwell House Haggadah has been the standard American version for generations. Artistic illustrated haggadahs, feminist haggadahs, and haggadahs designed for children have all expanded what the seder can look like. The text is fixed. The interpretation is alive.</p>
+
+<h2>Passover Music</h2>
+<p>The seder ends with songs. Echad Mi Yodea, a counting song, goes through thirteen Jewish concepts from one God to thirteen attributes of the divine. Chad Gadya, which means one little goat, is a cumulative song that sounds like a children's rhyme but has been interpreted as an allegory for Jewish history. Dayenu, meaning it would have been enough, is a song of gratitude listing the gifts of the Exodus. Each line ends with the word dayenu. Any single act of liberation would have been enough. Together they are overwhelming.</p>
+<p>These songs mark the end of the formal seder. People who are still awake and willing keep going. People who started the seder at nine and are now fighting sleep at midnight call it a night after Adir Hu and mean it.</p>
+
+<h2>Why Passover Still Matters</h2>
+<p>Passover is the most widely observed Jewish holiday. More Jews attend a seder than fast on Yom Kippur. More Jewish households have a seder plate than attend synagogue regularly. Something about the story and the structure of the holiday reaches across the full range of Jewish practice, from Orthodox to entirely secular.</p>
+<p>The reason is the story. The Exodus narrative is foundational. It established Jewish peoplehood. It gave the Torah's ethics their grounding: treat the stranger fairly, because you were strangers in Egypt. It established the idea that God acts in history on behalf of the oppressed. The seder keeps that story alive by making it present tense. You are not hearing about people who were freed. You are, for one night, one of them.</p>
+<p>Next year in Jerusalem. That is how the seder ends. Not as a plan. As a hope. As a reminder that the story of liberation is not finished. That is Passover.</p>
+
+
+---
+
+**Passover Essentials**
+
+Everything you need for the seder table:
+
+- [Passover Haggadah (Modern Illustrated)](https://www.amazon.com/s?k=modern+illustrated+haggadah+passover&tag=jewsa-20) — Bring the story alive at the table
+- [Ceramic Seder Plate](https://www.amazon.com/s?k=passover+seder+plate+ceramic&tag=jewsa-20) — The centerpiece that earns its place every year
+- [Passover Gift Guide](/passover-gift-guide) — Everything worth giving for the holiday
+- [Elijah's Cup](https://www.amazon.com/s?k=elijahs+cup+silver+passover&tag=jewsa-20) — Set it out. Open the door. Wait.
+- [Kosher for Passover Wine](https://www.amazon.com/s?k=kosher+for+passover+wine&tag=jewsa-20) — Four cups per person. Plan accordingly.
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
+  },
+  {
+    slug: 'passover-gifts-for-non-jewish-friends',
+    title: 'Passover Gifts for Non-Jewish Friends: A Practical Guide',
+    excerpt: 'Your Jewish friend is hosting a seder and you want to show up with something thoughtful. Here is exactly what to bring, what to avoid, and how to make the gesture land right.',
+    date: '2026-03-24',
+    category: 'culture',
+    readTime: 6,
+    content: `
+<h2>You Got Invited to a Seder</h2>
+<p>Your Jewish friend or colleague invited you to their Passover seder. You said yes, which was the right call. Now you are wondering what to bring.</p>
+<p>The seder is not a dinner party in the casual sense. It is a ritual meal with specific rules, specific foods, and a specific dietary framework. The gift you bring should work within that framework. A bottle of regular wine, a bakery cake, or a nice sourdough loaf will create an awkward moment. Not because your host will be rude about it. Because those things cannot be consumed on Passover and your host will have to quietly set them aside.</p>
+<p>Here is how to show up right.</p>
+
+<h2>The Passover Dietary Rule You Need to Know</h2>
+<p>During Passover, observant Jewish households do not eat chametz. Chametz is any leavened grain product: bread, pasta, most crackers, cookies, cake made with flour, beer, and most grain-based alcohol. Anything made with wheat, barley, rye, oats, or spelt that has been allowed to rise is off the table, literally.</p>
+<p>If you are bringing food or drink, it needs to be kosher for Passover. Look for packaging that says "Kosher for Passover" or "KFP." If you are not sure, a bottle of kosher wine is the safest and most appreciated option. Kosher wine is almost always kosher for Passover. Check the label.</p>
+<p>If you are not sure about your host's level of observance, text and ask: "Is there anything specific I should look for if I bring wine?" That question tells your host you did your research, and they will appreciate it.</p>
+
+<h2>What to Bring</h2>
+<p>Kosher for Passover wine is the strongest choice for a guest who is not Jewish. Your host needs four cups per person at the seder. Extra wine is never a problem. Bring a bottle of red and a bottle of white if you want to make an impression.</p>
+<p>Passover chocolate is another excellent option. Kosher for Passover chocolate is widely available in the weeks before the holiday and it disappears after. It is a thoughtful gesture and a crowd-pleaser.</p>
+<p>A beautifully designed haggadah, which is the text used to run the seder, is a meaningful gift if you find one that looks like care went into it. An illustrated haggadah, a family haggadah, or a haggadah with artistic design tells your host that you took the time to understand what the evening actually involves.</p>
+<p>Fresh flowers are a safe and welcome choice. They are not food, not chametz, and they make the table look better. Spring flowers that match the holiday's themes of renewal and freedom work especially well.</p>
+<p>A donation in the host's honor to a Jewish organization they care about is appropriate for close friends. Maot Chitim, which means wheat money, is a Passover tradition of ensuring that families who cannot afford the holiday's expenses have what they need. Donating to a local Jewish food pantry or social services organization in your host's name connects the gift to the holiday's core value of freedom and community.</p>
+
+<h2>What Not to Bring</h2>
+<p>Regular wine from a non-kosher producer is not the end of the world for less observant households, but it creates a complication for observant ones. Kosher wine is easy to find. Make the switch.</p>
+<p>Baked goods, bread, crackers, cookies, cake, and anything grain-based cannot be consumed on Passover in an observant household. Even something as simple as a nice bakery challah, which would be a welcome Shabbat gift, is wrong for Passover.</p>
+<p>Beer is chametz. Do not bring beer to a seder.</p>
+<p>Whiskey is made from grain and is chametz. Bring wine or kosher Passover grape juice instead.</p>
+
+<h2>How to Be a Good Guest at a Seder</h2>
+<p>Show up on time or a few minutes early. The seder has a structure and a flow. Arriving late disrupts both and puts your host in an awkward position.</p>
+<p>Participate in the readings, even if you are unfamiliar with the text. The haggadah assigns different sections to different readers around the table. Read your part when it comes. You do not need to understand every reference. You need to be present and engaged.</p>
+<p>Ask questions. The seder is literally structured around questions. The entire evening is designed to prompt curiosity and conversation. Asking a genuine question about something you do not understand is not an interruption. It is exactly what is supposed to happen.</p>
+<p>The Four Questions are sung or recited by the youngest person at the table who is able. If that is you, be ready.</p>
+<p>Eat what is offered. The seder plate foods are symbolic and some of them are meant to taste like what they represent. Horseradish is sharp on purpose. The charoset is sweet on purpose. Tasting them is part of the experience. Your host will notice if you skip the symbolic foods, and they will appreciate it when you do not.</p>
+<p>Say something real to your host at the end of the evening. Tell them what moved you, what surprised you, what you will carry with you. The seder is work. The person who hosted it cooked for days, prepared the ritual, held the room together for three hours, and opened their home. That deserves more than "thanks, it was great."</p>
+
+<h2>Why the Invitation Matters</h2>
+<p>Being invited to a seder by a Jewish family is an act of trust. The seder is one of the most intimate Jewish experiences. It is held in the home. The story told is about survival, persecution, and liberation. The people at the table are sharing something that is not just tradition but identity.</p>
+<p>You were invited because your presence was wanted. Showing up with a thoughtful gift, participating genuinely, and treating the evening with respect is how you honor that invitation. The kosher wine is the easy part. The rest is just showing up as someone worth having at the table.</p>
+
+
+---
+
+**What to Bring to a Seder**
+
+Your gift shopping list, handled:
+
+- [Kosher for Passover Wine](https://www.amazon.com/s?k=kosher+for+passover+wine&tag=jewsa-20) — The safest, most appreciated choice
+- [Passover Chocolate Gift Set](https://www.amazon.com/s?k=kosher+for+passover+chocolate+gift&tag=jewsa-20) — A crowd-pleaser that disappears fast
+- [Illustrated Haggadah](https://www.amazon.com/s?k=illustrated+haggadah+passover+modern&tag=jewsa-20) — A gift that shows you understand the evening
+- [Passover Seder Plate](https://www.amazon.com/s?k=passover+seder+plate+ceramic&tag=jewsa-20) — For the host who will use it every year
+- [Full Passover Gift Guide](/passover-gift-guide) — Everything worth giving for the holiday
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
+  },
+  {
+    slug: 'passover-traditions-explained',
+    title: 'Passover Traditions Explained: What Happens and Why',
+    excerpt: 'Matzah. The seder plate. Elijah\'s cup. The search for chametz. Passover has more traditions than any other Jewish holiday. Here is what each one means and where it comes from.',
+    date: '2026-03-24',
+    category: 'culture',
+    readTime: 8,
+    content: `
+<h2>Why Passover Has So Many Traditions</h2>
+<p>Passover is not just a holiday. It is a full sensory experience designed to make an ancient story feel present. Every tradition on Passover is either rooted in the Exodus narrative, in the biblical commandments that followed it, or in centuries of communal practice that layered meaning on top of meaning.</p>
+<p>The result is a holiday with more active rituals than almost any other in the Jewish calendar. You do not just observe Passover. You taste it, search for it, remove it from your home, retell it, argue about it, and sing about it until midnight. Here is what each tradition actually means.</p>
+
+<h2>Bedikat Chametz: The Search for Leavened Bread</h2>
+<p>The night before Passover begins, after dark, the head of the household conducts bedikat chametz, a formal search for chametz throughout the home. A candle is used to illuminate dark corners. A feather is used to brush crumbs together. A wooden spoon collects what is found. Ten pieces of bread are traditionally hidden in advance so the search has something to find.</p>
+<p>After the search, a declaration is recited nullifying any chametz that was missed. The chametz that was found is burned the following morning in biur chametz, the destruction of chametz, completing the removal before Passover begins at nightfall.</p>
+<p>The tradition is not only practical. It is a ritual of intention. You are not just cleaning your house. You are actively removing something from your home and your life to make space for the holy time ahead.</p>
+
+<h2>Matzah: The Bread of Affliction and Freedom</h2>
+<p>Matzah is the central food of Passover. It is unleavened bread, made with only flour and water, baked in under eighteen minutes so it has no time to rise. It represents two things simultaneously, which is characteristic of Jewish religious thinking.</p>
+<p>The Haggadah calls matzah the bread of affliction. It is what the Israelites ate in slavery, the minimal sustenance of people who had no control over their time or their food. It tastes like constraint on purpose.</p>
+<p>It also represents the bread of freedom. When the Israelites left Egypt in haste, they took their dough before it could rise. They baked it flat on their backs in the desert sun. Matzah is the bread of people moving too fast for their food to catch up. It tastes like liberation on purpose too.</p>
+<p>Eating matzah every day for eight days is a mitzvah, a commandment. It is the most widely observed Passover ritual. Many Jews who do not observe any other aspect of the holiday still eat matzah.</p>
+
+<h2>The Seder Plate: Six Symbols at the Center of the Table</h2>
+<p>The seder plate holds the six ritual foods that correspond to the Exodus story. Each is tasted, referenced, or symbolically present at specific points in the seder.</p>
+<p>Maror, the bitter herb, is usually horseradish. It represents the bitterness of slavery. It is eaten without apology. The burn in the back of the throat is the point.</p>
+<p>Charoset is a sweet paste made from apples, nuts, cinnamon, and wine. It represents the mortar the Israelite slaves used to make bricks for Egyptian building projects. The sweetness next to the bitterness of the maror creates a deliberate contrast: the memory of suffering paired with something that gestures toward sweetness. The two are eaten together in the Hillel sandwich.</p>
+<p>Karpas, usually parsley or celery, represents spring and new growth. It is dipped in saltwater at the beginning of the seder. The saltwater represents the tears of the enslaved. The dipping is a ritual that the Haggadah says is strange enough to prompt the first of the Four Questions from the children at the table.</p>
+<p>Zeroa is a roasted shank bone, representing the Passover lamb sacrifice offered at the Temple in Jerusalem. It is not eaten at the seder. It is present as a symbol of the sacrifice and the protection it represented.</p>
+<p>Beitzah is a roasted or hard-boiled egg, representing the festival offering and the cycle of life. Eggs also symbolize mourning in Jewish tradition, and the presence of the egg at the seder holds both meanings: the loss of the Temple, and the resilience of renewal.</p>
+<p>Chazeret is a second bitter herb, typically romaine lettuce, used in the Hillel sandwich along with charoset and maror. Romaine lettuce starts mild and becomes bitter the longer it sits, which some interpret as a symbol of how oppression can creep up gradually before its full weight is felt.</p>
+
+<h2>The Four Cups of Wine</h2>
+<p>Four cups of wine are drunk at the seder, corresponding to four expressions God uses in Exodus chapter six to describe the liberation: "I will bring you out," "I will deliver you," "I will redeem you," "I will take you." Each cup marks a movement through the seder's structure. Each is drunk while reclining to the left, a posture associated with free people in the ancient world.</p>
+<p>The cups punctuate the evening the way chapters punctuate a book. The first cup follows the blessing called kiddush that opens the seder. The second cup follows the telling of the Exodus story. The third cup follows the meal and the blessing after eating. The fourth cup closes the seder proper.</p>
+<p>A fifth cup is set out for Elijah the prophet. According to tradition, Elijah will return before the Messianic era. The front door is opened at a specific point in the seder to invite him in. Children watch the cup carefully. The level of wine does not visibly change. The conversation about whether he was there happens anyway.</p>
+
+<h2>The Four Questions</h2>
+<p>The Mah Nishtanah, meaning what is different, is sung or recited early in the seder by the youngest child at the table who is able. It asks four questions: why do we eat matzah instead of bread, why do we eat bitter herbs, why do we dip vegetables twice, and why do we recline. The rest of the seder is, structurally, the answer to these questions.</p>
+<p>The Four Questions serve a purpose beyond their content. The Haggadah is written to fulfill a biblical commandment to tell the story of the Exodus to your children. The tradition of having children ask questions rather than adults deliver lectures reflects a specific pedagogical philosophy: curiosity opens a mind that declarations close. You remember what you asked. You forget what you were told.</p>
+
+<h2>The Afikomen</h2>
+<p>Near the beginning of the seder, the middle of the three matzot on the table is broken in half. One half is called the afikomen. It is wrapped in a cloth and hidden, or stolen by children who hide it for ransom. The seder cannot be completed without the afikomen, which is eaten as the last food of the evening. This gives the children leverage.</p>
+<p>The negotiations over the return of the afikomen are one of the most reliably entertaining moments of any seder. Children who have been sitting for two hours while adults argue about the correct interpretation of a medieval commentary are suddenly very awake and very specific about what they want in exchange for the matzah.</p>
+<p>The afikomen tradition keeps children engaged across the full arc of the evening. Its origin is debated by scholars. Its effectiveness at keeping a seven-year-old invested in the outcome of a three-hour ritual meal is not.</p>
+
+<h2>Elijah's Cup and the Open Door</h2>
+<p>After the meal, a cup of wine is filled for Elijah the prophet. The front door of the home is opened. A special passage called Shfoch Chamatcha, meaning pour out your wrath, is recited. Then the door is closed.</p>
+<p>The open door is an invitation. It signals that this household awaits the prophet who will herald an era of universal peace. It is also an act of hope that has accumulated meaning across centuries of Jewish history. Seders were held in secret during the Inquisition, during pogroms, during the Holocaust. Opening the door was not always safe. The tradition continued anyway.</p>
+<p>Some families today also open the door to invite any hungry person in, connecting the tradition to Passover's social justice dimension. Let all who are hungry come and eat. That line is from the beginning of the Haggadah. Opening the door enacts it physically at the seder's midpoint.</p>
+
+<h2>The Songs</h2>
+<p>The seder ends with songs that have been sung at Passover tables for centuries. Dayenu, meaning it would have been enough, lists the gifts of the Exodus one by one. After each one, the chorus affirms that this alone would have been sufficient. Together they are overwhelming. The song is an exercise in gratitude that accumulates rather than summarizes.</p>
+<p>Chad Gadya, the cumulative song about a little goat, has been interpreted as an allegory for Jewish history, a children's song, and a theological statement about divine justice. It is all three. It is sung at midnight by people who are tired and happy and not quite ready to leave the table.</p>
+<p>The seder closes with the declaration: Next year in Jerusalem. Not necessarily as a plan. As a hope. As a reminder that the story of liberation, personal and collective, is not finished. That the obligation to see yourself as someone who left Egypt does not expire at the end of the evening.</p>
+<p>The matzah is gone. The wine is mostly gone. The seder plate has been cleared. But the story stays with you. That is the tradition.</p>
+
+
+---
+
+**Your Passover Table, Ready**
+
+The essentials, linked:
+
+- [Modern Haggadah](https://www.amazon.com/s?k=modern+illustrated+haggadah+passover&tag=jewsa-20) — Tell the story the right way
+- [Seder Plate](https://www.amazon.com/s?k=passover+seder+plate+ceramic&tag=jewsa-20) — The centerpiece that holds everything
+- [Elijah's Cup](https://www.amazon.com/s?k=elijahs+cup+passover+jewish&tag=jewsa-20) — Leave the door open. Fill the cup.
+- [Passover Gift Guide](/passover-gift-guide) — Everything worth giving this season
+- [Afikomen Bag](https://www.amazon.com/s?k=afikomen+bag+passover+embroidered&tag=jewsa-20) — Give the kids something worth negotiating over
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
+  },
+  {
     slug: 'rise-of-jewish-pride-merch',
     title: "The Rise of Jewish Pride Merch: Why We're Wearing It Now",
     excerpt: 'Something shifted in Jewish-American culture over the last few years. The merch got bolder, the pride got louder, and the conversation about Jewish identity got more interesting. Here is what is driving it.',
