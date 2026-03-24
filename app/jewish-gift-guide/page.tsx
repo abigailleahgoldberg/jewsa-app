@@ -27,7 +27,7 @@ export default function JewishGiftGuidePage() {
         
         <div style={{display:"grid",gap:16,marginBottom:40}}>
           {categories.map((c,i) => (
-            <div key={i} style={{background:"white",border:"1px solid #DBEAFE",borderRadius:8,padding:"20px",cursor:"pointer",transition:"all 0.2s",_hover:{borderColor:G,boxShadow:`0 0 0 1px ${G}`}}}>
+            <div key={i} style={{background:"white",border:"1px solid #DBEAFE",borderRadius:8,padding:"20px",cursor:"pointer",transition:"all 0.2s"`}}}>
               <h3 style={{fontWeight:700,fontSize:16,marginBottom:6,color:G}}>{c.name}</h3>
               <p style={{fontSize:14,color:"#666",margin:0}}>{c.desc}</p>
             </div>
