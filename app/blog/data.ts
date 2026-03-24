@@ -8,7 +8,163 @@ export interface BlogPost {
   readTime: number
 }
 
-export const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPost[
+  {
+    slug: 'they-tried-we-ate-passover',
+    title: 'They Tried. We Ate.',
+    description: 'Every Jewish holiday tells the same story: someone tried to destroy us, we survived, and then we ate. A celebration of survival, food, and Jewish pride for Passover 2026.',
+    content: `Every Jewish holiday can be summarized in exactly one sentence.
+
+They tried to kill us. We survived. Now we eat.
+
+That is it. That is the whole thing. Every year, different story, same ending. And the ending always involves food.
+
+Passover is coming. That means it is time to revisit the greatest ongoing saga in human history.
+
+The Pattern
+
+Passover: Pharaoh tried to keep us as slaves forever. Moses said no. There were plagues. We fled through a desert. We made it. Now we eat matzah and dip parsley in saltwater to remember the tears, which is a very Jewish way to celebrate survival.
+
+Hanukkah: The Seleucid Greeks tried to ban Jewish practice. The Maccabees said absolutely not. Against all odds, a small group of fighters took back the Temple. There was a tiny bit of oil that lasted eight days. Now we eat latkes fried in oil to remember the miracle, which honestly sounds like something someone thought up after the battle when they were very hungry.
+
+Purim: Haman tried to wipe out the Jews of Persia. Esther and Mordecai outmaneuvered him. Haman was hanged. Now we eat hamantaschen, cookies literally shaped like the guy's hat. The audacity of that is something you have to sit with for a moment.
+
+The pattern is not subtle. It is not accidental. It is the entire operating system.
+
+The Food Is the Memory
+
+At a Passover seder, the food does not just taste like something. It means something.
+
+Matzah is the bread that did not have time to rise because the Israelites left Egypt fast. Eating it every year is eating the memory of urgency and escape.
+
+Maror, the bitter herbs, represents the bitterness of slavery. You eat it. You taste history. You remember so you do not forget.
+
+Charoset, the sweet paste of apples and nuts and wine, represents the mortar the slaves used to build Pharaoh's cities. It is sweet because even in hardship, life carries sweetness.
+
+The seder plate is not a prop. It is a curriculum. A whole history compressed into five or six small items that fit on a ceramic dish.
+
+Why We Still Do This
+
+The easy answer is tradition. The true answer is identity.
+
+Every generation is commanded to see themselves as personally having left Egypt. Not to remember that ancestors left Egypt. To feel it as your own story. The first person singular.
+
+That is a remarkable instruction. It is asking every Jew at every table to locate themselves inside a 3,000 year old story and find it still relevant to their life right now.
+
+It works because the story is not actually about Egypt. It is about what it means to go from slavery to freedom. To go from being told you do not matter to insisting that you do.
+
+That story does not age.
+
+Wear It
+
+"They Tried. We Ate." is not a joke. It is a summary.
+
+It is the entire pattern of Jewish history distilled into four words. Wear it to your seder. Wear it to your office. Wear it when someone asks you what your holiday is about.
+
+Passover 2026 starts the evening of April 12. The matzah is ready. The story is ready. Are you?`,
+    date: '2026-03-24',
+    category: 'culture',
+    readTime: 6
+  },
+  {
+    slug: 'in-chutzpah-we-trust',
+    title: 'In Chutzpah We Trust',
+    description: 'Chutzpah is the most Jewish American value there is. Here is where it comes from, what it actually means, and why it belongs on the national motto.',
+    content: `"In God We Trust" is on every dollar bill.
+
+But if you want to understand how Jewish Americans actually operate, the motto is different.
+
+In Chutzpah We Trust.
+
+What Chutzpah Actually Is
+
+Chutzpah is a Yiddish word. It comes from the Hebrew word "hutspah," which roughly translates to audacity, nerve, gall. The unmitigated boldness to walk into a situation and act like you belong there. The confidence to ask for something most people would not dare ask for.
+
+The classic definition, credited to Leo Rosten: chutzpah is killing your parents and then throwing yourself on the mercy of the court because you are an orphan.
+
+That is the dark version. The real version is warmer.
+
+Chutzpah is the immigrant who shows up with nothing and builds something. The comedian who makes the entire room uncomfortable and then makes them laugh. The activist who says no to power when everyone around them says yes. The lawyer who argues the case that everyone says is unwinnable.
+
+It is not arrogance. Arrogance does not require courage. Chutzpah requires courage. You have to be willing to look foolish. You have to be willing to be told no. You do it anyway.
+
+Chutzpah Built American Culture
+
+The story of Jewish Americans in the 20th century is the story of chutzpah at scale.
+
+The studio executives who built Hollywood from scratch in the 1920s. The comedians who walked into clubs and talked about things nobody was supposed to talk about out loud. The civil rights lawyers who argued Brown v. Board of Education. The writers, the activists, the entrepreneurs who showed up, pushed in, and refused to be told there was no room for them.
+
+They did not wait for permission. They had chutzpah.
+
+That is not a coincidence. It is the operating system.
+
+A history of being told you do not belong tends to produce one of two responses: retreat or push back harder. Jewish culture, built on 3,000 years of that question, mostly chose push back harder. And then told jokes about it.
+
+Why It Belongs on the Motto
+
+America was built by people who were told their idea was too big, their ambition was too much, their presence was not welcome.
+
+They came anyway. They stayed anyway. They built anyway.
+
+That is chutzpah. On a national scale.
+
+"In Chutzpah We Trust" is not a parody of the national motto. It is a more honest version of what the national motto is actually describing.
+
+Wear it to Shabbat. Wear it to brunch. Wear it when someone asks you where you get your confidence. Tell them you inherited it.`,
+    date: '2026-03-24',
+    category: 'culture',
+    readTime: 5
+  },
+  {
+    slug: 'chosen-people-american-made',
+    title: 'Chosen People. American Made.',
+    description: 'What does it mean to be chosen people and American made at the same time? A look at Jewish American dual identity, ancient covenant, and modern pride.',
+    content: `Two identities. No conflict.
+
+Jewish Americans carry something most people do not have to think about: being fully, completely one thing and fully, completely another thing at the same time.
+
+Not hyphenated. Not divided. Both.
+
+What Chosen People Actually Means
+
+This one gets misunderstood constantly.
+
+"Chosen people" in Jewish theology does not mean superior. It does not mean better, smarter, more deserving of good things. It never meant that.
+
+The concept is brit, covenant. The Jewish people accepted a particular responsibility: to be a light unto the nations, to hold certain ethical and spiritual commitments, to carry a tradition forward through history no matter what history threw at them.
+
+It is not a prize. It is a job.
+
+And it is a job that has required, historically, an extraordinary amount of showing up. Multiple attempts at erasure. Thousands of years of diaspora. The Holocaust. The State of Israel built from survivors and a determination that has no equivalent in modern history.
+
+The "chosen" part is not about deserving special treatment. It is about accepting a responsibility most people would have put down centuries ago. Jewish people did not put it down.
+
+The American Part
+
+Jewish Americans love America. Not uncritically. But deeply.
+
+America is where the majority of American Jews' families found refuge when Europe became dangerous. It is the country that, for all its imperfections, offered something earlier countries had not: the legal and cultural possibility of being Jewish and fully belonging.
+
+The Jewish insistence on questioning authority comes from thousands of years of Talmudic argument. It also fits perfectly in a country founded on the right to dissent.
+
+The Jewish commitment to tikkun olam, the repair of the world, is ancient and religious. It also looks a lot like the best version of what America claims it wants to be.
+
+Est. 586 BCE
+
+That date on the design is not arbitrary.
+
+586 BCE is when the First Temple in Jerusalem was destroyed and the Jewish people were exiled. The Jewish people were already who they were long before America was an idea. Long before most of modern civilization showed up.
+
+To say "Chosen People. American Made." and put "Est. 586 BCE" on it is to hold both timelines at once. Ancient and new. Rooted and mobile. The same story, still being written.
+
+This design is not ironic. It is not a costume. It is exactly what it looks like.
+
+Wear it when you want someone to ask what it means. Because the answer is worth giving.`,
+    date: '2026-03-24',
+    category: 'culture',
+    readTime: 6
+  },
+] = [
   {
     slug: 'jewish-american-identity-2026',
     title: 'Jewish American Identity in 2026: What It Means to Be Jewish in America Today',
