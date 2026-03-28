@@ -272,7 +272,7 @@ export default function HomePage() {
           <div style={{textAlign:"center",marginBottom:56}}>
             <div style={{fontSize:11,letterSpacing:"3px",color:"var(--gold)",marginBottom:12}}>THE COLLECTION</div>
             <h2 style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:"clamp(36px,5vw,64px)",letterSpacing:"-1px",marginBottom:12}}>Gear For The Tribe</h2>
-            <p style={{fontSize:16,color:"rgba(245,240,232,0.5)",maxWidth:480,margin:"0 auto"}}>Two products. Both excellent. No fluff. Your bubbe would approve.</p>
+            <p style={{fontSize:16,color:"rgba(245,240,232,0.5)",maxWidth:480,margin:"0 auto"}}>Three ways to rep. All excellent. Your bubbe would approve.</p>
           </div>
           <div className="products-grid">
             {PRODUCTS.map(p=>(
@@ -294,6 +294,28 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+            {/* Bundle Card */}
+            <div className="card-h" style={{background:"rgba(201,168,76,0.04)",border:"2px solid rgba(201,168,76,0.4)",overflow:"hidden",position:"relative"}}>
+              <div style={{position:"relative",background:"rgba(201,168,76,0.06)",padding:24,textAlign:"center"}}>
+                <div style={{position:"absolute",top:12,left:12,background:"var(--gold)",color:"var(--navy)",fontSize:10,fontWeight:900,letterSpacing:"1.5px",padding:"4px 10px",textTransform:"uppercase"}}>Bundle and Save</div>
+                <div style={{display:"flex",justifyContent:"center",alignItems:"center",gap:16,padding:"16px 0"}}>
+                  <img src="https://files.cdn.printful.com/files/b4e/b4ebbc30701e79902092467a74f74124_preview.png" alt="JewSA Tee" style={{width:"42%",maxWidth:130,height:"auto"}} loading="lazy"/>
+                  <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"var(--gold)"}}>+</div>
+                  <img src="https://files.cdn.printful.com/files/3f4/3f41dd5bee9414a4c43fcefc2a63a429_preview.png" alt="Bucket Hat" style={{width:"42%",maxWidth:130,height:"auto"}} loading="lazy"/>
+                </div>
+              </div>
+              <div style={{padding:"24px 24px 28px"}}>
+                <div style={{fontWeight:900,fontSize:18,marginBottom:6}}>The JewSA Bundle</div>
+                <div style={{fontSize:13,color:"rgba(245,240,232,0.5)",lineHeight:1.6,marginBottom:16}}>Tee and hat. Together. Mazel tov, you saved $6. Pick your size and color on the next page.</div>
+                <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+                  <div style={{display:"flex",alignItems:"baseline",gap:10}}>
+                    <div style={{fontFamily:"'Bebas Neue',sans-serif",fontSize:32,color:"var(--gold)",letterSpacing:"1px"}}>$44</div>
+                    <div style={{fontSize:15,color:"rgba(245,240,232,0.35)",textDecoration:"line-through"}}>$50</div>
+                  </div>
+                  <Link href="/products/jewsa-bundle" style={{background:"var(--gold)",color:"var(--navy)",fontWeight:900,fontSize:13,letterSpacing:"1px",textTransform:"uppercase",padding:"12px 24px",textDecoration:"none",display:"inline-block"}}>Get the Bundle</Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
