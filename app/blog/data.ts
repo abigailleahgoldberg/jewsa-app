@@ -1600,5 +1600,88 @@ For the tribe — books, Judaica, and gifts worth having:
 - [Jewish Humor Books](https://www.amazon.com/s?k=jewish+humor+books&tag=theclantv20-20) — Because we have been turning suffering into comedy for 5,000 years
 
 *Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`
-  }
+  },
+  {
+    slug: 'march-madness-passover',
+    title: 'NCAA March Madness But Make It Passover',
+    excerpt: 'Brackets are busted, upsets are everywhere, and if you\'re Jewish you already know — your ancestors were doing bracket chaos long before Villanova existed.',
+    content: `It\'s the Final Four. Brackets are busted. Everyone\'s picking upsets. And if you\'re Jewish, you already know — your ancestors were doing bracket chaos long before Villanova existed.
+
+The Exodus was just the original March Madness. Nobody had Egypt losing in the first round.
+
+**The Exodus Region**
+
+Moses vs. Pharaoh. Ten plagues as a ten-seed. Nobody had this bracket. Nobody built their model around "firstborn sons and livestock." Nobody predicted the sea splits.
+
+That\'s classic upset energy. You go into Selection Sunday thinking Egypt is a lock. Rock solid defense. Thousands of years of empire. Then a shepherd shows up with a staff and some very specific grievances and suddenly Pharaoh\'s whole program falls apart in the second half.
+
+The Exodus bracket ended with a whole nation walking out of a country they\'d lived in for four hundred years. If that\'s not an eleven-seed making the Final Four, nothing is.
+
+**The Wilderness Conference**
+
+Forty years wandering the desert. Forty. Years.
+
+That is the longest regular season in the history of organized sports. No March Madness. Just March. And April. And every month for four decades. No postseason. No bracket. Just daily manna drops and the occasional complaint about the manna drops.
+
+The Israelites spent forty years in what modern analysts would call a rebuilding phase. Moses was essentially coaching a team that kept losing in overtime and blaming it on the food.
+
+**The Passover Seder as Selection Sunday**
+
+Every family has a different bracket. Grandma seeds the brisket number one every year regardless of matchup. Grandpa disputes the seeding methodology. Someone at the table always insists the charoset should have more walnuts. Someone else has never understood the maror and just powers through it.
+
+The Haggadah is the bracket sheet. You follow it in order. You know where it\'s going. But every family runs the same story differently. Different pace. Different commentary. Different moment where Uncle Danny goes off-script and derails the whole third quarter with a tangent about the Golan Heights.
+
+Selection Sunday and Seder night have the same energy. High stakes. Strong opinions. Brisket.
+
+**Elijah\'s Cup: The Cinderella Team**
+
+Every year we open the door and leave a full cup of wine for Elijah the prophet. Every year we wonder if he\'s going to show. Every year he doesn\'t drink. But we keep the cup full anyway.
+
+That is March Madness fan loyalty in its purest form. You know the outcome is uncertain. You know the underdog probably won\'t win. But you watch anyway. You hope anyway. You leave the door open anyway.
+
+Elijah is the eternal Cinderella team. Undefeated in terms of not having technically lost yet. We\'re still waiting on the buzzer beater.
+
+**The Four Children as the Four Regions**
+
+The Wise Child does analytics. Has a spreadsheet. Knows the seed history, upset rates by conference, and the full theological implications of the burning bush.
+
+The Wicked Child takes the points. Doesn\'t care about the journey, just the spread. Asks every year why we can\'t just order pizza instead of doing the whole Seder.
+
+The Simple Child goes chalk every round. Moses wins because Moses always wins. Never considers the upset. Gets confused when the bracket falls apart by Wednesday.
+
+The One Who Doesn\'t Know How to Ask just watches and eats. Honestly the most emotionally healthy person at the table.
+
+**The Overlap Is Not an Accident**
+
+This year Passover starts April 12. The Final Four tips April 5. The overlap is not a coincidence. It is a scheduling decision that someone with serious game theory knowledge clearly had input on.
+
+Both events are about survival. Both involve enormous amounts of food and arguing about what happened in the desert. Both end with someone crying and someone else saying they should have gone with their gut in round two.
+
+The Haggadah says every generation must see themselves as personally having left Egypt. March Madness says every year, no matter what happened last year, your bracket starts fresh.
+
+That\'s not just sports culture. That\'s a theology of renewal.
+
+This Passover, light the candles, argue about the Haggadah, leave the door open for Elijah, and know that somewhere in the original blueprint of Jewish history, someone already ran this bracket — and the underdog won.
+
+---
+
+**Which Torah figure would destroy your bracket? Drop it in the comments.**
+
+---
+
+**Passover Seder Essentials**
+
+Gear up for the best seder at the table:
+
+- [Modern Haggadah](https://www.amazon.com/s?k=passover+haggadah+funny+modern&tag=theclantv20-20) — Run a seder people actually want to finish
+- [Seder Plate](https://www.amazon.com/s?k=passover+seder+plate&tag=theclantv20-20) — The centerpiece your table deserves
+- [Matzah Set](https://www.amazon.com/s?k=matzah+cover+set+passover&tag=theclantv20-20) — Wrap the matzah like you mean it
+- [Elijah\'s Cup](https://www.amazon.com/s?k=elijah+cup+passover&tag=theclantv20-20) — Leave it full. You know the deal.
+- [Jewish Sports Gifts](https://www.amazon.com/s?k=jewish+sports+gift&tag=theclantv20-20) — For the fan who\'s both tribe and team
+
+*Some links may be affiliate links. JewSA earns a small commission at no extra cost to you.*`,
+    date: '2026-03-30',
+    category: 'humor',
+    readTime: 5
+  },
 ];
