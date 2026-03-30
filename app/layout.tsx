@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "JewSA — Where Pride Meets Punchlines",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JewSA — Where Pride Meets Punchlines",
     description: "Jewish-American pride merch that actually slaps.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
   },
   alternates: {
     canonical: 'https://jewsa.com',
