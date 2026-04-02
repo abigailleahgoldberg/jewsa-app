@@ -1685,3 +1685,251 @@ Gear up for the best seder at the table:
     readTime: 5
   },
 ];
+
+const aprilPosts2026: BlogPost[] = [
+  {
+    slug: 'jewish-american-comedians-changed-american-culture',
+    title: `10 Jewish-American Comedians Who Changed American Culture Forever`,
+    excerpt: `Jewish-American comedians didn't just make people laugh — they reshaped American culture, pushed boundaries, and gave outsiders a voice. Here are 10 who changed everything.`,
+    date: '2026-04-01',
+    category: `Jewish American Culture`,
+    readTime: '6 min read',
+    content: `American comedy and Jewish-American comedy are so intertwined it's almost impossible to separate them. The outsider's perspective, the self-deprecating bite, the willingness to say the uncomfortable thing out loud, the use of humor as both defense and offense — these qualities that define much of American comedic sensibility are deeply rooted in the Jewish-American experience.
+
+Here are ten figures whose work didn't just make people laugh. It changed what American comedy was allowed to be.
+
+## 1. Mel Brooks
+
+Mel Brooks is the comedian as cultural arsonist. His willingness to make the Holocaust funny — *The Producers* (1967), *To Be or Not to Be* (1983) — was not tastelessness but rather a radical act of reclamation. To make Nazis ridiculous, to rob them of their terrifying power through laughter, was a specifically Jewish response to specifically Jewish trauma.
+
+Brooks has talked about this directly: the best way to defeat Nazis is to make them objects of ridicule. His influence runs through every comedy that uses absurdity to defang power.
+
+Beyond that, he essentially invented the modern movie parody with *Blazing Saddles* and *Young Frankenstein* — two films released in the same year (1974) that remain among the funniest movies ever made.
+
+## 2. Lenny Bruce
+
+Lenny Bruce's significance isn't that he was the funniest comedian on this list — it's that he made every comedian on this list possible. Bruce went to jail for obscenity. He was arrested repeatedly for saying things onstage that the law, in the early 1960s, considered criminal.
+
+His willingness to engage with race, religion, sex, politics, and power directly and without sanitizing was a complete break from the variety show comedy of his era. Every comedian who followed him into the territory of difficult, honest, uncomfortable truths owes Bruce a debt.
+
+He died in 1966 at 40. He was posthumously pardoned by the Governor of New York in 2003.
+
+## 3. Jerry Seinfeld
+
+Seinfeld's contribution is the art of observational granularity. While many comedians punch at large targets — politics, social issues, the news — Seinfeld built a career on the incredibly detailed observation of small irritations. Why do we say "heads up" when we mean "duck?" Why does the door-hold etiquette at the end of a long hallway exist?
+
+*Seinfeld*, the show, codified a type of New York Jewish neurotic comedy that has been imitated and referenced thousands of times. "A show about nothing" was actually a show about everything small — and it ran for nine seasons.
+
+## 4. Larry David
+
+Larry David is Seinfeld unfiltered — the version without the polish. *Curb Your Enthusiasm* is one of the most original comedic enterprises in television history, an improvised series in which a fictionalized Larry David violates every social contract he encounters and suffers the perfectly calibrated consequences.
+
+The character is insufferable. He's also completely right about almost everything. The comedy works because Larry David is saying out loud what everyone thinks and no one says. That's a very old Jewish comedic tradition.
+
+## 5. Joan Rivers
+
+Joan Rivers had a harder road than anyone else on this list. She made it in a comedy world that had no place for women, let alone women who were as sharp, as aggressive, and as willing to say the cruelest true thing as any man.
+
+Her willingness to target herself was radical — not self-deprecation for sympathy but self-deprecation as a weapon, taking the attack before anyone else could. Her influence on female comedians and on the shape of red carpet commentary, celebrity roast culture, and late night humor is almost immeasurable.
+
+She was still performing into her eighties. She never stopped.
+
+## 6. Don Rickles
+
+Don Rickles invented the insult comic as a form of love. The genius of Rickles — and why audiences loved him even when he was targeting them — was that the insults were offered with warmth. The joke was the shared game, the performance of transgression, not actual cruelty.
+
+His career spanned from the 1950s through the 2010s. He was beloved by Frank Sinatra, Johnny Carson, and virtually every person he ever worked with. The roast format that has become a staple of American celebrity culture is substantially his creation.
+
+## 7. Billy Crystal
+
+Billy Crystal is the connector — the performer who bridges the Borscht Belt comedy tradition of the mid-20th century with the mainstream American pop culture of the 1980s and 90s. His work on *Saturday Night Live*, his HBO specials, his role in *When Harry Met Sally*, and his nine stints as Oscar host made him one of the most beloved entertainers in America.
+
+What's specifically Jewish about Crystal's work is the warmth underneath the wit — the comedy of memory, family, and identity that runs through his specials and his movie about reconnecting with his childhood friends.
+
+## 8. Gilda Radner
+
+Gilda Radner's original cast membership on *Saturday Night Live* established a template for what female comedy could be in the modern era. Her characters — Roseanne Rosannadanna, Emily Litella, Lisa Loopner — were fully inhabited comic creations, not impressions or one-note jokes.
+
+She died in 1989 from ovarian cancer. She was 42. Her memoir, *It's Always Something*, became a rallying point for cancer awareness and a testament to the use of humor as survival tool.
+
+## 9. Albert Brooks
+
+Albert Brooks has never been as famous as he should be. His stand-up in the early 1970s was unlike anything that existed — meta, self-aware, deconstructed comedy that was making jokes about the nature of comedy itself. His films — *Real Life*, *Modern Romance*, *Defending Your Life*, *Lost in America* — are among the smartest comedies ever made.
+
+He is the comedian who influenced every comedian. Ask almost any major comedian from the 1980s forward who shaped them and Albert Brooks appears.
+
+## 10. Sarah Silverman
+
+Sarah Silverman pushed what comedians were allowed to say further than almost anyone has since Lenny Bruce. Her willingness to engage with race, religion, sex, and politics in ways that made audiences simultaneously laugh and genuinely uncomfortable reopened the question of what comedy is allowed to do.
+
+Her stand-up, her show *The Sarah Silverman Program*, and her documentary *Jesus Is Magic* represent a specific kind of Jewish-American comedic tradition: using humor to expose the uncomfortable truths that polite society pretends don't exist.
+
+---
+
+## The Tradition Continues
+
+These ten are not a complete list. They're entry points into a tradition so wide and deep that it has functionally defined American comedy for a century.
+
+What ties them together is not a single style — they range from warm to cold, mainstream to transgressive, traditional to experimental. What ties them is the willingness to use humor as a tool for truth, and the specifically Jewish understanding that laughter is not the opposite of seriousness. It is one of the most serious things you can do.
+
+---
+
+*Explore more Jewish-American culture at [JEWSA](/culture).*`,
+  },
+  {
+    slug: 'tikkun-olam-meaning-2026-jewish-americans',
+    title: `What Does Tikkun Olam Mean in 2026? How Jewish Americans Are Repairing the World`,
+    excerpt: `Tikkun olam — repairing the world — is one of Judaism's most enduring concepts. But what does it actually mean, and how are Jewish Americans putting it into practice in 2026?`,
+    date: '2026-04-01',
+    category: `Jewish American Culture`,
+    readTime: '5 min read',
+    content: `*Tikkun olam.* Two Hebrew words that have traveled from ancient mystical texts to the center of contemporary Jewish-American identity, accrued layers of meaning across the centuries, been embraced by some and critiqued by others, and in 2026 remain one of the most actively debated concepts in Jewish communal life.
+
+What does it actually mean? Where does it come from? And what does it look like when Jewish Americans try to practice it today?
+
+## The Original Meaning
+
+The phrase *tikkun olam* — literally "repair of the world" or "mending of the world" — has roots in Kabbalistic mysticism, particularly in the 16th-century teachings of Rabbi Isaac Luria in Safed. In Lurianic Kabbalah, the concept describes the cosmic work of collecting and returning the divine sparks scattered throughout creation following a primordial shattering. The *tikkun* — the repair — is the spiritual work of restoring wholeness to a fractured cosmos.
+
+This original meaning is mystical and cosmic, not political or social. It describes a metaphysical process as much as a human responsibility.
+
+The phrase also appears in the Aleinu prayer, in the phrase *l'takken olam b'malkhut Shaddai* — "to repair the world under God's sovereignty." Here the context is eschatological — pointing toward a redeemed world at the end of history.
+
+## How the Meaning Evolved
+
+The modern meaning of *tikkun olam* — social justice, community responsibility, the Jewish obligation to work for a better world — developed largely in 20th-century American Jewish thought. It draws on authentic Jewish traditions of charitable giving (tzedakah), pursuing justice (*tzedek tzedek tirdof* — "justice, justice you shall pursue"), and the concept that every human being bears *b'tselem Elohim*, the image of God.
+
+Rabbi Abraham Joshua Heschel, who marched with Martin Luther King Jr. in Selma, embodied a vision of Jewish religious life inseparable from the struggle for justice. "When I marched in Selma," Heschel wrote, "my legs were praying." That synthesis — prayer and action, the spiritual and the political — is at the heart of the modern *tikkun olam* framework.
+
+By the 1990s and 2000s, *tikkun olam* had become shorthand for the Jewish social justice imperative across denominations and communities. It appeared on t-shirts, in synagogue mission statements, in bar and bat mitzvah projects, and in the names of Jewish nonprofits and magazines.
+
+## The Critiques
+
+The prominence of *tikkun olam* as a framework has not gone unchallenged.
+
+Some critics argue that the modern usage flattens and politicizes a complex mystical concept — that it has become a way of substituting social activism for genuine Jewish religious practice and study. Philosopher Jonathan Rynhold and others have observed that *tikkun olam* in its contemporary form often functions more as a secular liberal political framework than a specifically Jewish religious obligation.
+
+Others argue the opposite: that the reduction of Jewish ethical responsibility to a bumper sticker-friendly phrase trivializes the serious, demanding nature of what the tradition actually requires — the study of Torah, the observance of halakha, the binding commitment to Jewish peoplehood.
+
+And some critics, particularly in the aftermath of increased antisemitism and conflict around Israel, have argued that Jewish communal energy focused on universal social justice has sometimes come at the expense of attention to Jewish-specific concerns — that *tikkun olam* can become a way of performing Jewish values while neglecting the Jewish community itself.
+
+These are serious debates, and they're ongoing.
+
+## What Jewish Americans Are Actually Doing in 2026
+
+Whatever the theological debates, the work continues. Jewish Americans are practicing repair in ways that range from deeply traditional to thoroughly contemporary.
+
+**Tzedakah infrastructure:** Jewish federation networks, Jewish community foundations, and organizations like the Jewish Federations of North America channeled hundreds of millions of dollars in 2025 to domestic and international causes — food security, refugee assistance, medical care, education, and emergency response.
+
+**Environmental justice:** The Jewish environmental movement has grown significantly, drawing on the concept of *bal tashchit* (prohibition on needless destruction) and the Torah's explicit injunctions about care for the land. Jewish Climate Action Network and similar organizations connect environmental activism to Jewish religious obligation.
+
+**Healthcare access:** Jewish hospitals have a long history in American communities, and Jewish community organizations continue to run free clinics, mental health services, and social support networks that serve people far beyond the Jewish community.
+
+**Immigrant and refugee support:** HIAS, originally the Hebrew Immigrant Aid Society founded in 1881 to help Jewish refugees, now works with refugees of all backgrounds, driven by the explicit Jewish mandate: "You shall love the stranger, for you were strangers in the land of Egypt" (Deuteronomy 10:19).
+
+**Education equity:** Jewish day schools, Hillel chapters, and Jewish educational organizations have expanded their commitments to serving children and young people in underserved communities, often in partnerships that cross religious and cultural lines.
+
+## The Personal Practice
+
+*Tikkun olam* is not only organizational — it's a personal ethic that millions of Jewish Americans bring into their daily lives and work.
+
+It's the teacher who stays late. The doctor who volunteers in a free clinic. The businessperson who pays employees fairly. The neighbor who shows up. The activist who organizes. The lawyer who takes pro bono cases.
+
+The specific expression varies. The underlying conviction — that we are responsible for each other, that the world is not yet as it should be, that each of us has a part in repairing it — is consistent across the diversity of Jewish-American life.
+
+## What It Means in 2026
+
+In a moment of heightened division, increased antisemitism, and genuine uncertainty about the direction of American society and the world, *tikkun olam* continues to function as a lodestar for many Jewish Americans.
+
+Not because it resolves the debates — it doesn't. Not because it defines exactly which causes to support — it doesn't do that either. But because it insists, in the face of every reason for cynicism or despair, that repair is possible. That the work matters. That we are not finished.
+
+*The world is broken. You are here. Get to work.*
+
+That's what it means in 2026.
+
+---
+
+*Join the JEWSA community in exploring Jewish-American identity and values at [JEWSA](/community).*`,
+  },
+  {
+    slug: 'ultimate-guide-jewish-american-holidays',
+    title: `The Ultimate Guide to Jewish-American Holidays: What They Mean and How We Celebrate`,
+    excerpt: `The Jewish holiday calendar is rich, layered, and often misunderstood. This guide breaks down the major Jewish-American holidays — what they mean, how they're celebrated, and why they matter in 2026.`,
+    date: '2026-04-01',
+    category: `Jewish American Culture`,
+    readTime: '6 min read',
+    content: `The Jewish holiday calendar is one of the most layered, meaningful, and frequently misunderstood aspects of Jewish life — especially for Jewish Americans navigating the intersection of two rich cultural traditions. Colleagues who wonder why you're taking a day off, friends who ask "what's Sukkot?" at a dinner party, or younger family members trying to understand what they're actually celebrating — this guide is for all of them.
+
+We're not going to skim the surface. Here's a real overview of the major Jewish holidays, what they mean, how Jewish Americans actually observe them, and the American context that shapes how those traditions have evolved.
+
+## Rosh Hashanah: The Jewish New Year
+
+**When:** The first and second days of Tishrei (typically September–October on the Gregorian calendar)
+**What it means:** Rosh Hashanah (literally "head of the year") marks the beginning of the Jewish new year and the start of the High Holy Days — ten days of reflection, repentance, and renewal that culminate in Yom Kippur.
+
+The theological core is serious: these ten days are when Jewish tradition teaches that God inscribes each person's fate for the coming year in the Book of Life. The shofar (ram's horn) is blown as a call to self-examination. Prayers are long and introspective. The holiday is simultaneously celebratory and weighty.
+
+**How Jewish Americans celebrate:** The family dinner is the centerpiece — round challah (symbolizing the cycle of the year), apples and honey (for a sweet new year), and often pomegranates. Synagogue attendance peaks dramatically; the two High Holy Day services are among the best-attended of the year, drawing Jews who may not attend regularly at other times.
+
+The greeting: *Shanah Tovah* — "good year." Or the fuller *L'shanah tovah u'metukah* — "for a good and sweet year."
+
+## Yom Kippur: The Day of Atonement
+
+**When:** The tenth day of Tishrei, nine days after Rosh Hashanah
+**What it means:** Yom Kippur is the holiest day in the Jewish year. It is a day of fasting (from sundown to sundown), prayer, and atonement — a complete accounting of the year's actions and a sincere commitment to do better. The Hebrew *teshuvah* (return or repentance) is the central concept.
+
+The Kol Nidre service on Yom Kippur eve is one of the most haunting and beloved in all of Jewish liturgy — a melodic annulment of vows, often heard even by Jews with minimal synagogue attendance.
+
+**How Jewish Americans observe:** The fast is observed by the majority of Jewish Americans who identify with the holiday, even many who are not observant in other ways. The break-fast meal — traditionally bagels, lox, cream cheese, and desserts — has become a beloved American-Jewish tradition in itself, a communal gathering after a day of solemnity.
+
+## Sukkot: The Feast of Tabernacles
+
+**When:** Five days after Yom Kippur, lasting seven days
+**What it means:** Sukkot commemorates the 40 years the Israelites spent wandering in the desert after the Exodus, living in temporary shelters. It's also a harvest festival, with agricultural roots in the ancient cycles of the land of Israel.
+
+The sukkah is the temporary outdoor structure — a booth with a roof of natural materials through which you should be able to see stars — where observant Jews eat meals during the holiday. Some sleep in the sukkah as well.
+
+**How Jewish Americans celebrate:** Sukkot is widely considered underappreciated and under-celebrated among American Jews. Building and decorating a sukkah with family, particularly with children, is a cherished practice. The holiday has a quality of joy and festivity (*zman simchateinu* — "the time of our joy") that feels different from the solemnity of the High Holy Days.
+
+## Hanukkah: The Festival of Lights
+
+**When:** The 25th of Kislev, typically in November or December
+**What it means:** Hanukkah commemorates the Maccabees' victory over the Seleucid Empire in the 2nd century BCE and the miraculous rededication of the Temple in Jerusalem. The famous miracle: a one-day supply of oil burned for eight days.
+
+The menorah (or Hanukkiah), which holds nine candles (one for each night plus the shamash helper candle), is the central symbol. Candles are lit and blessings recited.
+
+**The American context:** Hanukkah is not a major holiday in Jewish religious law — it's a minor holiday that became culturally prominent in America largely because of its proximity to Christmas. This has created a fascinating and occasionally uncomfortable dynamic: Hanukkah is simultaneously over-commercialized (latkes, gelt, gifts, Hanukkah songs) and genuinely meaningful as a story about maintaining Jewish identity against cultural assimilation pressure. That tension is very alive in 2026.
+
+## Passover: The Festival of Freedom
+
+**When:** The 15th of Nisan, typically in March or April, lasting seven or eight days
+**What it means:** Passover (*Pesach*) commemorates the Exodus from Egypt — the liberation of the Israelites from slavery. The Seder, held on the first (and in the diaspora, second) night, is a structured ritual meal that retells the Exodus story through food, song, prayer, and discussion.
+
+The Haggadah, the book that guides the Seder, ends with *L'shana haba'ah b'Yerushalayim* — "Next year in Jerusalem" — a phrase that has carried different weight across different centuries and contexts.
+
+**How Jewish Americans celebrate:** Passover is one of the most widely observed holidays across the spectrum of American Jewish identity. The Seder is both religiously significant and deeply family-centered — grandparents, children, cousins, and often non-Jewish spouses and friends gathered around the table for a multi-hour meal that can range from deeply traditional to loose and expansive depending on the family.
+
+## Shavuot: The Festival of Weeks
+
+**When:** Fifty days after the first day of Passover
+**What it means:** Shavuot commemorates the giving of the Torah at Mount Sinai. It's also an ancient harvest festival marking the end of the grain harvest. Traditional observance includes all-night study sessions and eating dairy foods (cheesecake is the quintessential American-Jewish Shavuot food).
+
+## Purim: The Festival of Lots
+
+**When:** The 14th of Adar, typically in February or March
+**What it means:** Purim celebrates the deliverance of the Jewish people from the genocidal plot of Haman, as told in the Book of Esther. It's characterized by joyful celebration, costume wearing, the reading of the Megillah (Book of Esther), giving gifts of food, and charitable giving.
+
+**How Jewish Americans celebrate:** Purim is the most festive and party-oriented holiday on the calendar. Costumes, Purim carnivals for children, hamantaschen (triangular filled cookies), and community celebrations make it a beloved holiday especially for families with young children.
+
+## The Living Tradition
+
+What makes Jewish-American holiday observance distinctive is the way these ancient traditions have been adapted, reinterpreted, and maintained across the particular experience of American Jewish life. Every family has its own customs, its own Seder plate traditions, its own Hanukkah songs. Every community balances religious observance with American cultural context in its own way.
+
+The holidays are not just calendar dates. They're the architecture of Jewish time — a rhythm that connects Jewish Americans to each other, to their history, and to a tradition that has survived every historical challenge its people have faced.
+
+---
+
+*Explore Jewish-American history and culture at [JEWSA](/community).*`,
+  },
+];
+blogPosts.push(...aprilPosts2026);
