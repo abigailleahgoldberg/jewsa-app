@@ -45,8 +45,19 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound()
   const related = getRelatedPosts(slug, post.category)
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt.slice(0, 160),
+    "datePublished": post.date,
+    "author": { "@type": "Organization", "name": "JewSA" },
+    "publisher": { "@type": "Organization", "name": "JewSA", "url": "https://jewsa.com" }
+  };
+
   return (
     <main className="min-h-screen bg-[#1A1A2E] text-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div className="max-w-3xl mx-auto px-4 py-16">
         <Link
           href="/blog"
