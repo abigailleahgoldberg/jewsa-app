@@ -1692,7 +1692,7 @@ const aprilPosts2026: BlogPost[] = [
     title: `10 Jewish-American Comedians Who Changed American Culture Forever`,
     excerpt: `Jewish-American comedians didn't just make people laugh — they reshaped American culture, pushed boundaries, and gave outsiders a voice. Here are 10 who changed everything.`,
     date: '2026-04-01',
-    category: `Jewish American Culture`,
+    category: `Culture`,
     readTime: '6 min read',
     content: `American comedy and Jewish-American comedy are so intertwined it's almost impossible to separate them. The outsider's perspective, the self-deprecating bite, the willingness to say the uncomfortable thing out loud, the use of humor as both defense and offense — these qualities that define much of American comedic sensibility are deeply rooted in the Jewish-American experience.
 
@@ -1781,7 +1781,7 @@ What ties them together is not a single style — they range from warm to cold, 
     title: `What Does Tikkun Olam Mean in 2026? How Jewish Americans Are Repairing the World`,
     excerpt: `Tikkun olam — repairing the world — is one of Judaism's most enduring concepts. But what does it actually mean, and how are Jewish Americans putting it into practice in 2026?`,
     date: '2026-04-01',
-    category: `Jewish American Culture`,
+    category: `Culture`,
     readTime: '5 min read',
     content: `*Tikkun olam.* Two Hebrew words that have traveled from ancient mystical texts to the center of contemporary Jewish-American identity, accrued layers of meaning across the centuries, been embraced by some and critiqued by others, and in 2026 remain one of the most actively debated concepts in Jewish communal life.
 
@@ -1856,7 +1856,7 @@ That's what it means in 2026.
     title: `The Ultimate Guide to Jewish-American Holidays: What They Mean and How We Celebrate`,
     excerpt: `The Jewish holiday calendar is rich, layered, and often misunderstood. This guide breaks down the major Jewish-American holidays — what they mean, how they're celebrated, and why they matter in 2026.`,
     date: '2026-04-01',
-    category: `Jewish American Culture`,
+    category: `Culture`,
     readTime: '6 min read',
     content: `The Jewish holiday calendar is one of the most layered, meaningful, and frequently misunderstood aspects of Jewish life — especially for Jewish Americans navigating the intersection of two rich cultural traditions. Colleagues who wonder why you're taking a day off, friends who ask "what's Sukkot?" at a dinner party, or younger family members trying to understand what they're actually celebrating — this guide is for all of them.
 
