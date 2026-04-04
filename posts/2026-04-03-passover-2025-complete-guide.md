@@ -1,6 +1,6 @@
-# Passover 2025: The Complete Guide to Seder Traditions, Symbols, and Meaning
+# Passover 2026: The Complete Guide to Seder Traditions, Symbols, and Meaning
 
-Passover — Pesach in Hebrew — begins at sundown on April 5, 2025 and continues through April 13. It is one of the most widely observed Jewish holidays, celebrated by millions of Jewish families across the world, and one of the most rich in symbolism, tradition, and communal meaning.
+Passover — Pesach in Hebrew — begins at sundown on April 5, 2026 and continues through April 13. It is one of the most widely observed Jewish holidays, celebrated by millions of Jewish families across the world, and one of the most rich in symbolism, tradition, and communal meaning.
 
 At its heart, Passover is the story of liberation. The Exodus from Egypt — from slavery to freedom — is not just history in the Jewish tradition. It is a living story that every generation is commanded to retell as if they themselves were among those who left Egypt.
 
