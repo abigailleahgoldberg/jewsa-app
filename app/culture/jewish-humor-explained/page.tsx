@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const RELATED = [
-  { slug: "famous-jewish-americans", title: "Famous Jewish Americans", category: "Culture" },
+  { slug: "famous-jewish-americans", title: "Famous Jewish Americans", category: "culture" },
   { slug: "guide-to-your-jewish-neighbor", title: "A Guide to Your Jewish Neighbor", category: "Guide" },
   { slug: "history-of-jews-in-america", title: "The History of Jews in America", category: "History" },
 ];

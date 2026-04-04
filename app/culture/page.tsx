@@ -25,7 +25,7 @@ const CULTURE_ARTICLES = [
     title: "Famous Jewish Americans",
     desc: "Einstein, Ruth Bader Ginsburg, Steven Spielberg, Jerry Seinfeld, Sandy Koufax — the Jewish Americans who shaped science, law, art, comedy, and sports.",
     readTime: 8,
-    category: "Culture",
+    category: "culture",
   },
   {
     slug: "jewish-humor-explained",
